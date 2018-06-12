@@ -1,9 +1,16 @@
 <div class="row">
   <div class="col-md-12">
     <div class="row">
+<div class="col-md-6">
+</div>
+<div class="col-md-6">
+  <button>Edit</button>
+  </div>
+    </div>
+    <div class="row">
       <div class="col-md-12">
         <div class="background-event">
-          <h2> Events </h2>
+          <h2> {{event.name}} </h2>
           <hr>
         </div>
       </div>
@@ -11,7 +18,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="event-img">
-          <img src="../../../assets/img/detail.jpg" width="600" height="280">
+          <img src="{{event.imgUrl}}" width="600" height="280">
         </div>
       </div>
     </div>
@@ -20,9 +27,7 @@
       <div class="col-md-2">
 
         <div class="event-date text-center">
-          <p> Nov</p>
-          <h3 class="bold">10 </h3>
-          <p> 2018</p>
+          <h3> {{event.date}}</h3>
 
         </div>
 
@@ -30,29 +35,16 @@
 
       <div class="col-md-9">
         <div class=" event-title">
-          <h1> Medical Conference in blabla</h1>
+          <h1> {{event.name}} in {{event.address}}</h1>
           <span>
-            <i class="far fa-clock"></i> 5:00 pm </span>
+            <i class="fa fa-clock-o"></i>{{event.time}}</span>
           <span>
-            <i class="fas fa-map-marker-alt "></i> Smart Village</span>
+            <i class="fa fa-map-marker "></i> {{event.location}}</span>
         </div>
 
         <div class="event-blog">
 
-          <div>
-
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in fringilla
-            arcu ligula ornare mauris. Donec efficitur mi eget eros suscipit rhoncus. Nulla aliquet faucibus est, a ornare
-            neque pellentesque quis. Nunc id volutpat magna. Sed tincidunt convallis cursus. Quisque maximus nulla eget
-            turpis condimentum congue. Lorem ipsum. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat,
-            est a finibus lobortis, eros justo rutrum est, in fringilla arcu ligula ornare mauris. Donec efficitur mi eget
-            eros suscipit rhoncus. Nulla aliquet faucibus est, a ornare neque pellentesque quis. Nunc id volutpat magna.
-            Sed tincidunt convallis cursus. Quisque maximus nulla eget turpis condimentum congue. Lorem ipsum. lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in
-            fringilla arcu ligula ornare mauris. Donec efficitur mi eget eros suscipit rhoncus. Nulla aliquet faucibus
-            est, a ornare neque pellentesque quis. Nunc id volutpat magna. Sed tincidunt convallis cursus. Quisque maximus
-            nulla eget turpis condimentum congue. Lorem ipsum.
-          </div>
+          <div>{{event.details}}</div>
         </div>
 
       </div>

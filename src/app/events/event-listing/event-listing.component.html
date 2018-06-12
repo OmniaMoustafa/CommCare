@@ -1,177 +1,20 @@
 <div class="row">
+	<div class="col-md-12 space">
+		<form id="propertiesForm" action="demo-real-estate-properties.html" method="POST">
+			<div class="form-row filter-patient">
+				<div class="col-md-12">
+					<div class="input-container">
+						<div class="icon">
+							<img src="../../../assets/img/search.png" />
+						</div>
+						<input class="input-field" type="text" [(ngModel)]='listFilter' placeholder="Search Events.." name="EventName">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
 	<div class="col-md-12">
-		<div class="row">
-				<div class="col-md-4 right searchinpt2">
-					<input type="text" placeholder="search.." class="form-control" id="inputDefault">
-					</div>
-		</div>
-		<div class="big-block block1">
-			<div class="row">
-				<div class="col-md-3  col-md-offset-1 left-block">
-					<div class="word-month"> Jan </div>
-					<div class="word-day"> 30</div>
-
-
-				</div>
-
-				<div class="col-md-4 middle-block ">
-
-					<div class="title-event"> Medical School Council </div>
-					<div class="place-event"> Egypt-cairo</div>
-					<div class="location-event">
-						<i class="fa fa-map-marker" aria-hidden="true">
-						</i> smart village
-						<span>
-							<i class="fa fa-clock-o" aria-hidden="true">
-							</i> 8:00 am</span>
-					</div>
-
-				</div>
-
-
-				<div class="col-md-4 right-block">
-
-					<div class="img-event">
-						<img src="..\..\..\assets\images\detail.jpg" width="230" height="150">
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel-event">
-						<div class="details-event">
-							<a href="oneevent.html"> view this event in details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="big-block">
-			<div class="row">
-				<div class="col-md-3  col-md-offset-1 left-block">
-					<div class="word-month"> Jan </div>
-					<div class="word-day"> 30</div>
-
-
-				</div>
-
-				<div class="col-md-4 middle-block ">
-
-					<div class="title-event"> Medical School Council </div>
-					<div class="place-event"> Egypt-cairo</div>
-					<div class="location-event">
-						<i class="fa fa-map-marker" aria-hidden="true">
-						</i> smart village
-						<span>
-							<i class="fa fa-clock-o" aria-hidden="true">
-							</i> 8:00 am</span>
-					</div>
-
-				</div>
-
-
-				<div class="col-md-4 right-block">
-
-					<div class="img-event">
-							<img src="..\..\..\assets\images\detail.jpg" width="230" height="150">
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel-event">
-						<div class="details-event">
-							<a href="oneevent.html"> view this event in details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="big-block">
-			<div class="row">
-				<div class="col-md-3  col-md-offset-1 left-block">
-					<div class="word-month"> Jan </div>
-					<div class="word-day"> 30</div>
-
-
-				</div>
-
-				<div class="col-md-4 middle-block ">
-
-					<div class="title-event"> Medical School Council </div>
-					<div class="place-event"> Egypt-cairo</div>
-					<div class="location-event">
-						<i class="fa fa-map-marker" aria-hidden="true">
-						</i> smart village
-						<span>
-							<i class="fa fa-clock-o" aria-hidden="true">
-							</i> 8:00 am</span>
-					</div>
-
-				</div>
-
-
-				<div class="col-md-4 right-block">
-
-					<div class="img-event">
-							<img src="..\..\..\assets\images\detail.jpg" width="230" height="150">
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel-event">
-						<div class="details-event">
-							<a href="oneevent.html"> view this event in details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-
-
+		<app-event-item-small *ngFor="let event of filteredEvents" [event]="event" [eventIndex]="filteredEvents.indexOf(event)"></app-event-item-small>
 	</div>
 </div>
-<div class="row mt-lg mb-xlg">
-	<div class="col-md-12 center">
-		<ul class="pagination">
-			<li>
-				<a href="#">
-					<i class="fa fa-chevron-left"></i>
-				</a>
-			</li>
-			<li class="active">
-				<a href="#">1</a>
-			</li>
-			<li>
-				<a href="#">2</a>
-			</li>
-			<li>
-				<a href="#">3</a>
-			</li>
-			<li>
-				<a href="#">4</a>
-			</li>
-			<li>
-				<a href="#">5</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class="fa fa-chevron-right"></i>
-				</a>
-			</li>
-		</ul>
-	</div>
-</div>
-
