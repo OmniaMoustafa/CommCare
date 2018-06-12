@@ -1,3 +1,51 @@
-<p>
-  medical-history works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="tabs tabs-bottom tabs-left tabs-simple">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#tabsNavigationSimple1" data-toggle="tab" aria-expanded="false">Initial physician assesment</a>
+          </li>
+          <li class="">
+            <a href="#tabsNavigationSimple2" data-toggle="tab" aria-expanded="false">Admission Office&Pt.i.D</a>
+          </li>
+          <li>
+            <a href="#tabsNavigationSimple3" data-toggle="tab">H & P Physician Progress</a>
+          </li>
+          <li class="">
+            <a href="#tabsNavigationSimple4" data-toggle="tab" aria-expanded="true">Consultation & therapy</a>
+          </li>
+          <li class="">
+            <a href="#tabsNavigationSimple5" data-toggle="tab" aria-expanded="true">Physician Sheet</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <!--=====assesment=======-->
+          <div class="tab-pane" id="tabsNavigationSimple1">
+              <app-initial-physician-assesment [patientFName]="patientFName" [patientLName]="patientLName"></app-initial-physician-assesment>
+          </div>
+
+          <!--===============admission============-->
+          <div class="tab-pane" id="tabsNavigationSimple2">
+            <app-admission [patientFName]="patientFName" [patientLName]="patientLName"></app-admission>
+          </div>
+          <!-- ===========physician progress==============-->
+          <div class="tab-pane" id="tabsNavigationSimple3">
+            <app-hp-physician-progress [patientFName]="patientFName" [patientLName]="patientLName"></app-hp-physician-progress>
+          </div>
+          <!--======================consultation================-->
+          <div class="tab-pane active" id="tabsNavigationSimple4">
+            <app-consultation [patientFName]="patientFName" [patientLName]="patientLName"></app-consultation>
+          </div>
+          <!--==================physician sheet==========-->
+          <div class="tab-pane active" id="tabsNavigationSimple5">
+            <app-physician-sheet [patientFName]="patientFName" [patientLName]="patientLName"></app-physician-sheet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
