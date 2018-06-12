@@ -1,7 +1,21 @@
+.pt{
+    padding-top: 20px;
+}
+.landing-wrapper {
+    height: 20%;
+}
 /* top-header */
 #header .header-social-icons {
     float: right;
     margin: 10px 0 0 10px;
+}
+#header .header-logo img {
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 15px 15px 15px 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
 }
 .center{
     margin: auto;
