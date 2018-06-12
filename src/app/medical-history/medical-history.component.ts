@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IPatient } from '../shared/interfaces/IPatient';
 
 @Component({
   selector: 'app-medical-history',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./medical-history.component.css']
 })
 export class MedicalHistoryComponent implements OnInit {
+
+  @Input() patientFName: string;
+  @Input() patientLName: string;
 
   constructor() { }
 

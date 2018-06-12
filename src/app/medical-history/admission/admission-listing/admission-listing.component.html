@@ -1,0 +1,7 @@
+<accordion class="center">
+  <app-admission-item-small
+  *ngFor="let admission of admissions" 
+  [admission]="admission"
+  [index]="admissions.indexOf(admission)">
+  </app-admission-item-small>
+</accordion>

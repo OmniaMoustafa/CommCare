@@ -1,0 +1,7 @@
+<accordion class="center">
+    <app-consultation-item-small
+    *ngFor="let consultation of consultations" 
+    [consultation]="consultation"
+    [index]="consultations.indexOf(consultation)">
+  </app-consultation-item-small>
+  </accordion>

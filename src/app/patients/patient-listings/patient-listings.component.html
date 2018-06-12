@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <form id="propertiesForm" action="demo-real-estate-properties.html" method="POST">
+        <div class="form-row filter-patient">
+          <div class="col-md-12">
+              <div class="input-container">
+                <div  class="icon"><img src="./assets/img/search.png"/></div>
+                  <input class="input-field" type="text" [(ngModel)]='listFilter' placeholder="Search Patients.." name="patientName">
+                </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row patients-block">
+        <app-patient-item-small *ngFor="let patient of filteredPatients" [patient]="patient" [patientIndex]="patients.indexOf(patient)"></app-patient-item-small>
+      </div>
+
+    </div>
+  </div>
+</div>
