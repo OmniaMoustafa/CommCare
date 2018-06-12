@@ -1,0 +1,193 @@
+
+/* _________________________________header-bar____________________________________- */
+.header-bar-dr{
+    background-color: #008fe2;
+    min-height: 57px;
+    width: 100%;
+    margin-top: -26px;
+    position: fixed;
+    z-index: 1001;
+}
+.header-bar-dr .pages-path div{
+    
+        margin-left: 20px;
+        font-size: 21px;
+        color:#2b2a2a;
+        font-weight: bold;
+        padding-top: 13px;
+        cursor: pointer
+    } 
+    .header-bar-dr .pages-path div:hover{
+      color: #eee;
+    }
+     .header-bar-dr .pages-path div span {
+        font-size: 15px;
+        color: #eee;
+        padding-left: 20px;
+     cursor: pointer;
+    }
+    .img-profile{
+        margin-right: -10px;
+       padding-bottom: 5px;
+      
+    }
+    .downarrow-menu{
+      padding-left: -10px;
+      margin-left: -10px;
+      position: relative;
+      top: 3px;
+    }
+    
+      .var-page{
+      color: #2b2a2a !important;
+      font-weight: bold;
+      margin-left: -18px;
+     }
+     .logo-for-dr span a {
+       color:#eee;
+     }
+    .dropdown-menu{
+        margin-left: 15px;
+        width: 93%;
+        border-top: 5px solid #08c;
+        
+    }
+    .right{
+        margin-right: -636px;
+    }
+/*     
+    .badgee{
+    background-color: #eee;
+    border-radius: 50%;
+    padding: 0px 2px;
+    margin-left: -10px;
+    position: relative;
+    margin-left: -12px;
+    top: -9px;
+    } */
+    .search-header input{
+      width: 20%;
+    }
+    .search-header input:hover{
+    width: 35%;
+    }
+    
+
+
+    menu {
+        position: fixed;
+        top: 134px;
+        left: 0;
+        height: 100vh;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      /*    outline: 2px solid #262f3c;*/
+          border-radius: 10px;
+      }
+      .menu li a{
+          display:block;
+          height:3.5em;
+          width:6em;
+          text-indent:-500em;
+          line-height:5em;
+          text-align:center;
+          color: #fff3f5;
+          background: #008fe2;
+          position: relative;
+          /* border-bottom: 1px solid #ffe2e3; */
+          transition: background 0.3s ease-in-out;
+      }
+      /*#1d2654*/
+      .menu li a:before {
+        font-family: FontAwesome;
+        /* speak: none; */
+        text-indent: 0em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 1.4em;
+      }
+      .menu li a:hover{
+        background: #a7a8ad;
+        color: #fff;
+      }
+      .menu li.current a {
+        background: #ff5e5e;
+        color: #fff;
+      }
+      .menu li a.active {
+        background: #8e8f94;
+        color: #fff3f5;
+      }
+      .menu li a.active:after{
+          position:absolute;
+          left:5em;
+          top:0;
+          content:"";
+          border:2.5em solid transparent;
+          border-left-color:#8e8f94;
+          border-width: 2.5em 1em
+      }
+      .menu li{
+          position:relative;
+      }
+      .menu li:after{
+          content: attr(title);
+          position:absolute;
+          left:5em;
+          top:0;
+          width:14em;
+          height:3.5em;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          text-transform:uppercase;
+          background:#8e8f94;
+          color: #fff3f5;
+          padding:0.8em 2em;
+          transition: all 0.3s ease-in-out;
+          visibility:hidden;
+          opacity:0;
+          font-weight: 700;
+      }
+      .menu li:hover:after{
+          visibility:visible;
+          opacity:1;
+      }
+      @media screen and (max-height: 34em){
+        .menu li{
+          font-size:70%;
+        }
+          
+      }
+    
+      .menu li a.dashboard:before {
+        content: "\f015";
+      }
+      .menu li a.doctors:before {
+        content: "\f0f0";
+      }
+      .menu li a.patients:before {
+        content: "\f0c0";
+      }
+      .menu li a.add-prescription:before {
+        content: "\f14b";
+      }
+      .menu li a.schedule:before {
+        content: "\f073";
+      }
+      .menu li a.appointment:before {
+        content: "\f017";
+      }
+      .menu li a.messages:before {
+        content: "\f1d7";
+      }
+      
+      .menu li a.reports:before {
+        content: "\f0f6";
+      }
+ 
+      

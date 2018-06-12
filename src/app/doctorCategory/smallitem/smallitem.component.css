@@ -1,0 +1,12 @@
+.doctorcategory{
+    width: 228px;
+    height: 126px;
+    background-color: rgb(49, 146, 238);
+}
+ a{
+    color:#fff;
+    font-size: 24px;
+    padding-left: 55px;
+    line-height: 127px;
+    cursor: pointer;
+}

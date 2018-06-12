@@ -1,0 +1,56 @@
+/* ________________________________--prescription page ________________________*/
+.presc-word{
+    margin-top: 50px;
+    /* margin-left: -50px; */
+    font-weight: bold;
+    color: rgb(26, 129, 224);
+    text-align: center;
+}
+  .presc-form{
+      margin-top: 50px;
+      outline: 2px solid #eee;
+      outline-offset: 10px;
+  }
+  
+  .edit-medicine i{
+      padding-right: 10px;
+  }
+  .doct-block{
+      margin-left: -50px;
+  }
+  ul.portfolio-list .portfolio-item{
+      width: 120%;
+      padding-right: 38px;
+     
+  }
+.team .thumb-info .thumb-info-caption{
+  height: 140px;
+}
+  .header-search{
+      width: 50%;
+  }
+  .searchinpt{
+      margin-left: 120px;
+      margin-top: 60px;
+  }
+  .searchinpt2{
+    margin-left: 690px;
+    margin-top: 70px;
+    margin-bottom: -50px;
+   
+  }
+  .searchinpt2 input{
+    border-radius: 10px;
+  }
+  .sbmit-btn{
+    margin-top: 50px;
+    margin-left: 340px;
+    padding: 8px 100px;
+}
+  .searchinpt input{
+
+    border-radius: 10px;
+}
+.heading-word-dr{
+      margin-top: 50px;
+  }

@@ -1,0 +1,10 @@
+.image {
+    height:500px;
+    background-image: url("../../../assets/img/hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+ p.lheight{
+    line-height:1.2;
+}

@@ -1,0 +1,23 @@
+.dropdownoption{
+    margin: 20px 10px;
+}
+.dropdownoption label{
+padding-right: 10px;
+font-size: 20px;
+padding-top: 10px;
+}
+ .inpts{
+
+    width:55%;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgb(200, 200, 200);
+}
+button{
+    margin-top: 38px;
+    padding: 13px 20px;
+    width: 31%;
+    border-radius: 10px;
+    margin-left: 516px;
+    font-size: 19px;
+}

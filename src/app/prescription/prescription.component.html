@@ -1,0 +1,136 @@
+<div class="col-md-8">
+  <h3 class="presc-word"> ADD PRESCRIPTION</h3>
+
+  <form class="form-horizontal presc-form" method="get">
+    <div class="form-group">
+      <br>
+      <br>
+      <label class="col-md-3 control-label" for="inputDefault">Patient Name : </label>
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="inputDefault">
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="doctorname"> Doctor Name : </label>
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="doctorname">
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="presctriptiondate"> Prescription Date : </label>
+      <div class="col-md-6">
+        <input type="date" class="form-control" id="presctriptiondate">
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="place"> Place : </label>
+      <div class="col-md-6">
+        <select class="form-control" id="place">
+          <option>haram hospital</option>
+          <option> abc clinic </option>
+        </select>
+      </div>
+
+
+    </div>
+
+    <div #asd id="medicine-addedonce">
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="medcine"> Medicine Name : </label>
+        <div class="col-md-6">
+          <select class="form-control" id="medcine">
+            <option> tricitn </option>
+            <option> panadol </option>
+          </select>
+        </div>
+        <div class="edit-medicine">
+          <a href="#" class="on-default edit-row" id="edit-row" (click)="onPlusClick(asd)">
+            <i class="fa fa-plus"></i>
+          </a>
+          <a href="#" class="on-default remove-row" id="remove-row">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="checkbox">
+        <label class="col-md-3 control-label">
+          <input type="checkbox" value=""> Morning </label>
+        <label class="radio-inline rdio">
+          <input type="radio" name="optradio">
+          <span class="word-radio">Before Food</span>
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">After Food</label>
+        <div class="col-md-1">
+          <select class="form-control" id="medcine">
+            <option> 1 </option>
+            <option> 2 </option>
+          </select>
+        </div>
+      </div>
+      <div class="checkbox">
+        <label class="col-md-3 control-label">
+          <input type="checkbox" value=""> AfterNoon </label>
+        <label class="radio-inline rdio">
+          <input type="radio" name="optradioo">
+          <span class="word-radio"> Before Food</span>
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradioo"> After Food</label>
+
+        <div class="col-md-1">
+          <select class="form-control" id="medcine">
+            <option> 1 </option>
+            <option> 2 </option>
+          </select>
+        </div>
+      </div>
+      <div class="checkbox">
+        <label class="col-md-3 control-label">
+          <input type="checkbox" value=""> Evening </label>
+
+
+        <label class="radio-inline rdio">
+          <input type="radio" name="optaradio">
+          <span class="word-radio">Before Food</span>
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optaradio">After Food</label>
+        <div class="col-md-1">
+          <select class="form-control" id="medcine">
+            <option> 1 </option>
+            <option> 2 </option>
+          </select>
+        </div>
+
+      </div>
+
+
+      <br>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="textareaDefault">Comment : </label>
+        <div class="col-md-6">
+          <textarea class="form-control" rows="3" id="textareaDefault"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <input type="submit" class=" btn btn-primary sbmit-btn" value="Save" />
+
+
+
+
+
+
+  </form>
+
+</div>

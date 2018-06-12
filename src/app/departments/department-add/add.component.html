@@ -1,0 +1,50 @@
+<div class="row pt-lg mb-lg pb-xl">
+  <div class="col-md-1"></div>
+  <div class="col-md-6">
+    <div class="row">
+      <h4 class="font-weight-semibold mb-xlg">Add the department information : </h4>
+    </div>
+    <form method="post" (ngSubmit)="OnAdd(MyForm)" #MyForm=ngForm>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #dname=ngModel [(ngModel)]="dept.name" name="dname" type="text" placeholder="The Department Name" value="" data-msg-required="Please enter your name." maxlength="100"
+              class="form-control"  id="name" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #dBDesc=ngModel [(ngModel)]="dept.briefDesc" name="dBDesc" type="text" placeholder="Brief Description" value="" data-msg-required="Please enter the subject." maxlength="100"
+              class="form-control"  id="subject" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #dDDesc=ngModel [(ngModel)]="dept.detailedDesc" name="dDDesc" maxlength="5000" placeholder="Detailed Description" data-msg-required="Please enter your message." rows="5" class="form-control"
+               id="message" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #dPhoto=ngModel [(ngModel)]="dept.photo" name="dPhoto" type="file" placeholder="The Department Photo" value="" data-msg-required="Please enter the subject." maxlength="100"
+              class="form-control"  id="subject" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" value="Add" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading..."> &nbsp;
+          <input type="button" value="Cancel" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="col-md-5"></div>
+</div>

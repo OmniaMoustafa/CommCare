@@ -1,0 +1,27 @@
+#header
+{
+    position: relative;
+    z-index: 0;
+}
+#header .header-body
+{
+    position: static;
+    min-height: 0px;
+    border: none;
+    box-shadow: none;
+}
+.add-icon
+{
+    font-size: 25px;
+    cursor: pointer;
+}
+.add-span
+{
+    float: right;
+    margin-top: 16px;
+    margin-right: 10px;
+}
+.search-box
+{
+    margin-right: 30px;
+}

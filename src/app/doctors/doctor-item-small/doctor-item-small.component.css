@@ -1,0 +1,19 @@
+.doc-card{
+    height: 0;
+    float: left;
+}
+.docdetails{
+    margin-top:40px;
+    display: table;
+    /* transition: all ease 0.7s; */
+}
+.docdetails img{
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.card{
+    transition: all ease-in 0.7s;
+}
+.car:hover{
+    transform: scale(1.1);
+}
