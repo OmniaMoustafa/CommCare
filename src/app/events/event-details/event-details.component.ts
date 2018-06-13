@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EventDetailsComponent implements OnInit {
   eventIndex: number;
   event: Ievents;
-  eventedit:boolean=false;
+  editMode:boolean=false;
   constructor(private eventService:EventsService,private activeLink:ActivatedRoute) { }
 
   ngOnInit() {

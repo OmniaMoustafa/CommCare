@@ -18,6 +18,7 @@ import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
+import { EventListingComponent } from '../events/event-listing/event-listing.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { DoctorsComponent } from './doctors.component';
         {path:'prescription', component:PrescriptionComponent} ,
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'calendar/edit',component:EditCalendarComponent},
+        {path:'events',component:EventListingComponent}
       ]},
     ])
   ],
