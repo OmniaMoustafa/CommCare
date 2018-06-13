@@ -8,8 +8,6 @@ import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.compo
 import { FullCalendarModule } from 'ng-fullcalendar';
 import { CalendarService } from "../shared/services/CalendarService/calendar.service";
 import { RouterModule, Routes } from '@angular/router';
-import { PrescriptionComponent } from '../prescription/prescription.component';
-import { PrescriptionModule } from '../prescription/prescription.module';
 import { Component } from '@angular/core/src/metadata/directives';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { FormsModule } from '@angular/forms';
@@ -19,12 +17,11 @@ import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
-
+import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component;
 @NgModule({
   imports: [
     CommonModule,
     FullCalendarModule,
-    PrescriptionModule,
     DoctorCategoryModule,
     CalendarUtilsModule,
     FormsModule,
@@ -36,9 +33,9 @@ import { EventListingComponent } from '../events/event-listing/event-listing.com
 
         {path: "doctorProfile/:id" ,component:DoctorsComponent,children :[
         {path:'', component: DoctorDetailsComponent },
-        {path:'ddoctors', redirectTo:"/doctorListing" ,pathMatch:'full'},
+        {path:'Listing', component:DoctorListingsComponent},
         {path:'add',component:DoctorAddComponent},
-        {path:'prescription', component:PrescriptionComponent} ,
+        {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'calendar/edit',component:EditCalendarComponent},
         {path:'events',component:EventListingComponent}
@@ -54,8 +51,9 @@ import { EventListingComponent } from '../events/event-listing/event-listing.com
       DoctorAddComponent,
       DoctorItemSmallComponent,
       DoctorCalendarComponent,
-      EditCalendarComponent
-    ],
+      EditCalendarComponent,
+      DoctorPrescriptionComponent
+],
 
  exports:[
   DoctorsComponent,

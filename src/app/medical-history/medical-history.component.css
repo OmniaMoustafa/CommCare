@@ -1,0 +1,24 @@
+.container{
+    width: 100%;
+}
+
+ul li a{
+    font-size: 12px;
+    padding: 16px;
+}
+ul li a:hover{
+    border-bottom: 3px solid #eee;
+    font-size: 12px;
+    padding: 16px;
+}
+ul li a:active{
+    border-bottom: 3px solid #eee;
+    font-size: 12px;
+    padding: 16px;
+}
+ul li a:focus{
+    border-bottom: 3px solid #eee;
+    font-size: 12px;
+    padding: 16px;
+}
+

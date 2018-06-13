@@ -1,0 +1,7 @@
+<accordion class="center">
+  <app-physician-sheet-item-small
+  *ngFor="let physician of physicians" 
+  [physician]="physician"
+  [index]="physicians.indexOf(physician)">
+  </app-physician-sheet-item-small>
+</accordion>
