@@ -1,20 +1,23 @@
 .filter{
     background-color: #eee;
     display: inline-block;
-    padding: 20px 5px;
+    padding: 30px 35px;
+    height: 126px;
 }
 .part{
     width: 300px;
 }
 .filter h3{
     color:#337ab7;
+    padding-bottom: 22px;
 }
 input[type="submit"]{
-    margin-left: -40px;
+    margin-left: 0px;
     margin-top: -2px;
     padding: 5px;
 }
 .inpts{
     width: 130px;
     height: 30px;
+    margin-right: 30px;
 }
