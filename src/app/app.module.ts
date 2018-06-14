@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HospitalHomeModule } from './hospital-home/hospital-home.module';
 import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
 import { CalendarService } from './shared/services/CalendarService/calendar.service';
+import { HospitalService } from './shared/services/hospital.service';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { CalendarService } from './shared/services/CalendarService/calendar.serv
   
    ],
 
-  providers: [DepartmentService, Doctorservice,CalendarService],
+  providers: [DepartmentService, Doctorservice,CalendarService,HospitalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
