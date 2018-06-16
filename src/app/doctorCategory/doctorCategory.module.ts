@@ -23,6 +23,7 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 ],
   exports:[
     DoctorCategoryComponent,
+    FilterDoctorsComponent,
     RouterModule
   ]
 

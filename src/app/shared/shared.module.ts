@@ -16,20 +16,20 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
     DepartmentsModule,
     DoctorsModule,
     RouterModule.forChild([
-      {path:'contactUs', component: ContactUsComponent},
-      {path:'login', component: HospitalLoginComponent}
+      {path: 'contactUs', component: ContactUsComponent},
+      {path: 'login', component: HospitalLoginComponent}
     ])
   ],
   declarations: [
     MenuComponent,
-    HospitalHeaderComponent, 
+    HospitalHeaderComponent,
     HospitalFooterComponent,
     ContactUsComponent   ,
-    HospitalLoginComponent 
+    HospitalLoginComponent
 ],
 exports:
 [
-  HospitalHeaderComponent, 
+  HospitalHeaderComponent,
   HospitalFooterComponent,
 ]
 })

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-
+    <!-- المفروض تظهر عند الدكتور -->
     <div class="col-md-2">
       <section class="menu-side">
         <ul class="menu">
@@ -9,16 +9,16 @@
             <a routerLink="/doctorProfile/{{doctor.id}}" class=" active dashboard"> Profile</a>
           </li>
           <li title="Doctors">
-            <a routerLink="/doctorProfile/{{doctor.id}}/ddoctors" class="doctors">Doctors</a>
+            <a routerLink="/doctorProfile/{{doctor.id}}/Listing" class="doctors">Doctors</a>
           </li>
           <li title="Patients">
             <a routerLink="/" class="patients">Patients</a>
           </li>
           <li title="Add-Prescription">
-            <a routerLink="/prescription" class=" add-prescription">Add-prescription</a>
+            <a routerLink="/doctorProfile/{{doctor.id}}/WritePrescription" class=" add-prescription">Add-prescription</a>
           </li>
           <li title="events">
-            <a routerLink="/" class="schedule">Events</a>
+            <a routerLink="/events" class="schedule">Events</a>
           </li>
           <li title="Appointment">
             <a routerLink="/doctorProfile/{{doctor.id}}/calendar" class="appointment">Schedule</a>
@@ -26,17 +26,13 @@
           <li title="Messages">
             <a routerLink="/" class="messages">Messages</a>
           </li>
-          <!-- <li title="Reports">
-              <a href="#" class="reports">Reports</a>
-            </li> -->
 
         </ul>
 
       </section>
   
     </div>
-    <div class="col-md-9">
-      
+    <div class="col-md-9">   
       <router-outlet></router-outlet>
     </div>
   

@@ -1,0 +1,7 @@
+<accordion class="center">
+  <app-initial-physician-assesment-item-small 
+  *ngFor="let InitialPhysicianAssesment of InitialPhysicianAssesments" 
+  [InitialPhysicianAssesment]="InitialPhysicianAssesment"
+  [index]="InitialPhysicianAssesments.indexOf(InitialPhysicianAssesment)">
+  </app-initial-physician-assesment-item-small>
+</accordion>
