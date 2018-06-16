@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HospitalHomeModule } from './hospital-home/hospital-home.module';
 import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
 import { CalendarService } from './shared/services/CalendarService/calendar.service';
+import { HospitalService } from './shared/services/hospital.service';
 import { RouterModule } from '@angular/router';
 import { PatientsModule } from './patients/patients.module';
 import { MedicalHistoryModule } from './medical-history/medical-history.module';
@@ -27,6 +28,7 @@ import { InitialPhysicianAssesmentService } from './shared/services/MedicalHisto
 import { AdmissionService } from './shared/services/MedicalHistoryService/admission.service';
 import { ConsultationService } from './shared/services/MedicalHistoryService/consultation.service';
 import { PhysicianService } from './shared/services/MedicalHistoryService/physician.service';
+
 
 
 @NgModule({
@@ -57,8 +59,10 @@ import { PhysicianService } from './shared/services/MedicalHistoryService/physic
     InitialPhysicianAssesmentService,
     AdmissionService,
     ConsultationService,
-    PhysicianService
+    PhysicianService,
+    HospitalService
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
