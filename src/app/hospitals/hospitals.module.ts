@@ -12,7 +12,7 @@ import { HospitalAddComponent } from './hospital-add/hospital-add.component';
   ],
   declarations: [HospitalitemComponent, HospitalListingComponent, HospitalDetailsComponent, HospitalsComponent, HospitalAddComponent],
   exports:[
-    
+    HospitalListingComponent
   ]
 })
 export class HospitalsModule { }

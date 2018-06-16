@@ -27,6 +27,7 @@ import { InitialPhysicianAssesmentService } from './shared/services/MedicalHisto
 import { AdmissionService } from './shared/services/MedicalHistoryService/admission.service';
 import { ConsultationService } from './shared/services/MedicalHistoryService/consultation.service';
 import { PhysicianService } from './shared/services/MedicalHistoryService/physician.service';
+import { SystemHomeModule } from './system-home/system-home.module';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { PhysicianService } from './shared/services/MedicalHistoryService/physic
     HospitalHomeModule,
     DoctorCategoryModule,
     PatientsModule,
+    SystemHomeModule,
     MedicalHistoryModule
    ],
 

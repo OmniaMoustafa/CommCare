@@ -17,7 +17,7 @@ import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
-import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component;
+import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -58,6 +58,11 @@ import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescr
  exports:[
   DoctorsComponent,
   DoctorCalendarComponent,
+  DoctorListingsComponent,
+  DoctorAddComponent,
+  DoctorItemSmallComponent,
+  DoctorCalendarComponent,
+  EditCalendarComponent,
   RouterModule
 ],
 providers:
