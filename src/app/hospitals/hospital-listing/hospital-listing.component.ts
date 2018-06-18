@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ihospital } from '../../shared/interfaces/ihospital';
-import { HospitalService } from '../../shared/services/hospital.service';
+// import { HospitalService } from '../../shared/services/hospital.service';
 
 @Component({
   selector: 'app-hospital-listing',
@@ -8,13 +8,13 @@ import { HospitalService } from '../../shared/services/hospital.service';
   styleUrls: ['./hospital-listing.component.css']
 })
 export class HospitalListingComponent implements OnInit {
-  public hospitals: Ihospital[];
-  constructor(private hospitalservice : HospitalService) {
-    this.hospitals = []
+  // public hospitals: Ihospital[];
+  constructor() {
+    // this.hospitals = []
   }
 
   ngOnInit() {
-    this.hospitals=this.hospitalservice.getAll();
+    // this.hospitals=this.hospitalservice.getAll();
   }
 
 }

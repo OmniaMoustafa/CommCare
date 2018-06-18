@@ -12,7 +12,7 @@ export class HospitalService{
                 name:'El Gala',
                 address:'1050 S Medical Dr (500 W) Brigham CityUT',
                 phone:234985545689,
-                photo:'../../../assets/img/hospital1.jpg',
+                photo:'../../../assets/img/hos1.jpg',
                 hours:'08 am :08 pm',
                 description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
             },
@@ -21,7 +21,7 @@ export class HospitalService{
                 name:'El Demerdash',
                 address:'500 N Medical Dr (500 W) New York',
                 phone:31180938976,
-                photo:'../../../assets/img/hospital2.jpg',
+                photo:'../../../assets/img/hos4.jpg',
                 hours:'12 am : 12 pm',
                 description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
             },
@@ -30,7 +30,7 @@ export class HospitalService{
                 name:'Air Force',
                 address:'1320 S Medical Dr (500 W) NewCairo',
                 phone:45682739898,
-                photo:'../../../assets/img/hospital3.jpg',
+                photo:'../../../assets/img/hos10.jpg',
                 hours:'10 am :12 pm',
                 description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
             },
@@ -39,7 +39,7 @@ export class HospitalService{
                 name:'El Salam',
                 address:'1320 S Medical Dr (500 W) NewCairo',
                 phone:45682739898,
-                photo:'../../../assets/img/hospital4.jpg',
+                photo:'../../../assets/img/hos11.jpg',
                 hours:'10 am :12 pm',
                 description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
             }
@@ -48,5 +48,14 @@ export class HospitalService{
 
     public getAll():Ihospital[] {
         return this.hospitals
+    }
+    public getById(id:number):Ihospital{
+        const i=this.hospitals.findIndex(b=>b.id == id);
+        return this.hospitals[i];
+    }
+    public add(dept: Ihospital) {
+        
+        this.hospitals.push(dept);
+        console.log(this.hospitals);
     }
 }
