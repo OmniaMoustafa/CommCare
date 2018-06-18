@@ -10,6 +10,14 @@
     border: none;
     box-shadow: none;
 }
+#header .header-column
+{
+    float: right;
+}
+.search-icon
+{
+    margin-right: 32px;
+}
 .add-icon
 {
     font-size: 25px;
