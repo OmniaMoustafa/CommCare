@@ -1,6 +1,7 @@
 <div class="body">
     <div role="main" class="main">
         <div class="image">
+            <!-- <img src="{{hospitalDetails.photo}}" alt=""> -->
         </div>
         <!-- Map BLock -->
         <div class="home-intro light">
@@ -18,11 +19,11 @@
                         <br />
                     </div>
                     <div class="col-md-3">
-                        <h2 style=" line-height:0.6">El Gala</h2>
+                        <h2 style=" line-height:0.6">{{hospitalDetails.name}}</h2>
                         <p style="font-size: 1em">
-                            <i class="fa fa-map-marker"></i> 1050 S Medical Dr (500 W) Brigham CityUT
+                            <i class="fa fa-map-marker"></i> {{hospitalDetails.address}}
                             <br>
-                            <i class="fa fa-phone"></i> 84302 435-695-2700
+                            <i class="fa fa-phone"></i> {{hospitalDetails.phone}}
                         </p>
                     </div>
                     <div class="col-md-3">
@@ -47,11 +48,10 @@
                     <h1 class="word-rotator-title mb-sm">
                         About
 
-                        <b>Abo El Reesh</b> hospital
+                        <b>{{hospitalDetails.name}}</b> hospital
                     </h1>
                     <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit
-                        arcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.
+                        {{hospitalDetails.description}}
                     </p>
                 </div>
             </div>
