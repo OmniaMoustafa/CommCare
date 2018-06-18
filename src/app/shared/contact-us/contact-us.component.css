@@ -1,0 +1,22 @@
+.form-group
+{
+    width: 100%;
+}
+h2{
+    text-align: center;
+    padding: 25px 0 15px;
+}
+input 
+{
+    border-radius: 15px;
+    height: 45px;
+}
+textarea
+{
+    border-radius: 15px;
+}
+label
+{
+    font-weight: bold;
+    margin-bottom: 13px;
+}
