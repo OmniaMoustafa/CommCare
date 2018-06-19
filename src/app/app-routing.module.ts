@@ -6,6 +6,7 @@ import { HospitalHomeModule } from 'src/app/hospital-home/hospital-home.module';
 import { DepartmentsModule } from './departments/departments.module';
 import { DoctorsModule } from 'src/app/doctors/doctors.module';
 import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
+import { HospitalsModule } from 'src/app/hospitals/hospitals.module';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.compo
     HospitalHomeModule,
     DepartmentsModule,
     DoctorsModule,
+    HospitalsModule,
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'}
