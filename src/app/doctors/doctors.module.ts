@@ -58,6 +58,11 @@ import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescr
  exports:[
   DoctorsComponent,
   DoctorCalendarComponent,
+  DoctorListingsComponent,
+  DoctorAddComponent,
+  DoctorItemSmallComponent,
+  DoctorCalendarComponent,
+  EditCalendarComponent,
   RouterModule
 ],
 providers:

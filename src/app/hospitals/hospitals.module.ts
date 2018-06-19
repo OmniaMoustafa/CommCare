@@ -20,7 +20,9 @@ import { FormsModule } from '@angular/forms';
   ],
   declarations: [HospitalitemComponent, HospitalListingComponent, HospitalDetailsComponent, HospitalsComponent, HospitalAddComponent],
   exports:[
+    HospitalListingComponent,
     RouterModule
+
   ]
 })
 export class HospitalsModule {}
