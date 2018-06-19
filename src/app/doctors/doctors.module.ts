@@ -19,6 +19,7 @@ import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
 import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
 import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -60,6 +61,11 @@ import { AppointmentDetailsSmallComponent } from '../appointments/appointment-de
  exports:[
   DoctorsComponent,
   DoctorCalendarComponent,
+  DoctorListingsComponent,
+  DoctorAddComponent,
+  DoctorItemSmallComponent,
+  DoctorCalendarComponent,
+  EditCalendarComponent,
   RouterModule
 ],
 providers:

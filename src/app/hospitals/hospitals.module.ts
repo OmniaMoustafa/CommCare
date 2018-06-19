@@ -5,14 +5,24 @@ import { HospitalListingComponent } from './hospital-listing/hospital-listing.co
 import { HospitalDetailsComponent } from './hospital-details/hospital-details.component';
 import { HospitalsComponent } from './hospitals.component';
 import { HospitalAddComponent } from './hospital-add/hospital-add.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild([
+      {path:'hospitals/viewAll',component:HospitalListingComponent},
+      {path:'details/:id',component:HospitalDetailsComponent},
+      {path:'hospital/add',component:HospitalAddComponent},
+      
+    ])
   ],
   declarations: [HospitalitemComponent, HospitalListingComponent, HospitalDetailsComponent, HospitalsComponent, HospitalAddComponent],
   exports:[
-    
+    HospitalListingComponent,
+    RouterModule
+
   ]
 })
-export class HospitalsModule { }
+export class HospitalsModule {}

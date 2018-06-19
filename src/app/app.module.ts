@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HospitalHomeModule } from './hospital-home/hospital-home.module';
 import { DoctorCategoryModule } from './doctorCategory/doctorCategory.module';
 import { CalendarService } from './shared/services/CalendarService/calendar.service';
+import { HospitalService } from './shared/services/hospital.service';
 import { RouterModule } from '@angular/router';
 import { PatientsModule } from './patients/patients.module';
 import { MedicalHistoryModule } from './medical-history/medical-history.module';
@@ -29,6 +30,15 @@ import { ConsultationService } from './shared/services/MedicalHistoryService/con
 import { PhysicianService } from './shared/services/MedicalHistoryService/physician.service';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentsModule } from './appointments/appointments.module';
+
+import { SystemHomeModule } from './system-home/system-home.module';
+
+
+import { HospitalsModule } from './hospitals/hospitals.module';
+
+
+
+
 
 
 @NgModule({
@@ -47,8 +57,18 @@ import { AppointmentsModule } from './appointments/appointments.module';
     HospitalHomeModule,
     DoctorCategoryModule,
     PatientsModule,
+
     MedicalHistoryModule,
     AppointmentsModule
+    SystemHomeModule,
+    AppointmentModule,
+    MedicalHistoryModule,
+    MedicalHistoryModule,
+
+    MedicalHistoryModule,
+    HospitalsModule
+
+
    ],
 
   providers: [
@@ -60,8 +80,10 @@ import { AppointmentsModule } from './appointments/appointments.module';
     InitialPhysicianAssesmentService,
     AdmissionService,
     ConsultationService,
-    PhysicianService
+    PhysicianService,
+    HospitalService
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
