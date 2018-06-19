@@ -12,7 +12,7 @@ export class PatientService {
         gender: 'female',
         phone: '01142664848',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient1.jpg',
     },
     {
         firstName: 'Sara',
@@ -22,7 +22,7 @@ export class PatientService {
         gender: 'female',
         phone: '01185758948',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient3.jpg',
     },
     {
         firstName: 'Omnia',
@@ -32,7 +32,7 @@ export class PatientService {
         gender: 'female',
         phone: '011985779003',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient4.jpg',
     },
     {
         firstName: 'Omnia',
@@ -42,7 +42,7 @@ export class PatientService {
         gender: 'female',
         phone: '01198654337',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient2.jpg',
     },
 ];
 

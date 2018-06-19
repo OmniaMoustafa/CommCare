@@ -8,14 +8,17 @@ import { Idoctor } from '../../shared/interfaces/idoctor';
 })
 export class FilterDoctorsComponent implements OnInit {
 
-  // filteredDoctors:Idoctor[];
-  // _doctorname: string;
-  // _cityname:string;
-  // _specialist:string;
 
   constructor() { }
 
   ngOnInit() {
+    
   }
-
+public onFilter(doctorname, specialistname,cityname)
+{
+  
+  console.log(doctorname.value);
+  console.log(specialistname.value);
+  console.log(cityname.value);
+}
 }

@@ -11,21 +11,21 @@ export class Doctorservice{
                 id:1,
                 speciality:'dentist doctor',
                 detailedDesc:'it is a detailed description about caradiology',
-                photo:'../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png'
+                photo:'../../../assets/img/doct2.jpg'
             },
             {
                 id:2,
                 name:'sara hossam',
                 speciality:'dentist doctor',
                 detailedDesc:'it is a detailed description about dental',
-                photo:'../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png' 
+                photo:'../../../assets/img/detail.jpg' 
             },
             {
                 id:3,
                 name:'dina',
                 speciality:'batna doctor',
                 detailedDesc:'it is a detailed description about nutrition',
-                photo:'../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png'  
+                photo:'../../../assets/img/doctor1.jpg'  
             }
            
         ];
@@ -50,4 +50,11 @@ export class Doctorservice{
         return i;
       }
 
+      public filterDoctors(doctorname:string,specialityname:string ):Idoctor[]
+      {
+         const ii=this.doctors.filter(a=>a.name.replace(/\s/g,'')== doctorname 
+        || a.speciality.replace(/\s/g,'')== specialityname)
+        console.log(ii);
+        return ii;
+        }
 }

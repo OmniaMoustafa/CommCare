@@ -23,6 +23,10 @@ export class DoctorListingsComponent implements OnInit {
     if (this.category.categoryname) {
       this.doctors = this.docservice.getBySpeciality(this.category.categoryname);
     }
+  //   else if(this.doctors.do)
+  //   {
+  // this.doctors=this.docservice.filterDoctors(this.doctors.doctorname)
+  //   }
     else {
       this.doctors = this.docservice.getAll();
     }
