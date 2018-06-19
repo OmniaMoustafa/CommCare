@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Idoctor } from '../../shared/interfaces/idoctor';
+import { Doctorservice } from '../../shared/services/doctor.service';
 
 @Component({
   selector: 'app-filterDoctors',
@@ -9,13 +10,16 @@ import { Idoctor } from '../../shared/interfaces/idoctor';
 export class FilterDoctorsComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private docservice:Doctorservice) {
+    
+   }
 
   ngOnInit() {
     
   }
 public onFilter(doctorname, specialistname,cityname)
 {
+   
   
   console.log(doctorname.value);
   console.log(specialistname.value);
