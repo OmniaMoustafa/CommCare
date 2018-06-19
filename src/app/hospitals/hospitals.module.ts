@@ -6,10 +6,11 @@ import { HospitalDetailsComponent } from './hospital-details/hospital-details.co
 import { HospitalsComponent } from './hospitals.component';
 import { HospitalAddComponent } from './hospital-add/hospital-add.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
       {path:'hospitals/viewAll',component:HospitalListingComponent},
       {path:'details/:id',component:HospitalDetailsComponent},
@@ -19,7 +20,9 @@ import { RouterModule, Routes } from '@angular/router';
   ],
   declarations: [HospitalitemComponent, HospitalListingComponent, HospitalDetailsComponent, HospitalsComponent, HospitalAddComponent],
   exports:[
-    
+    HospitalListingComponent,
+    RouterModule
+
   ]
 })
-export class HospitalsModule { }
+export class HospitalsModule {}

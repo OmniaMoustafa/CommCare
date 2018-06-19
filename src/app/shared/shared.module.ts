@@ -9,6 +9,7 @@ import { DepartmentsModule } from '../departments/departments.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DoctorsModule } from '../doctors/doctors.module';
 import { HospitalLoginComponent } from './hospital-login/hospital-login.component';
+import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,9 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
     DoctorsModule,
     RouterModule.forChild([
       {path: 'contactUs', component: ContactUsComponent},
-      {path: 'login', component: HospitalLoginComponent}
+      {path: 'login', component: HospitalLoginComponent},
+      {path: 'AboutUs', component: HospitalAboutUsComponent},
+      
     ])
   ],
   declarations: [
@@ -25,7 +28,8 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
     HospitalHeaderComponent,
     HospitalFooterComponent,
     ContactUsComponent   ,
-    HospitalLoginComponent
+    HospitalLoginComponent,
+    HospitalAboutUsComponent
 ],
 exports:
 [

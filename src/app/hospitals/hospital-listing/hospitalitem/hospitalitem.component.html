@@ -1,20 +1,20 @@
 <!-- HOSPITAL -->
-    <div class="col-sm-6 col-xs-12 col-md-3 col-lg-3 boxes">
+    <div *ngFor="let hos of hospitals" class="col-lg-3 col-md-3 col-sm-6 col-xs-12  boxes">
         <span class="thumb-info thumb-info-hide-wrapper-bg">
             <span class="thumb-info-wrapper">
-                <a routerLink="/details">
-                    <img src="{{hospital.photo}}" class="img-responsive" alt="" style="height: 170px;">
+                <a routerLink="/details/{{hos.id}}">
+                    <img src="{{hos.photo}}" class="img-responsive" alt="" style="height: 170px;">
                     <span class="thumb-info-title">
-                        <span class="thumb-info-inner">{{hospital.name}}</span>
+                        <span class="thumb-info-inner">{{hos.name}}</span>
                     </span>
                 </a>
             </span>
             <span class="thumb-info-caption">
                 <span class="thumb-info-caption-text">
-                    <b> {{hospital.address}}</b>
-                    <span>{{hospital.phone}}</span>
+                    <b> {{hos.address}}</b>
+                    <span>{{hos.phone}}</span>
                 </span>
-                <span class="thumb-info-caption-text" style="color:green">{{hospital.hours}}</span>
+                <span class="thumb-info-caption-text" style="color:green">{{hos.hours}}</span>
                 <span class="thumb-info-social-icons">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>

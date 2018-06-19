@@ -22,6 +22,8 @@ import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component'
 import { PatientListingsComponent } from '../patients/patient-listings/patient-listings.component';
 import { PatientsModule } from '../patients/patients.module';
 import { EventsModule } from '../events/events.module';
+import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -32,7 +34,7 @@ import { EventsModule } from '../events/events.module';
     PatientsModule,
     EventsModule,
     CalendarModule.forRoot(),
-     NgbModalModule.forRoot(),
+    NgbModalModule.forRoot(),
     RouterModule.forChild([
         {path:'doctors/:categoryname',component:DoctorListingsComponent},
         {path:'doctorListing',component:DoctorListingsComponent},
@@ -66,6 +68,11 @@ import { EventsModule } from '../events/events.module';
  exports:[
   DoctorsComponent,
   DoctorCalendarComponent,
+  DoctorListingsComponent,
+  DoctorAddComponent,
+  DoctorItemSmallComponent,
+  DoctorCalendarComponent,
+  EditCalendarComponent,
   RouterModule
 ],
 providers:
