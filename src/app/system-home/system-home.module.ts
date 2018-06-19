@@ -11,6 +11,7 @@ import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -23,6 +24,7 @@ import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
   declarations: [SystemHomeComponent,
     SliderComponent,
     PackedgesComponent
+
 ],
 exports:[
   SystemHomeComponent,
