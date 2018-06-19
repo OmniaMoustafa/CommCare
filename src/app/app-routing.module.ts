@@ -12,6 +12,7 @@ import { AcceptanceComponent } from './appointment/Acceptance/Acceptance.compone
 
     
 
+import { HospitalsModule } from 'src/app/hospitals/hospitals.module';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { AcceptanceComponent } from './appointment/Acceptance/Acceptance.compone
     HospitalHomeModule,
     DepartmentsModule,
     DoctorsModule,
+    HospitalsModule,
     RouterModule.forRoot([
       { path:'home', component: HospitalHomeComponent},
       {path:'systemHome' , component:SystemHomeComponent},
