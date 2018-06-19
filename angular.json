@@ -30,6 +30,8 @@
               "src/assets/vendor/owl.carousel/assets/owl.carousel.min.css",
               "src/assets/vendor/owl.carousel/assets/owl.theme.default.min.css",
               "src/assets/vendor/magnific-popup/magnific-popup.min.css",
+              "src/assets/vendor/rs-plugin/css/settings.css",
+              "src/assets/vendor/rs-plugin/css/navigation.css",
               "src/assets/css/theme.css",
               "src/assets/css/theme-elements.css",
               "src/assets/css/theme-blog.css",
@@ -38,6 +40,7 @@
               "src/assets/css/skins/default.css",
               "src/assets/css/skins/skin-medical.css",
               "src/assets/css/demos/demo-medical.css",
+              "src/assets/css/demos/demo-resume.css",
               "src/assets/css/custom.css",
               "src/styles.css"
 

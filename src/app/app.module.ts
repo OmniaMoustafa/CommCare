@@ -28,10 +28,14 @@ import { InitialPhysicianAssesmentService } from './shared/services/MedicalHisto
 import { AdmissionService } from './shared/services/MedicalHistoryService/admission.service';
 import { ConsultationService } from './shared/services/MedicalHistoryService/consultation.service';
 import { PhysicianService } from './shared/services/MedicalHistoryService/physician.service';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { AppointmentsModule } from './appointments/appointments.module';
+
 import { SystemHomeModule } from './system-home/system-home.module';
-import { AppointmentModule } from './appointment/appointment.module';
+
 
 import { HospitalsModule } from './hospitals/hospitals.module';
+
 
 
 
@@ -54,13 +58,15 @@ import { HospitalsModule } from './hospitals/hospitals.module';
     DoctorCategoryModule,
     PatientsModule,
 
+    MedicalHistoryModule,
+    AppointmentsModule,
     SystemHomeModule,
-    AppointmentModule,
     MedicalHistoryModule,
     MedicalHistoryModule,
 
     MedicalHistoryModule,
     HospitalsModule
+
 
    ],
 

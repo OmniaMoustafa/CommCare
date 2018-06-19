@@ -18,6 +18,8 @@ import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-cale
 import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
 import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
+import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescr
         {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'calendar/edit',component:EditCalendarComponent},
-        {path:'events',component:EventListingComponent}
+        {path:'events',component:EventListingComponent},
+        {path:'appointment',component:AppointmentDetailsSmallComponent}
       ]},
     ])
   ],
