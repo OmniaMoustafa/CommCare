@@ -1,0 +1,31 @@
+.form-group
+{
+    width: 100%;
+}
+input 
+{
+    border-radius: 15px;
+    height: 45px;
+    margin-bottom: 20px;
+}
+textarea
+{
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+h4{
+    margin: 25px;
+}
+label
+{
+    cursor: pointer;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 15px;
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+}
+input[type="file"] {
+    display: none;
+}
