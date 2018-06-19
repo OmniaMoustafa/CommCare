@@ -59,9 +59,8 @@ import { HospitalsModule } from './hospitals/hospitals.module';
     PatientsModule,
 
     MedicalHistoryModule,
-    AppointmentsModule
+    AppointmentsModule,
     SystemHomeModule,
-    AppointmentModule,
     MedicalHistoryModule,
     MedicalHistoryModule,
 
