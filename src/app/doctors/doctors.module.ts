@@ -16,7 +16,13 @@ import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
+import { EventListingComponent } from '../events/event-listing/event-listing.component';
 import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
+import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component';
+import { PatientListingsComponent } from '../patients/patient-listings/patient-listings.component';
+import { PatientsModule } from '../patients/patients.module';
+import { EventsModule } from '../events/events.module';
+import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
 
 @NgModule({
   imports: [
@@ -25,8 +31,10 @@ import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescr
     DoctorCategoryModule,
     CalendarUtilsModule,
     FormsModule,
+    PatientsModule,
+    EventsModule,
     CalendarModule.forRoot(),
-     NgbModalModule.forRoot(),
+    NgbModalModule.forRoot(),
     RouterModule.forChild([
         {path:'doctors/:categoryname',component:DoctorListingsComponent},
         {path:'doctorListing',component:DoctorListingsComponent},
@@ -38,6 +46,8 @@ import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescr
         {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'calendar/edit',component:EditCalendarComponent},
+        {path:'docevents',component:EventListingComponent},
+        {path:'docpatients',component:PatientListingsComponent}
       ]},
     ])
   ],
@@ -51,12 +61,18 @@ import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescr
       DoctorItemSmallComponent,
       DoctorCalendarComponent,
       EditCalendarComponent,
-      DoctorPrescriptionComponent
+      DoctorPrescriptionComponent,
+      FilterDoctorsComponent
 ],
 
  exports:[
   DoctorsComponent,
   DoctorCalendarComponent,
+  DoctorListingsComponent,
+  DoctorAddComponent,
+  DoctorItemSmallComponent,
+  DoctorCalendarComponent,
+  EditCalendarComponent,
   RouterModule
 ],
 providers:

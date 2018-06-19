@@ -12,7 +12,7 @@ export class PatientService {
         gender: 'female',
         phone: '01142664848',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient1.jpg',
     },
     {
         firstName: 'Sara',
@@ -22,7 +22,7 @@ export class PatientService {
         gender: 'female',
         phone: '01185758948',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient3.jpg',
     },
     {
         firstName: 'Omnia',
@@ -32,7 +32,7 @@ export class PatientService {
         gender: 'female',
         phone: '011985779003',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient4.jpg',
     },
     {
         firstName: 'Omnia',
@@ -42,7 +42,7 @@ export class PatientService {
         gender: 'female',
         phone: '01198654337',
         address: 'cairo',
-        image: './assets/img/detail.jpg',
+        image: './assets/img/patient2.jpg',
     },
 ];
 
@@ -58,30 +58,30 @@ addPatient(firstName: string, lastName: string, age: number, DOB: string, gender
 }
 
 // tslint:disable-next-line:max-line-length
-updatePatient(id: number, firstName: string, lastName: string, age: number, DOB: string, gender: string, phone: string, address: string, image: string) {
-    if (firstName != null) {
-        this.patient[id].firstName = firstName;
+updatePatient(patient: IPatient, id: number) {
+    if (patient.firstName != null) {
+        this.patient[id].firstName = patient.firstName;
     }
-    if (lastName != null) {
-        this.patient[id].lastName = lastName;
+    if (patient.lastName != null) {
+        this.patient[id].lastName = patient.lastName;
     }
-    if (age != null) {
-        this.patient[id].age = age;
+    if (patient.age != null) {
+        this.patient[id].age = patient.age;
     }
-    if (DOB != null) {
-        this.patient[id].DOB = DOB;
+    if (patient.DOB != null) {
+        this.patient[id].DOB = patient.DOB;
     }
-    if (gender != null) {
-        this.patient[id].gender = gender;
+    if (patient.gender != null) {
+        this.patient[id].gender = patient.gender;
     }
-    if (phone != null) {
-        this.patient[id].phone = phone;
+    if (patient.phone != null) {
+        this.patient[id].phone = patient.phone;
     }
-    if (address != null) {
-        this.patient[id].address = address;
+    if (patient.address != null) {
+        this.patient[id].address = patient.address;
     }
-    if (image != null) {
-        this.patient[id].image = image;
+    if (patient.image != null) {
+        this.patient[id].image = patient.image;
     }
 }
 

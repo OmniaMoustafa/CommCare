@@ -1,10 +1,15 @@
 /* ________________________________--prescription page ________________________*/
 .presc-word{
-    margin-top: 50px;
-    /* margin-left: -50px; */
+    margin-top: -10px;
     font-weight: bold;
+    background-color: #eee;
     color: rgb(26, 129, 224);
     text-align: center;
+    height: 82px;
+    padding: 32px;
+    width: 103%;
+    margin-left: -11px;
+    margin-bottom: -39px;
 }
   .presc-form{
       margin-top: 50px;
@@ -14,6 +19,7 @@
   
   .edit-medicine i{
       padding-right: 10px;
+      margin-top: 15px;
   }
   .doct-block{
       margin-left: -50px;
@@ -44,13 +50,22 @@
   }
   .sbmit-btn{
     margin-top: 50px;
-    margin-left: 340px;
+    margin-left: 300px;
     padding: 8px 100px;
+    margin-bottom: 30px;
 }
   .searchinpt input{
 
     border-radius: 10px;
 }
 .heading-word-dr{
-      margin-top: 50px;
+      margin-top: 20px;
+  }
+  .defaultinput{
+      height: 40px !important;
+      border-radius: 3px;
+  }
+  .selectmedicine{
+      height: 30px !important;
+      width: 70px !important;
   }

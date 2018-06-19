@@ -11,31 +11,35 @@ import { MedicalHistoryModule } from '../medical-history/medical-history.module'
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap';
 
-const routesPatient: Routes = [
-  {
-    path: 'patients',
-    component: PatientsComponent,
-    children: [
-      {path: '', component: PatientListingsComponent},
-      {path: 'patientdetails/:id',
-      component: PatientDetailsComponent,
-      children: [
-        {path: 'patientAdd', component: PatientAddComponent}
-      ]},
-    ]
-  }
-];
+// const routesPatient: Routes = [
+//   {
+//     path: 'patients',
+//     component: PatientsComponent,
+//     children: [
+//       {path: '', component: PatientListingsComponent},
+//       {path: 'patientdetails/:id', component: PatientDetailsComponent},
+//       {path: 'patientAdd', component: PatientAddComponent}
+//     ]
+//   }
+// ];
 
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
     MedicalHistoryModule,
-    RouterModule.forRoot(routesPatient),
+    RouterModule.forChild([{ path:"patient",component: PatientsComponent,
+      children: [
+        {path: '', component: PatientListingsComponent},
+        {path: 'patientdetails/:id', component: PatientDetailsComponent},
+        {path: 'patientAdd', component: PatientAddComponent}
+      ]
+    }]),
     ModalModule.forRoot()
   ],
   exports: [
     PatientsComponent,
+    PatientListingsComponent,
     RouterModule
   ],
   declarations: [

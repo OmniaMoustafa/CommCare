@@ -60,8 +60,9 @@ export class DoctorcategoryService {
   public getById(id: number): Category {
     const i = this.categories.findIndex(b => b.id == id);
     return this.categories[i];
-  }
+   }
 
 
+ 
 
 }

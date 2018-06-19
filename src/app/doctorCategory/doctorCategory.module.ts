@@ -4,7 +4,6 @@ import { DoctorCategoryComponent } from './doctorCategory.component';
 import { SmallitemComponent } from './smallitem/smallitem.component';
 import { ListingAllComponent } from './listingAll/listingAll.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 @NgModule({
   imports: [
@@ -17,13 +16,11 @@ import { DragScrollModule } from 'ngx-drag-scroll';
   declarations: [
     DoctorCategoryComponent,
     SmallitemComponent,
-    ListingAllComponent,
-    FilterDoctorsComponent
+    ListingAllComponent
     
 ],
   exports:[
     DoctorCategoryComponent,
-    FilterDoctorsComponent,
     RouterModule
   ]
 
