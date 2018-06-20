@@ -6,6 +6,9 @@ import { CarouselModule } from 'ngx-bootstrap';
 import { DoctorsModule } from '../doctors/doctors.module';
 import { HospitalsModule } from '../hospitals/hospitals.module';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
+
+import { PaymentComponent } from './Packedges/payment/payment.component';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 
 @NgModule({
@@ -14,12 +17,19 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
     CarouselModule.forRoot(),
     DoctorCategoryModule,
     DoctorsModule,
+    RouterModule.forRoot([
+      { path:'payment', component:PaymentComponent},
+    ]),
     HospitalsModule
     
   ],
   declarations: [SystemHomeComponent,
+
+    SliderComponent,
     PackedgesComponent,
+    PaymentComponent,
     HomeSliderComponent
+
 ],
 exports:[
   SystemHomeComponent,
