@@ -48,7 +48,7 @@ import { PatientsComponent } from '../patients/patients.component';
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'calendar/edit',component:EditCalendarComponent},
         {path:'docevents',component:EventListingComponent},
-        {path:'docpatients',component:PatientsComponent}
+        {path:'docpatients',component:PatientListingsComponent}
       ]},
     ])
   ],
