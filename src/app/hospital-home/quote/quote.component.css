@@ -1,4 +1,11 @@
+:host{
+    width: 100%;
+}
 .section-secondary
 {
     height: 260px;
+}
+
+.owl-carousel {
+    display: block;
 }

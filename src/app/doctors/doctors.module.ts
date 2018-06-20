@@ -23,6 +23,7 @@ import { PatientListingsComponent } from '../patients/patient-listings/patient-l
 import { PatientsModule } from '../patients/patients.module';
 import { EventsModule } from '../events/events.module';
 import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
+import { PatientsComponent } from '../patients/patients.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,7 @@ import { AppointmentDetailsSmallComponent } from '../appointments/appointment-de
         {path:'calendar', component:DoctorCalendarComponent},
         {path:'calendar/edit',component:EditCalendarComponent},
         {path:'docevents',component:EventListingComponent},
-        {path:'docpatients',component:PatientListingsComponent}
+        {path:'docpatients',component:PatientsComponent}
       ]},
     ])
   ],
