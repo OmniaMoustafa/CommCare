@@ -7,10 +7,15 @@ import { HospitalsComponent } from './hospitals.component';
 import { HospitalAddComponent } from './hospital-add/hospital-add.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {DoctorsModule}  from '../doctors/doctors.module';
+import { DepartmentsModule }  from '../departments/departments.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    DoctorsModule,
+    DepartmentsModule,
     RouterModule.forChild([
       {path:'hospitals/viewAll',component:HospitalListingComponent},
       {path:'details/:id',component:HospitalDetailsComponent},

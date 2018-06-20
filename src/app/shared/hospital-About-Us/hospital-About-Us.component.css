@@ -31,6 +31,7 @@ section.highlight {
     margin-right: 20px;
 }
 
+
 .text p{
     font-size: 18px;
     margin-top: 30px;
@@ -47,6 +48,10 @@ hr.tall{
 .nospace{
     margin-top:-60px; 
 }
-.alltext{
+.alltext p{
+    font-size: 17px;
+}
+.secundary p{
     font-size: 14px;
 }
+

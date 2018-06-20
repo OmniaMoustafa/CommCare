@@ -10,6 +10,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DoctorsModule } from '../doctors/doctors.module';
 import { HospitalLoginComponent } from './hospital-login/hospital-login.component';
 import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
+import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.
       {path: 'contactUs', component: ContactUsComponent},
       {path: 'login', component: HospitalLoginComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
+      {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
       
     ])
   ],
@@ -29,7 +31,8 @@ import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.
     HospitalFooterComponent,
     ContactUsComponent   ,
     HospitalLoginComponent,
-    HospitalAboutUsComponent
+    HospitalAboutUsComponent,
+    HospitalMedicalservicesComponent
 ],
 exports:
 [
