@@ -21,6 +21,7 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 ],
   exports:[
     DoctorCategoryComponent,
+    ListingAllComponent,
     RouterModule
   ]
 
