@@ -1,7 +1,7 @@
-<ng-template #modalContent let-close="close">
+<ng-template #template>
   <div class="modal-header">
     <h5 class="modal-title">Event action occurred</h5>
-    <button type="button" class="close" >
+    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -105,6 +105,7 @@
 
 <br><br><br>
 <button
+    style="margin-bottom: 50px;"
     class="btn btn-primary pull-right"
     routerLink="edit">
     Edit events

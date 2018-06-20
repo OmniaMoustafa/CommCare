@@ -8,11 +8,11 @@ import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.compo
 import { FullCalendarModule } from 'ng-fullcalendar';
 import { CalendarService } from "../shared/services/CalendarService/calendar.service";
 import { RouterModule, Routes } from '@angular/router';
-import { Component } from '@angular/core/src/metadata/directives';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
-import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalModule } from "ngx-bootstrap";
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
@@ -35,11 +35,12 @@ import { PatientsComponent } from '../patients/patients.component';
     FullCalendarModule,
     DoctorCategoryModule,
     CalendarUtilsModule,
+    BrowserAnimationsModule,
     FormsModule,
     PatientsModule,
     EventsModule,
+    ModalModule.forRoot(),
     CalendarModule.forRoot(),
-    NgbModalModule.forRoot(),
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctorListing', component: DoctorListingsComponent },
