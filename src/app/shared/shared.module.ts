@@ -11,6 +11,8 @@ import { DoctorsModule } from '../doctors/doctors.module';
 import { HospitalLoginComponent } from './hospital-login/hospital-login.component';
 import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
 import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
+import { HeaderComponent } from './header-content/header.component';
+
 
 @NgModule({
   imports: [
@@ -32,7 +34,8 @@ import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hos
     ContactUsComponent   ,
     HospitalLoginComponent,
     HospitalAboutUsComponent,
-    HospitalMedicalservicesComponent
+    HospitalMedicalservicesComponent,
+    HeaderComponent
 ],
 exports:
 [
