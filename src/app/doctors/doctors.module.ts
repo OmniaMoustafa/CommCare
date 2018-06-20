@@ -26,6 +26,8 @@ import { AppointmentDetailsSmallComponent } from '../appointments/appointment-de
 import { EventDetailsComponent } from 'src/app/events/event-details/event-details.component';
 import { MedicalHistoryComponent } from 'src/app/medical-history/medical-history.component';
 import { PatientDetailsComponent } from 'src/app/patients/patient-details/patient-details.component';
+import { PatientsComponent } from '../patients/patients.component';
+
 
 @NgModule({
   imports: [
@@ -41,6 +43,7 @@ import { PatientDetailsComponent } from 'src/app/patients/patient-details/patien
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctorListing', component: DoctorListingsComponent },
+
 
       {
         path: "doctorProfile/:id", component: DoctorsComponent, children: [
