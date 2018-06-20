@@ -3,7 +3,6 @@ import { NgModule , OnInit } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EventsModule } from './events/events.module';
 import { FooterComponent } from './shared/footer-content/footer.component';
-import { HeaderComponent } from './shared/header-content/header.component';
 import { DepartmentService } from 'src/app/shared/services/department.service';
 import { DepartmentsModule} from 'src/app/departments/departments.module';
 import { DoctorsModule } from './doctors/doctors.module';
@@ -45,7 +44,7 @@ import { HospitalsModule } from './hospitals/hospitals.module';
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+   
   ],
   imports: [
     BrowserModule,

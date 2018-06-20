@@ -1,148 +1,184 @@
-<div class="body">
-    <div role="main" class="main">
-        <div class="image">
-            <!-- <img src="{{hospitalDetails.photo}}" alt=""> -->
-        </div>
-        <!-- Map BLock -->
-        <div class="home-intro light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <br>
-                        <div style=" width: 50% ">
-                            <iframe style=" border-radius: 50%; border:1px solid rgb(243, 243, 243)" width="100%" height="110" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Malet%20St%2C%20London%20WC1E%207HU%2C%20United%20Kingdom+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                                <a href="https://www.mapsdirections.info/en/custom-google-maps/"></a>
-                                <a href="https://www.mapsdirections.info/en/"></a>
-                            </iframe>
-                        </div>
-                        <br />
-                    </div>
-                    <div class="col-md-3">
-                        <h2 style=" line-height:0.6">{{hospitalDetails.name}}</h2>
-                        <p style="font-size: 1em">
-                            <i class="fa fa-map-marker"></i> {{hospitalDetails.address}}
-                            <br>
-                            <i class="fa fa-phone"></i> {{hospitalDetails.phone}}
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <p class="lheight" style="font-size:1em"> 08 Am: 08 Pm</p>
-                        <p class="lheight" style="font-size: 1em"> 
-                            OVERALL PATIENT SATISFACTION
-                            <br>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- about us -->
+<div role="main" class="main">
+    <div class="image">
+        <img src="{{hospitalDetails.photo}}" alt="" style="height:400px; width:100%">
+    </div>
+    <!-- Map BLock -->
+    <div class="home-intro light">
         <div class="container">
-            <div class="row center">
-                <div class="col-md-12">
-                    <h1 class="word-rotator-title mb-sm">
-                        About
-
-                        <b>{{hospitalDetails.name}}</b> hospital
-                    </h1>
-                    <p class="lead">
-                        {{hospitalDetails.description}}
+            <div class="row">
+                <div class="col-md-3">
+                    <br>
+                    <div class="map">
+                        <img id="hero_1_herosubpanelcolumn1_0_imgStaticMap" src="../../../assets/img/map.jpg" style="width:110px;">
+                    </div>
+                    <!-- <div style=" width: 50% ">
+                        <iframe style=" border-radius:50px; border:1px solid rgb(243, 243, 243)" width="100%" height="110" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Malet%20St%2C%20London%20WC1E%207HU%2C%20United%20Kingdom+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            <a href="https://www.mapsdirections.info/en/custom-google-maps/"></a>
+                            <a href="https://www.mapsdirections.info/en/"></a>
+                        </iframe>
+                    </div> -->
+                    <br />
+                </div>
+                <div class="col-md-3">
+                    <h2 style=" line-height:0.6">{{hospitalDetails.name}}</h2>
+                    <p style="font-size: 1em">
+                        <i class="fa fa-map-marker"></i> {{hospitalDetails.address}}
+                        <br>
+                        <i class="fa fa-phone"></i> {{hospitalDetails.phone}}
                     </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <hr class="tall">
+                <div class="col-md-3 last">
+                    <br>
+                    <p class="lheight" style="font-size:0.9em"> 08 Am: 08 Pm</p>
+                    <br>
+                    <p class="lheight" style="font-size: 0.9em">
+                        OVERALL PATIENT SATISFACTION</p>
+                        <br>
+                        <i class="fa fa-star yellow"></i>
+                        <i class="fa fa-star yellow"></i>
+                        <i class="fa fa-star yellow"></i>
+                        <i class="fa fa-star yellow"></i>
+                        <i class="fa fa-star"></i>
+                    
                 </div>
             </div>
         </div>
-        <!-- Our services -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+    </div>
+    <!-- about us -->
+    <div class="container">
+        <div class="row center">
+            <div class="col-md-12">
+                <h1 class="word-rotator-title mb-sm">
+                    About
 
-                    <ul class="history">
-                        <li>
+                    <b>{{hospitalDetails.name}}</b> hospital
+                </h1>
+                <p class="lead">
+                    {{hospitalDetails.description}}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="tall">
+            </div>
+        </div>
+    </div>
+    <!-- Our services -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="history">
+                    <li>
+                        <a routerLink="/doctorListing">
                             <div class="thumb">
                                 <img src="../../../assets/img/doctor3.jpg" alt="" />
                             </div>
-                            <div class="featured-box">
-                                <h4 class="heading-primary">
-                                    <strong>
-                                  Our Doctors
-                                    </strong>
-                                </h4>
-                                <div class="box-content">
+                        </a>
+                        <div class="featured-box">
+                            <h4 class="heading-primary">
+                                <strong>
+                                    &nbsp; Our Doctors
+                                </strong>
+                            </h4>
+                            <div class="box-content">
 
-                                    <p>Learn about our expert providers who offer 
-                                        a variety of healthcare services.</p>
-                                </div>
+                                <p>Learn about our expert providers who offer a variety of healthcare services.</p>
                             </div>
-                        </li>
-                        <li>
+                        </div>
+                    </li>
+                    <li>
+                        <a routerLink="/departments/listing">
                             <div class="thumb">
-                            <img src="../../../assets/img/download2.jpg" alt="" />
+                                <img src="../../../assets/img/download2.jpg" alt="" />
                             </div>
-                            <div class="featured-box">
-                                <h4 class="heading-primary">
-                                    <strong>Our Departments</strong>
-                                </h4>
-                                <div class="box-content">
+                        </a>
+                        <div class="featured-box">
+                            <h4 class="heading-primary">
+                                <strong> &nbsp;Our Departments</strong>
+                            </h4>
+                            <div class="box-content">
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque
-                                        eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing
-                                        porta tellus, Curabitur pellentesque neque eget diam posuere porta. Quisque ut
-                                        nulla at nunc vehicula lacinia.</p>
-                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget
+                                    diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta
+                                    tellus, Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc
+                                    vehicula lacinia.</p>
                             </div>
-                        </li>
-                        <li>
+                        </div>
+                    </li>
+                    <li>
+                        <a routerLink="/Medicalservice">
                             <div class="thumb">
                                 <img src="../../../assets/img/download6.jpg" alt="" />
                             </div>
-                            <div class="featured-box">
-                                <h4 class="heading-primary">
-                                    <strong>Our Medical Sevices</strong>
-                                </h4>
-                                <div class="box-content">
+                        </a>
+                        <div class="featured-box">
+                            <h4 class="heading-primary">
 
-                                    <p>We are committed to providing the highest quality of care with kindness and compassion.
-                                         Learn more about the medical services we offer.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="thumb">
-                                <img src="../../../assets/img/hospital4.jpg" alt="" />
-                            </div>
-                            <div class="featured-box">
-                                <h4 class="heading-primary">
-                                    <strong>Hospital Information</strong>
-                                </h4>
-                                <div class="box-content">
+                                <strong>&nbsp; Our Medical Sevices</strong>
+                            </h4>
+                            <div class="box-content">
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque
-                                        eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing
-                                        porta tellus, Curabitur pellentesque neque eget diam posuere porta. Quisque ut
-                                        nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, Curabitur pellentesque
-                                        neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin
-                                        adipiscing porta tellus,</p>
-                                </div>
+                                <p>We are committed to providing the highest quality of care with kindness and compassion. Learn
+                                    more about the medical services we offer.</p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <a routerLink=""> -->
+                        <div class="thumb">
+                            <img src="../../../assets/img/hospital4.jpg" alt="" />
+                        </div>
+                        <!-- </a> -->
+                        <div class="featured-box scroll" id="kryesore">
+                            <h4 class="heading-primary">
+                                <strong> &nbsp; Latest News</strong>
+                            </h4>
+                            <div class="box-content news">
+                                <p>
+                                    <a href="#">
+                                        <b> Vincent Sports Performance Among First To Implement U.S. Center For SafeSport Training
+                                            Course
+                                        </b>
+                                    </a>
+                                    <br> Sports Performance is partnering with the U.S. Center for SafeSport to call
+                                    upon its 100-plus associates to thoroughly complete a crucial training designed to help
+                                    athletes identify signs of bullying, physical abuse and sexual misconduct.
 
-                </div>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        <b> El Demerdash Opens First Neighborhood Hospital In Marion County
+                                        </b>
+                                    </a>
+                                    <br> El Demerdash will open its first Neighborhood Hospital in Marion County on April 23 at
+                                    9 a.m. This will be the fourth St. Vincent Neighborhood Hospital to open, which will
+                                    be located at 8602 Allisonville Road, Indianapolis, near Castleton Square Mall.
+
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        <b> El Demerdash Neighborhood Hospital Receives Excellence In Healthcare Award
+                                        </b>
+                                    </a>
+                                    <br> El Demerdash Neighborhood Hospital was recently recognized with an Award of Distinction
+                                    for Excellent Performance in Patient Experience for emergency departments by national
+                                    healthcare market research company Professional Research Consultants, Inc. (PRC).
+
+                                </p>
+
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <hr class="tall">
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="tall">
             </div>
         </div>
     </div>
