@@ -25,7 +25,7 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
   ],
   declarations: [SystemHomeComponent,
 
-    SliderComponent,
+    
     PackedgesComponent,
     PaymentComponent,
     HomeSliderComponent
