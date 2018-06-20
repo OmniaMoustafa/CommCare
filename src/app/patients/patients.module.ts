@@ -31,7 +31,7 @@ import { ModalModule } from 'ngx-bootstrap';
     RouterModule.forChild([{ path:"patient",component: PatientsComponent,
       children: [
         {path: '', component: PatientListingsComponent},
-        {path: 'patientdetails/:id', component: PatientDetailsComponent},
+        {path: ':id', component: PatientDetailsComponent},
         {path: 'patientAdd', component: PatientAddComponent}
       ]
     }]),

@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     component:EventsComponent,
     children:[
       { path:'',component:EventListingComponent},
-      {path:'details/:id',component:EventDetailsComponent},
+      {path:':id',component:EventDetailsComponent},
       {path:'add',component:EventAddComponent}
     ]}])
   ],
