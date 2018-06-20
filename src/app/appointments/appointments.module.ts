@@ -5,21 +5,35 @@ import { AppointmentDetailsSmallComponent } from './appointment-details-small/ap
 import { Router, Route, Routes, RouterModule } from '@angular/router';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
 import { FormsModule } from '@angular/forms';
-const eventsRoutes:Routes=[
-  {
-    path:'appointments',
-    component:AppointmentsComponent,
-    children:[
-      { path:'',component:AppointmentDetailsSmallComponent},
-      {path:'details',component:AppointmentDetailsComponent}
-    ]
-  }
-]
+import { CarouselModule } from 'ngx-bootstrap';
+// const eventsRoutes:Routes=[
+//   {
+//     path:'appointments',
+//     component:AppointmentsComponent,
+//     children:[
+//       { path:'',component:AppointmentDetailsSmallComponent},
+//       {path:'details',component:AppointmentDetailsComponent},
+//       {path:'appointmaentdetails', component:AppointmentDetailsSmallComponent},
+//       {path:'acceptance',component:AppointmentDetailsComponent}
+//     ]
+//   }
+// ]
 @NgModule({
   imports: [
     FormsModule,
+    CarouselModule,
     CommonModule,
-    RouterModule.forRoot(eventsRoutes)
+    RouterModule.forRoot([
+      {path:'acceptance',component:AppointmentDetailsComponent},
+      {
+      path:'appointments',
+    component:AppointmentsComponent,
+    children:[
+      { path:'',component:AppointmentDetailsSmallComponent},
+      {path:'details',component:AppointmentDetailsComponent},
+      {path:'appointmaentdetails', component:AppointmentDetailsSmallComponent},
+      {path:'acceptance',component:AppointmentDetailsComponent}
+    ]}])
   ],
   declarations: [AppointmentsComponent,
     AppointmentDetailsSmallComponent,
@@ -27,6 +41,7 @@ const eventsRoutes:Routes=[
 ],
 exports:[
   AppointmentsComponent
+
 ]
 })
 export class AppointmentsModule { }
