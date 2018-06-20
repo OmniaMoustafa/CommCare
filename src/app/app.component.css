@@ -1,0 +1,7 @@
+body{
+    min-height: 500px;
+}
+
+.mt-router-outlet{
+    margin-top: 160px;
+}

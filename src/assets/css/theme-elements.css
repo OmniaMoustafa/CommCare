@@ -2498,6 +2498,7 @@ ul.sitemap.list ul {
 }
 /* Video */
 section.video {
+	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0, 0, 0);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -2582,6 +2583,7 @@ html.boxed section.video > div:first-child video {
 /* Zoom */
 .mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg {
 	opacity: 0.001;
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
