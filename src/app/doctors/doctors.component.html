@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <!-- المفروض تظهر عند الدكتور -->
-    <div class="col-md-2">
+    <div>
       <section class="menu-side">
         <ul class="menu">
 
@@ -12,13 +12,13 @@
             <a routerLink="/doctorProfile/{{doctor.id}}/Listing" class="doctors">Doctors</a>
           </li>
           <li title="Patients">
-            <a routerLink="/patients" class="patients">Patients</a>
+            <a routerLink="/doctorProfile/{{doctor.id}}/docpatients" class="patients">Patients</a>
           </li>
           <li title="Add-Prescription">
             <a routerLink="/doctorProfile/{{doctor.id}}/WritePrescription" class=" add-prescription">Add-prescription</a>
           </li>
           <li title="events">
-            <a routerLink="/events" class="schedule">Events</a>
+            <a routerLink="/doctorProfile/{{doctor.id}}/docevents" class="schedule">Events</a>
           </li>
           <li title="Appointment">
             <a routerLink="/doctorProfile/{{doctor.id}}/calendar" class="appointment">Schedule</a>
@@ -32,7 +32,7 @@
       </section>
   
     </div>
-    <div class="col-md-9">   
+    <div class="col-md-12">   
       <router-outlet></router-outlet>
     </div>
   

@@ -11,14 +11,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { Component } from '@angular/core/src/metadata/directives';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { FormsModule } from '@angular/forms';
- import { CalendarModule } from 'angular-calendar';
+import { CalendarModule } from 'angular-calendar';
 import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
 import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
+import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component';
+import { PatientListingsComponent } from '../patients/patient-listings/patient-listings.component';
+import { PatientsModule } from '../patients/patients.module';
+import { EventsModule } from '../events/events.module';
 import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
+import { EventDetailsComponent } from 'src/app/events/event-details/event-details.component';
+import { MedicalHistoryComponent } from 'src/app/medical-history/medical-history.component';
+import { PatientDetailsComponent } from 'src/app/patients/patient-details/patient-details.component';
+import { PatientsComponent } from '../patients/patients.component';
+
 
 @NgModule({
   imports: [
@@ -27,22 +36,30 @@ import { AppointmentDetailsSmallComponent } from '../appointments/appointment-de
     DoctorCategoryModule,
     CalendarUtilsModule,
     FormsModule,
+    PatientsModule,
+    EventsModule,
     CalendarModule.forRoot(),
-     NgbModalModule.forRoot(),
+    NgbModalModule.forRoot(),
     RouterModule.forChild([
-        {path:'doctors/:categoryname',component:DoctorListingsComponent},
-        {path:'doctorListing',component:DoctorListingsComponent},
+      { path: 'doctors/:categoryname', component: DoctorListingsComponent },
+      { path: 'doctorListing', component: DoctorListingsComponent },
 
-        {path: "doctorProfile/:id" ,component:DoctorsComponent,children :[
-        {path:'', component: DoctorDetailsComponent },
-        {path:'Listing', component:DoctorListingsComponent},
-        {path:'add',component:DoctorAddComponent},
-        {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
-        {path:'calendar', component:DoctorCalendarComponent},
-        {path:'calendar/edit',component:EditCalendarComponent},
-        {path:'events',component:EventListingComponent},
-        {path:'appointment',component:AppointmentDetailsSmallComponent}
-      ]},
+
+      {
+        path: "doctorProfile/:id", component: DoctorsComponent, children: [
+          { path: '', component: DoctorDetailsComponent },
+          { path: 'Listing', component: DoctorListingsComponent },
+          { path: 'add', component: DoctorAddComponent },
+          { path: 'WritePrescription', component: DoctorPrescriptionComponent },
+          { path: 'calendar', component: DoctorCalendarComponent },
+          { path: 'calendar/edit', component: EditCalendarComponent },
+          { path: 'docevents', component: EventListingComponent },
+          { path: 'docevents/:id', component: EventDetailsComponent },
+          { path: 'docpatients', component: PatientListingsComponent },
+          { path: 'docpatients/:id', component: PatientDetailsComponent }
+
+        ]
+      },
     ])
   ],
 
@@ -55,23 +72,24 @@ import { AppointmentDetailsSmallComponent } from '../appointments/appointment-de
       DoctorItemSmallComponent,
       DoctorCalendarComponent,
       EditCalendarComponent,
-      DoctorPrescriptionComponent
-],
+      DoctorPrescriptionComponent,
+      FilterDoctorsComponent
+    ],
 
- exports:[
-  DoctorsComponent,
-  DoctorCalendarComponent,
-  DoctorListingsComponent,
-  DoctorAddComponent,
-  DoctorItemSmallComponent,
-  DoctorCalendarComponent,
-  EditCalendarComponent,
-  RouterModule
-],
-providers:
-[
-  CalendarService,
-]
+  exports: [
+    DoctorsComponent,
+    DoctorCalendarComponent,
+    DoctorListingsComponent,
+    DoctorAddComponent,
+    DoctorItemSmallComponent,
+    DoctorCalendarComponent,
+    EditCalendarComponent,
+    RouterModule
+  ],
+  providers:
+    [
+      CalendarService,
+    ]
 
 })
 export class DoctorsModule { }

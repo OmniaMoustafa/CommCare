@@ -20,8 +20,7 @@ import { HospitalsModule } from 'src/app/hospitals/hospitals.module';
     DoctorsModule,
     HospitalsModule,
     RouterModule.forRoot([
-      { path:'home', component: HospitalHomeComponent},
-      {path:'systemHome' , component:SystemHomeComponent},
+      {path:'home' , component:SystemHomeComponent},
       { path:'', redirectTo:'/home', pathMatch:'full'}
       
 

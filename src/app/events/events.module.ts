@@ -8,22 +8,17 @@ import { EventItemSmallComponent } from './event-item-small/event-item-small.com
 import { Route, Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-const eventsRoutes:Routes=[
-  {
-    path:'events',
-    component:EventsComponent,
-    children:[
-      { path:'',component:EventListingComponent},
-      {path:'details/:id',component:EventDetailsComponent},
-      {path:'add',component:EventAddComponent}
-    ]
-  }
-]
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
-    RouterModule.forRoot(eventsRoutes)
+    RouterModule.forChild([{path:'events',
+    component:EventsComponent,
+    children:[
+      { path:'',component:EventListingComponent},
+      {path:':id',component:EventDetailsComponent},
+      {path:'add',component:EventAddComponent}
+    ]}])
   ],
   declarations: [
     EventsComponent,

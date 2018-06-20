@@ -1,6 +1,6 @@
-<div class="col-md-4">
+<div class="col-md-5">
   <div class="card">
-    <img [src]= "event.imgUrl" [alt]="event.name">
+    <img [src]= "event.imgUrl" [alt]="event.name" width="300" height="250">
     <div class=" text text-center">
       <h4>
         <b>{{event.name}}</b>
@@ -9,7 +9,7 @@
       <div>
       <span><i class="fa fa-clock-o"></i>{{event.time}}</span>
       <span><i class="fa fa-map-marker "></i> {{event.location}}</span></div>
-      <button class="btn btn-primary" routerLink="details/{{eventIndex}}">Details</button>
+      <button class="btn btn-primary" routerLink="{{eventIndex}}">Details</button>
     </div>
   </div>
 </div>

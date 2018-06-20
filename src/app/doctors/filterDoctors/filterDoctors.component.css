@@ -1,0 +1,228 @@
+:host{
+    display: block;
+    width: 100%;
+}
+/* .filter{
+    background-color: #eee;
+    display: block;
+    padding: 20px 5px;
+    width: 100%;
+} */
+
+ .filter{
+    background-color: #eee;
+    display: inline-block;
+    padding: 30px 35px;
+    height: 126px;
+}
+.part{
+    width: 300px;
+}
+.filter h3{
+    color:#337ab7;
+    padding-bottom: 22px;
+}
+input[type="submit"]{
+    margin-left: 0px;
+    margin-top: -2px;
+    padding: 5px;
+}
+.inpts{
+    width: 130px;
+    height: 30px;
+} 
+/* initial 
+* {
+    box-sizing: border-box;
+  }
+  
+  /* typo
+  body {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(0,0,0,0.6);
+  }
+  
+  nav {
+    /*font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 51%;
+  }
+  
+  /* site
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  
+  #container {
+    /* display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* width: 100vw; */
+    /* height: 100vh; 
+  }
+  
+  header {
+    background-color: rgba(0,0,0,0.0);
+    flex: 1 0 10vh;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 11rem;
+  }
+  
+  header h2 {
+    color:#da2b40;
+    padding: 1rem;
+  }
+  
+  
+  /* nav */
+  /* nav {
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+  } 
+  
+  nav ul.flex {
+    display: flex;
+    background-color: rgba(0,0,0,0);
+    /* width: 100vw; 
+  }
+  
+  nav ul {
+    background-color: white;
+  }
+  
+  nav > ul > li {
+    flex: 1 1 25vw;
+  }
+  
+  nav ul li a {
+    white-space: nowrap;
+    color: rgba(0,0,0,0.6);
+    transition: all ease 0.2s;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.5rem 2rem;
+  }
+  .dropdown-icon{
+    font-family: FontAwesome;
+    content: "\f0f1";
+  }
+  nav > ul > li {
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  nav > ul > li:first-child {
+    border-left: 0 none;
+  }
+  nav > ul > li:last-child {
+    border-right: 0 none;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a:active {
+    background-color: #da2b40;
+    color: rgba(255,255,255,0.7);
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
+  
+  nav ul.submenu {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 14vw;
+    z-index: 2;
+    border-left: 1px solid rgba(0,0,0,0.15);
+    border-right: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+  }
+  
+  nav li.hassubmenu > ul {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.2s;
+  }
+  
+  nav li.hassubmenu:hover > ul {
+    visibility: visible;
+    opacity: 100;
+    transition: all ease 0.2s;
+  }
+  
+  nav li.hassubmenu > a {
+    justify-content: space-between;
+  }
+  
+  nav li.hassubmenu > a::after {
+    display: flex;
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+    transition: all ease 0.2s;
+    color: rgba(0,0,0,0.6);
+  }
+  
+  nav li.hassubmenu > a:hover::after,
+  nav li.hassubmenu > a:active::after {
+    font-family: 'FontAwesome';
+    content: "\f0d8";
+    transition: all ease 0.2s;
+    color: rgba(255,255,255,0.7);
+  }
+  
+  
+  nav ul.sub2menu {
+    position: absolute;
+    left: 25vw;
+    margin: -5rem 0 0 0;
+    border-top: 1px solid rgba(0,0,0,0.15);
+    border-right: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+  }
+  
+  nav li.hassub2menu > ul {
+    visibility: hidden;
+    display: flex;
+    flex-flow: column;
+    width: 25vw;
+    opacity: 0;
+    transition: all ease 0.2s;  
+  }
+  
+  nav li.hassub2menu:hover > ul,
+  nav li.hassub2menu:active > ul {
+    visibility: visible;
+    opacity: 100;
+    transition: all ease 0.2s;
+  }
+  
+  nav li.hassub2menu > a {
+    justify-content: space-between;
+  }
+  
+  nav li.hassub2menu > a::after {
+    display: flex;
+    font-family: 'FontAwesome';
+    content: "\f0da";
+    transition: all ease 0.2s;
+  }
+  
+  nav li.hassub2menu > a:hover::after,
+  nav li.hassub2menu > a:active::after {
+    font-family: 'FontAwesome';
+    content: "\f0d9";
+    transition: all ease 0.2s;
+  }
+  
+  */
+    

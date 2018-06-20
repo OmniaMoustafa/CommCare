@@ -1,12 +1,12 @@
 <div class="col-md-2 maxwidth">
   <div class="card">
-    <img [src]= "patient.image" [alt]="patient.firstName">
+    <img [src]= "patient.image" [alt]="patient.firstName" >
     <div class=" text text-center">
       <h4>
         <b>{{patient.firstName +' '+ patient.lastName}}</b>
       </h4>
       <p>Last visited: 13/12/2010</p>
-      <button class="btn btn-primary" routerLink="./patientdetails/{{patientIndex}}">Profile</button>
+      <button class="btn btn-primary" routerLink="{{patientIndex}}">Profile</button>
     </div>
   </div>
 </div>

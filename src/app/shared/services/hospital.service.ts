@@ -30,7 +30,7 @@ export class HospitalService{
                 name:'Air Force',
                 address:'1320 S Medical Dr (500 W) NewCairo',
                 phone:45682739898,
-                photo:'../../../assets/img/hos10.jpg',
+                photo:'../../../assets/img/hos3.jpg',
                 hours:'10 am :12 pm',
                 description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
             },
