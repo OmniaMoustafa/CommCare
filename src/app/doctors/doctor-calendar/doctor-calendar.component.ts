@@ -25,7 +25,6 @@ import {
 } from 'angular-calendar';
 import { CalendarService } from '../../shared/services/CalendarService/calendar.service';
 import {colors} from '../../calendar-utils/colors';
-import { CalendarModalComponent } from './calendar-modal/calendar-modal.component';
 
 @Component({
   selector: 'app-doctor-calendar',
@@ -34,6 +33,8 @@ import { CalendarModalComponent } from './calendar-modal/calendar-modal.componen
   templateUrl: 'doctor-calendar.component.html'
 })
 export class DoctorCalendarComponent implements OnInit {
+  
+  @ViewChild('modalContent') modalContent:TemplateRef<any>;
 
   modalRef:BsModalRef;
 
@@ -107,7 +108,7 @@ export class DoctorCalendarComponent implements OnInit {
 
   handleEvent(action: string, event: CalendarEvent): void {
     this.modalData = { event, action };
-    this.modalService.show(this.modalRef);
+    this.openModal(this.modalContent);
   }
 
   addEvent(): void {

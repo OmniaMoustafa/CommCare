@@ -1,9 +1,9 @@
-<ng-template #template>
+<ng-template #modalContent>
   <div class="modal-header">
-    <h5 class="modal-title">Event action occurred</h5>
     <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
+    <h3 class="modal-title">Event action occurred</h3>
   </div>
   <div class="modal-body">
     <div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-secondary" >OK</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="modalRef.hide()">OK</button>
   </div>
 </ng-template>
 

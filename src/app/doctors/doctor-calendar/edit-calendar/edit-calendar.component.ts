@@ -13,11 +13,13 @@ import { Subject } from 'rxjs';
   styleUrls: ['./edit-calendar.component.css']
 })
 export class EditCalendarComponent implements OnInit {
-
+  
   event: CalendarEvent;
   refresh: Subject<any> = new Subject();
-
-  constructor(private calendarService: CalendarService) { }
+  public events: CalendarEvent[];
+  constructor(private calendarService: CalendarService) {
+    this.events=calendarService.getAllEvents();
+   }
   addEvent(): void {
     this.event = {
       title: 'New event',
