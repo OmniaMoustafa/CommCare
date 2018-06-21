@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Ievents } from '../../interfaces/Ievents';
+import { NgbDatepickerMonthView } from '@ng-bootstrap/ng-bootstrap/datepicker/datepicker.module';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ events:Ievents[] =[{
   address:'57357hospital',
   location:'cairo',
   date:'15/09/2018',
-  imgUrl:'../../../assets/img/detail.jpg',
+  imgUrl:'../../../assets/img/event3.jpg',
   time:8,
   details:'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in fringilla'
 
@@ -21,7 +22,7 @@ events:Ievents[] =[{
   address:'57357hospital',
   location:'cairo',
   date:'15/09/2018',
-  imgUrl:'../../../assets/img/detail.jpg',
+  imgUrl:'../../../assets/img/event2.jpg',
   time:8,
   details:'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in fringilla'
 },
@@ -30,7 +31,7 @@ events:Ievents[] =[{
   address:'57357hospital',
   location:'cairo',
   date:'15/09/2018',
-  imgUrl:'../../../assets/img/detail.jpg',
+  imgUrl:'../../../assets/img/event3.jpg',
   time:8,
   details:'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in fringilla'
 },
@@ -39,7 +40,7 @@ events:Ievents[] =[{
   address:'57357hospital',
   location:'cairo',
   date:'15/09/2018',
-  imgUrl:'../../../assets/img/detail.jpg',
+  imgUrl:'../../../assets/img/event2.jpg',
   time:8,
   details:'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in fringilla'
 },
@@ -48,7 +49,7 @@ events:Ievents[] =[{
   address:'57357hospital',
   location:'cairo',
   date:'15/09/2018',
-  imgUrl:'../../../assets/img/detail.jpg',
+  imgUrl:'../../../assets/img/event3.jpg',
   time:8,
   details:'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, est a finibus lobortis, eros justo rutrum est, in fringilla'
 

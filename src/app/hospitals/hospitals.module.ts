@@ -25,7 +25,9 @@ import { DepartmentsModule }  from '../departments/departments.module';
   ],
   declarations: [HospitalitemComponent, HospitalListingComponent, HospitalDetailsComponent, HospitalsComponent, HospitalAddComponent],
   exports:[
+    HospitalListingComponent,
     RouterModule
+
   ]
 })
 export class HospitalsModule {}

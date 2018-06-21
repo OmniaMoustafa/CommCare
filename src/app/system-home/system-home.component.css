@@ -1,0 +1,12 @@
+
+.doctors{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.doctors h1 , .hospitals h1 , .packages h1{
+    color:#194d89;
+    text-transform: capitalize;
+}
+.hospitals , .packages{
+    margin-bottom: 100px;
+}

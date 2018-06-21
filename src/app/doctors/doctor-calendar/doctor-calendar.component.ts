@@ -5,6 +5,8 @@ import {
   TemplateRef,
   OnInit
 } from '@angular/core';
+import { BsModalService } from "ngx-bootstrap/modal";
+import { BsModalRef } from "ngx-bootstrap/modal/bs-modal-ref.service";
 import {
   startOfDay,
   endOfDay,
@@ -16,28 +18,14 @@ import {
   addHours
 } from 'date-fns';
 import { Subject } from 'rxjs';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
   CalendarEvent,
   CalendarEventAction,
   CalendarEventTimesChangedEvent
 } from 'angular-calendar';
 import { CalendarService } from '../../shared/services/CalendarService/calendar.service';
-
-const colors: any = {
-  red: {
-    primary: '#ad2121',
-    secondary: '#FAE3E3'
-  },
-  blue: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF'
-  },
-  yellow: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA'
-  }
-};
+import {colors} from '../../calendar-utils/colors';
+import { CalendarModalComponent } from './calendar-modal/calendar-modal.component';
 
 @Component({
   selector: 'app-doctor-calendar',
@@ -47,8 +35,7 @@ const colors: any = {
 })
 export class DoctorCalendarComponent implements OnInit {
 
-
-  @ViewChild('modalContent') modalContent: TemplateRef<any>;
+  modalRef:BsModalRef;
 
   view: string = 'month';
 
@@ -81,8 +68,11 @@ export class DoctorCalendarComponent implements OnInit {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal, private calendarService: CalendarService) { }
+  constructor(private modalService:BsModalService, private calendarService: CalendarService) { }
 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
   ngOnInit(): void {
     this.events = this.calendarService.getAllEvents();
     this.events.forEach((event) => {
@@ -117,7 +107,7 @@ export class DoctorCalendarComponent implements OnInit {
 
   handleEvent(action: string, event: CalendarEvent): void {
     this.modalData = { event, action };
-    this.modal.open(this.modalContent, { size: 'lg' });
+    this.modalService.show(this.modalRef);
   }
 
   addEvent(): void {
@@ -133,9 +123,5 @@ export class DoctorCalendarComponent implements OnInit {
       }
     });
     this.refresh.next();
-  }
-
-  close() {
-    console.log("Close");
   }
 }

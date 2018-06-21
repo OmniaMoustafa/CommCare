@@ -690,7 +690,7 @@ width: 86%;
     color: orange;
   }
   .total-rates{
-   margin-left: -10px;
+   margin-left: 110px;
    margin-top: 30px;
    margin-bottom: 10px;
 
@@ -1021,7 +1021,7 @@ color:#0088cc;
 /* ______________________________new profile______________________ */
 .profpic{
   margin-top: 80px;
-  margin-left: -50px;
+  /* margin-left: -50px; */
   z-index: 1;
 }
 .profpic img{
@@ -1031,7 +1031,8 @@ color:#0088cc;
 }
 .detailsaboutdr{
   margin-top: 140px;
-  margin-left: 70px;
+  /* margin-left: 70px; */
+  width: 100%;
 }
 .detailsaboutdr .topics h2{
   color:#0b3d5a;
@@ -1045,8 +1046,8 @@ color:#0088cc;
   background: #eee;
   height: 400px;
   margin-top: 0px;
-  width: 115%; 
-   margin-left: -90px; 
+  width: 100%; 
+   /* margin-left: -90px;  */
    z-index: 0;
    position: relative;
    top: -52px;
