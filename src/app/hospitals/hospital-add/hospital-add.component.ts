@@ -18,6 +18,7 @@ export class HospitalAddComponent implements OnInit {
   public OnAdd(form: NgForm) {
     this.hosService.add(this.hos);
     this.router.navigate(['/hospitals/viewAll']);
+    this.router.navigate(['/details/:id']);
 }
 
 }
