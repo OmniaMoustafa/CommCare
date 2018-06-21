@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { IPatient } from '../../shared/interfaces/IPatient';
 import { PatientService } from '../../shared/services/patient.service';
 import { NgForm } from '@angular/forms';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-patient-add',
@@ -34,12 +35,7 @@ export class PatientAddComponent implements OnInit {
 
   }
 
-  onFileChanged(event) {
-    const file = event.target.files[0];
-    console.log(file);
-  }
-
-  onAdd(form: NgForm) {
+  onAdd(form: NgForm) : boolean {
     const patient: IPatient = {
       firstName: form.value['fName'],
       lastName: form.value['lName'],
@@ -51,5 +47,7 @@ export class PatientAddComponent implements OnInit {
       gender: this.gender
     };
     this._PatientService.updatePatient(patient, this.patientIndex);
+    return true;
+
   }
 }

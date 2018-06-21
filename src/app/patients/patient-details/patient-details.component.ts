@@ -16,6 +16,9 @@ export class PatientDetailsComponent implements OnInit {
   constructor(private _PatientService: PatientService, private activeLink: ActivatedRoute) {
   }
 
+  updateFromChild(model){
+    
+  }
   ngOnInit() {
     this.patientIndex = this.activeLink.snapshot.params['id'];
     this.patient = this._PatientService.getById(this.patientIndex);
