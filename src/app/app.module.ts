@@ -29,10 +29,7 @@ import { ConsultationService } from './shared/services/MedicalHistoryService/con
 import { PhysicianService } from './shared/services/MedicalHistoryService/physician.service';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentsModule } from './appointments/appointments.module';
-
 import { SystemHomeModule } from './system-home/system-home.module';
-
-
 import { HospitalsModule } from './hospitals/hospitals.module';
 
 
@@ -42,9 +39,7 @@ import { HospitalsModule } from './hospitals/hospitals.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FooterComponent,
-   
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -56,14 +51,9 @@ import { HospitalsModule } from './hospitals/hospitals.module';
     HospitalHomeModule,
     DoctorCategoryModule,
     PatientsModule,
-
     MedicalHistoryModule,
     AppointmentsModule,
     SystemHomeModule,
-    MedicalHistoryModule,
-    MedicalHistoryModule,
-
-    MedicalHistoryModule,
     HospitalsModule
 
 
