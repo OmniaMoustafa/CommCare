@@ -1,6 +1,15 @@
 <div role="main" class="main">
+    <div class="row">
+        <div class="col-sm-6">
+                <div class="mb-md">
+                    <button id="addToTable" class="btn btn-primary" routerLink="/hospital/add">Edit
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     <div class="image">
-        <img src="{{hospitalDetails.photo}}" alt="" style="height:400px; width:100%">
+        <img src="{{hos.photo}}" alt="" style="height:400px; width:100%">
     </div>
     <!-- Map BLock -->
     <div class="home-intro light">
@@ -21,16 +30,16 @@
                     <br />
                 </div>
                 <div class="col-md-3">
-                    <h2 style=" line-height:0.6">{{hospitalDetails.name}}</h2>
+                    <h2 style=" line-height:0.6">{{hos.name}}</h2>
                     <p style="font-size: 1em">
-                        <i class="fa fa-map-marker"></i> {{hospitalDetails.address}}
+                        <i class="fa fa-map-marker"></i> {{hos.address}}
                         <br>
-                        <i class="fa fa-phone"></i> {{hospitalDetails.phone}}
+                        <i class="fa fa-phone"></i> {{hos.phone}}
                     </p>
                 </div>
                 <div class="col-md-3 last">
                     <br>
-                    <p class="lheight" style="font-size:0.9em"> 08 Am: 08 Pm</p>
+                    <p class="lheight" style="font-size:0.9em">{{hos.hours}}</p>
                     <br>
                     <p class="lheight" style="font-size: 0.9em">
                         OVERALL PATIENT SATISFACTION</p>
