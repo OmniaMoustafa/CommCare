@@ -12,8 +12,9 @@
  .filter{
     background-color: #eee;
     display: inline-block;
-    padding: 30px 35px;
+    padding: 30px 0px;
     height: 126px;
+    width: 100%;
 }
 .part{
     width: 300px;
