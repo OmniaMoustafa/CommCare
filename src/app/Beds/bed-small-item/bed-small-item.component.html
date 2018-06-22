@@ -1,0 +1,45 @@
+
+    <div class="col-md-4">
+      <div class="bedblock" (click)="openModal(template)" >
+          <img  class="center" [src] = "bed.image" > 
+          <h4 class="text-center"> {{bed.bedNo}}  </h4>
+          <!-- <p class="text-center">{{room.numberOfRoom}}</p> -->
+
+          <ng-template #template>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Bed Details</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+               <div class="col-md-4">
+                 <img src="../../../assets/img/patient1.jpg" width="200" height="200">
+                
+               </div>
+              <div class="col-md-8">
+                <div class="details-about-patient">
+                  <div class="col-md-7">
+                      <h4>  Name: </h4>
+                      <h4>  Age: </h4>
+                      <h4> Date Of Visit : </h4>
+                      <h4> Time Of Visit :</h4>
+                  </div>
+                  <div class="col-md-5">
+                    <p> Sara Hossam</p>
+                      <p> 22</p>
+                      <p> 22/12/2015</p>
+                      <p> 10:00 am</p>
+                  </div>
+                  
+                </div>
+
+              </div>
+              </div>
+            </ng-template>
+
+
+        </div>
+  </div>
+
+  

@@ -1,0 +1,17 @@
+.roomblock{
+width: 300px;
+height: 350px;
+/* background-color: rgb(49, 146, 238); */
+}
+
+a{
+color:#000;
+font-size: 24px;
+ padding-left: 55px; 
+/* line-height: 127px; */ 
+cursor: pointer;
+}
+.roomblock img{
+    width: 200px;
+    height: 200px;
+}

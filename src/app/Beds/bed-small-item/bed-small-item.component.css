@@ -1,0 +1,38 @@
+.bedblock{
+    width:280px;
+    height: 260px;
+    border:2px solid  #008fe2;
+   margin-bottom: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+
+}
+.bedblock img{
+    width: 240px;
+    height: 200px;
+    margin: 10px 22px;
+}
+.bedblock h4{
+    color:#194d89;
+    font-weight: bold;
+}
+.bedblock p{
+    margin-top: -14px;
+}
+
+ .modal-body {
+        
+        height: 286px;
+       
+    }
+.details-about-patient{
+        margin-left: 32px;
+        margin-top: 21px;
+    }
+.details-about-patient h4{
+    color:#194d89;
+    padding-right: 25px;
+}
+.details-about-patient  p{
+    color:rgb(185, 184, 184) !important;
+}
