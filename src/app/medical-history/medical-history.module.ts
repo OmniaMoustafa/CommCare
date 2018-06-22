@@ -39,11 +39,13 @@ import { HPService } from '../shared/services/MedicalHistoryService/hp.service';
 import { ConsultationService } from '../shared/services/MedicalHistoryService/consultation.service';
 import { AdmissionService } from '../shared/services/MedicalHistoryService/admission.service';
 import { PhysicianService } from '../shared/services/MedicalHistoryService/physician.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    FormsModule
   ],
   declarations: [
     MedicalHistoryComponent,

@@ -35,7 +35,7 @@ export class PatientAddComponent implements OnInit {
 
   }
 
-  onAdd(form: NgForm) : boolean {
+  onAdd(form: NgForm) {
     const patient: IPatient = {
       firstName: form.value['fName'],
       lastName: form.value['lName'],
@@ -47,7 +47,6 @@ export class PatientAddComponent implements OnInit {
       gender: this.gender
     };
     this._PatientService.updatePatient(patient, this.patientIndex);
-    return true;
 
   }
 }
