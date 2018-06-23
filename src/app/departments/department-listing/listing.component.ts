@@ -9,14 +9,31 @@ import { Idepartment } from 'src/app/shared/interfaces/idepartment';
 })
 export class ListingComponent implements OnInit {
   departments:Idepartment[];
+  filteredDepts:Idepartment[];
+  _listFilter: string;
 
   constructor(private deptservice:DepartmentService) { 
     this.deptservice.getAll().subscribe(
       (data : Idepartment[]) => {this.departments = data}
     );
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredDepts = this.listFilter ? this.performFilter(this.listFilter) : this.departments;
   }
 
+  constructor(private deptservice:DepartmentService) { 
+
+  }
+  performFilter(filterBy: string): Idepartment[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));
+  }
   ngOnInit() {
+    this.departments = this.deptservice.getAll();
+    this.filteredDepts = this.departments;
   }
   
 }

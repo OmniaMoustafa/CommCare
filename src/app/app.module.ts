@@ -32,11 +32,10 @@ import { AppointmentsModule } from './appointments/appointments.module';
 import { SystemHomeModule } from './system-home/system-home.module';
 import { HospitalsModule } from './hospitals/hospitals.module';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
-
-
+import { RoomsModule } from './rooms/rooms.module';
+import { RoomServiceService } from './shared/services/room.service';
+import { BedService } from './shared/services/bed.service';
+import { BedsModule } from './Beds/Beds.module';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,9 @@ import { HttpClientModule } from '@angular/common/http';
     MedicalHistoryModule,
     AppointmentsModule,
     SystemHomeModule,
-    HospitalsModule
+    HospitalsModule,
+    RoomsModule,
+    BedsModule
 
 
    ],
@@ -71,7 +72,9 @@ import { HttpClientModule } from '@angular/common/http';
     AdmissionService,
     ConsultationService,
     PhysicianService,
-    HospitalService
+    HospitalService,
+    RoomServiceService,
+    BedService
   ],
 
   bootstrap: [AppComponent]

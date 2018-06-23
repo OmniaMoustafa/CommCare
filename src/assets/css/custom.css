@@ -1202,7 +1202,7 @@ section.section {
   width:122%;
 }
 .owl-theme .owl-nav.disabled+.owl-dots {
-  margin-top: 70px;
+  margin-top: 0px;
 }
 .custom-box-details-2{
   padding: 10px 30px;
