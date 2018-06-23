@@ -11,7 +11,9 @@ export class ListingComponent implements OnInit {
   departments:Idepartment[];
 
   constructor(private deptservice:DepartmentService) { 
-    this.departments=deptservice.getAll();
+    this.deptservice.getAll().subscribe(
+      (data : Idepartment[]) => {this.departments = data}
+    );
   }
 
   ngOnInit() {
