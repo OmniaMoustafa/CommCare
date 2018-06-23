@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { IPatient } from '../../shared/interfaces/IPatient';
 import { PatientService } from '../../shared/services/patient.service';
 import { NgForm } from '@angular/forms';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-patient-add',
@@ -16,6 +17,8 @@ export class PatientAddComponent implements OnInit {
   todayDate: Date = new Date();
   todayYear: number = this.todayDate.getFullYear();
   image: string;
+  bloodPressure: number;
+  bloodSugarLevel: number;
 
   constructor(private _PatientService: PatientService) { }
 
@@ -34,11 +37,6 @@ export class PatientAddComponent implements OnInit {
 
   }
 
-  onFileChanged(event) {
-    const file = event.target.files[0];
-    console.log(file);
-  }
-
   onAdd(form: NgForm) {
     const patient: IPatient = {
       firstName: form.value['fName'],
@@ -48,8 +46,11 @@ export class PatientAddComponent implements OnInit {
       age: this.getAge(),
       image: form.value['image'],
       DOB: form.value['DOB'],
-      gender: this.gender
+      gender: this.gender,
+      bloodPressure: this.bloodPressure,
+      bloodSugarLevel: this.bloodSugarLevel 
     };
     this._PatientService.updatePatient(patient, this.patientIndex);
+
   }
 }

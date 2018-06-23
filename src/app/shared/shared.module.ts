@@ -12,6 +12,8 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
 import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
 import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
 import { HeaderComponent } from './header-content/header.component';
+import { SystemFooterComponent } from './system-footer/system-footer.component';
+import { SystemMenuComponent } from './system-menu/system-menu.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 
@@ -26,6 +28,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
       {path: 'login', component: HospitalLoginComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
       {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
+      {path: 'aboutus',component:AboutUsComponent}
       
     ])
   ],
@@ -38,13 +41,17 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HospitalAboutUsComponent,
     HospitalMedicalservicesComponent,
     HeaderComponent,
+    SystemFooterComponent,
+    SystemMenuComponent,
     AboutUsComponent
 ],
 exports:
 [
   HospitalHeaderComponent,
   HospitalFooterComponent,
-  AboutUsComponent
+  AboutUsComponent,
+  SystemFooterComponent,
+  HeaderComponent,
 ]
 })
 export class SharedModule { }

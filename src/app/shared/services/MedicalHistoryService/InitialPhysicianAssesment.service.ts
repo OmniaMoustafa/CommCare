@@ -62,5 +62,19 @@ export class InitialPhysicianAssesmentService {
         return this.InitialPhysicianAssesment[index];
     }
 
-
+    addInitialPhysicianAssesment(initial: InitialPhysicianAssesment) {
+        this.InitialPhysicianAssesment.push({
+            date: initial.date,
+            hospitalName: initial.hospitalName,
+            timeOfArrival: initial.timeOfArrival,
+            gender: initial.gender,
+            arrival: initial.arrival,
+            modeOfArrival: initial.modeOfArrival,
+            InformationObtained: initial.InformationObtained,
+            PlaceOfIncident: initial.PlaceOfIncident,
+            fName: initial.fName,
+            lName: initial.lName
+        });
+        console.log(this.InitialPhysicianAssesment, this.InitialPhysicianAssesment.length);
+    }
 }

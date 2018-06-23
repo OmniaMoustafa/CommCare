@@ -21,9 +21,8 @@ import { HospitalsModule } from 'src/app/hospitals/hospitals.module';
     HospitalsModule,
     RouterModule.forRoot([
       {path:'home' , component:SystemHomeComponent},
-      { path:'', redirectTo:'/home', pathMatch:'full'}
-      
-
+      { path:'', redirectTo:'/home', pathMatch:'full'},
+      {path:'HospitalHome' , component:HospitalHomeComponent}
     ])
   ],
   declarations: [],

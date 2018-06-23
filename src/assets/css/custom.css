@@ -847,7 +847,7 @@ box-shadow: 10px 10px 10px #444;
   
 } 
 
-/* Modal Content */
+/* Modal Content
  .modal-content {
   background-color: #faf8f8;
   margin: auto;
@@ -860,7 +860,7 @@ box-shadow: 10px 10px 10px #444;
 .panel-heading{
   width: 50%;
 }
-
+*/
 
 /* The Close Button */
 .close {
@@ -1202,7 +1202,7 @@ section.section {
   width:122%;
 }
 .owl-theme .owl-nav.disabled+.owl-dots {
-  margin-top: 70px;
+  margin-top: 0px;
 }
 .custom-box-details-2{
   padding: 10px 30px;
@@ -1258,3 +1258,13 @@ section.section {
   margin: 72px -50px;
   color:#fff;
 }
+
+/* Modal Start */
+/* .fade.show {
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+  transition: opacity .15s linear;
+} */
+/* Modal End */

@@ -13,6 +13,8 @@ export class PatientService {
         phone: '01142664848',
         address: 'cairo',
         image: './assets/img/patient1.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
     },
     {
         firstName: 'Sara',
@@ -23,6 +25,8 @@ export class PatientService {
         phone: '01185758948',
         address: 'cairo',
         image: './assets/img/patient3.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
     },
     {
         firstName: 'Omnia',
@@ -33,6 +37,8 @@ export class PatientService {
         phone: '011985779003',
         address: 'cairo',
         image: './assets/img/patient4.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
     },
     {
         firstName: 'Omnia',
@@ -43,10 +49,12 @@ export class PatientService {
         phone: '01198654337',
         address: 'cairo',
         image: './assets/img/patient2.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
     },
 ];
 
-addPatient(firstName: string, lastName: string, age: number, DOB: string, gender: string, phone: string, address: string, image: string) {
+addPatient(firstName: string, lastName: string, age: number, DOB: string, gender: string, phone: string, address: string, image: string, bloodPressure: number, bloodSugarLevel: number) {
     this.patient.push({
         firstName: firstName,
         lastName: lastName,
@@ -54,7 +62,9 @@ addPatient(firstName: string, lastName: string, age: number, DOB: string, gender
         gender: gender,
         phone: phone,
         address: address,
-        image: image});
+        image: image,
+        bloodPressure: bloodPressure,
+        bloodSugarLevel: bloodSugarLevel});
 }
 
 // tslint:disable-next-line:max-line-length
@@ -82,6 +92,12 @@ updatePatient(patient: IPatient, id: number) {
     }
     if (patient.image != null) {
         this.patient[id].image = patient.image;
+    }
+    if (patient.bloodPressure != null) {
+        this.patient[id].bloodPressure = patient.bloodPressure;
+    }
+    if (patient.bloodSugarLevel != null) {
+        this.patient[id].bloodSugarLevel = patient.bloodSugarLevel;
     }
 }
 
