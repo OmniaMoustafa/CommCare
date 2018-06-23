@@ -17,6 +17,7 @@ import { SystemMenuComponent } from './system-menu/system-menu.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -48,9 +49,9 @@ exports:
 [
   HospitalHeaderComponent,
   HospitalFooterComponent,
+  AboutUsComponent,
   SystemFooterComponent,
   HeaderComponent,
-
 ]
 })
 export class SharedModule { }
