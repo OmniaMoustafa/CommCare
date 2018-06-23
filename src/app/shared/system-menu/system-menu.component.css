@@ -1,0 +1,36 @@
+/* .nav {
+    padding-left: 142px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    list-style: none;
+    display: -webkit-inline-box;
+} */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.list-inline{
+    list-style: none;
+}
+a:active{
+    background-color: #007fc9;
+    color: #fff;
+    border-radius: 2px;
+}
+.nav>li{
+    position: relative;
+    display: block;
+}
+.nav>li:hover, nav>li:focus{
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.nav-pills>li+li {
+    margin-left: 8px;
+}
+ul.nav-pills > li.active > a{
+    background-color: #008fe2;
+    border-radius: 4px;
+}

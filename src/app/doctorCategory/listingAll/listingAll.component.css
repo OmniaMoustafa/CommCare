@@ -1,3 +1,6 @@
 .scroll-small-item {
     display: inline-block; 
 }
+.mt-lg{
+    margin-top: 10px !important;
+}
