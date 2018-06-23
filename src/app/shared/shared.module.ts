@@ -12,6 +12,8 @@ import { HospitalLoginComponent } from './hospital-login/hospital-login.componen
 import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
 import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
 import { HeaderComponent } from './header-content/header.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 
 
 @NgModule({
@@ -35,12 +37,14 @@ import { HeaderComponent } from './header-content/header.component';
     HospitalLoginComponent,
     HospitalAboutUsComponent,
     HospitalMedicalservicesComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutUsComponent
 ],
 exports:
 [
   HospitalHeaderComponent,
   HospitalFooterComponent,
+  AboutUsComponent
 ]
 })
 export class SharedModule { }
