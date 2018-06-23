@@ -26,6 +26,7 @@ import { AppointmentDetailsSmallComponent } from '../appointments/appointment-de
 import { EventDetailsComponent } from 'src/app/events/event-details/event-details.component';
 import { MedicalHistoryComponent } from 'src/app/medical-history/medical-history.component';
 import { PatientDetailsComponent } from 'src/app/patients/patient-details/patient-details.component';
+import { PatientsComponent } from '../patients/patients.component';
 
 @NgModule({
   imports: [
@@ -57,6 +58,16 @@ import { PatientDetailsComponent } from 'src/app/patients/patient-details/patien
 
         ]
       },
+        {path: "doctorProfile/:id" ,component:DoctorsComponent,children :[
+        {path:'', component: DoctorDetailsComponent },
+        {path:'Listing', component:DoctorListingsComponent},
+        {path:'add',component:DoctorAddComponent},
+        {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
+        {path:'calendar', component:DoctorCalendarComponent},
+        {path:'calendar/edit',component:EditCalendarComponent},
+        {path:'docevents',component:EventListingComponent},
+        //{path:'docpatients',component:PatientsComponent}
+      ]},
     ])
   ],
 

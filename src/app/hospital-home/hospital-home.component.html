@@ -1,14 +1,22 @@
-
-  <div role="main" class="main">
+<div class="container-fluid">
+  <div class="row">
     <app-slider></app-slider>
-    <section class="p-xlg">
-      <div class="container">
-        <app-about></app-about>
-        <div class="row mt-lg">
-        <app-department-item-small *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
-        </div>
-        <hr class="custom-divider">
-      </div>
-    </section>
-    <app-quote></app-quote>
   </div>
+</div>
+<section class="p-xlg">
+  <div class="container">
+    <app-about></app-about>
+    <div class="row mt-lg">
+      <app-department-item-small *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
+    </div>
+    <hr class="custom-divider">
+  </div>
+</section>
+<div class="container-fluid">
+
+  <div class="row">
+    <app-quote></app-quote>
+
+  </div>
+
+</div>
