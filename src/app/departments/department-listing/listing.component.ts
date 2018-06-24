@@ -29,7 +29,7 @@ export class ListingComponent implements OnInit {
     return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));
   }
   ngOnInit() {
-    //this.departments = this.deptservice.getAll();
+    // this.departments = this.deptservice.getAll();
     this.filteredDepts = this.departments;
   }
   
