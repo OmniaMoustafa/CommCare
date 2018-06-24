@@ -1,5 +1,5 @@
 <div role="main" class="main">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-xs-6">
                 <div class="mb-md">
                     <button id="addToTable" class="btn btn-primary" routerLink="/hospital/add">Edit
@@ -7,7 +7,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
     <div class="image">
         <img src="{{hos.photo}}" alt="" style="height:400px; width:100%">
     </div>
@@ -17,20 +17,20 @@
             <div class="row">
                 <div class="col-md-3" style="margin-right:20px; ">
                     <br>
-                    <div class="map">
+                    <!-- <div class="map">
                         <img id="hero_1_herosubpanelcolumn1_0_imgStaticMap" src="../../../assets/img/map.jpg" style="width:115px;">
-                    </div>
-                    <!-- <div style=" width: 50% ">
-                        <iframe style=" border-radius:50px; border:1px solid rgb(243, 243, 243)" width="100%" height="110" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Malet%20St%2C%20London%20WC1E%207HU%2C%20United%20Kingdom+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                    </div> -->
+                    <div style=" width: 50% " class="map">
+                        <iframe style="-moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; border:1px solid rgb(243, 243, 243)" width="100%" height="110" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Malet%20St%2C%20London%20WC1E%207HU%2C%20United%20Kingdom+(Your%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                             <a href="https://www.mapsdirections.info/en/custom-google-maps/"></a>
                             <a href="https://www.mapsdirections.info/en/"></a>
                         </iframe>
-                    </div> -->
+                    </div>
                     <br />
                 </div>
                 <div class="col-md-3" style="margin-right:20px;padding-top:2%">
-                   <a routerLink="/HospitalHome/{{hos.id}}"><h2 style=" line-height:0.6">{{hos.name}}</h2></a>
+                   <a routerLink="/hospitalHome/{{hos.id}}"><h2 style=" line-height:0.6">{{hos.name}}</h2></a>
                     <p style="font-size: 1em">
                         <i class="fa fa-map-marker"></i> {{hos.address}}
                         <br>
@@ -44,10 +44,10 @@
                     <p class="lheight" style="font-size: 0.9em">
                         OVERALL PATIENT SATISFACTION</p>
                         <br>
-                        <i class="fa fa-star yellow"></i>
-                        <i class="fa fa-star yellow"></i>
-                        <i class="fa fa-star yellow"></i>
-                        <i class="fa fa-star yellow"></i>
+                        <i class="fa fa-star orange"></i>
+                        <i class="fa fa-star orange"></i>
+                        <i class="fa fa-star orange"></i>
+                        <i class="fa fa-star orange"></i>
                         <i class="fa fa-star"></i>
                     
                 </div>
