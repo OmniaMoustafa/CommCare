@@ -12,10 +12,7 @@ export class ListingComponent implements OnInit {
   filteredDepts:Idepartment[];
   _listFilter: string;
 
-  constructor(private deptservice:DepartmentService) { 
-    this.deptservice.getAll().subscribe(
-      (data : Idepartment[]) => {this.departments = data}
-    );
+  
   get listFilter(): string {
     return this._listFilter;
   }
@@ -32,7 +29,7 @@ export class ListingComponent implements OnInit {
     return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));
   }
   ngOnInit() {
-    this.departments = this.deptservice.getAll();
+    //this.departments = this.deptservice.getAll();
     this.filteredDepts = this.departments;
   }
   

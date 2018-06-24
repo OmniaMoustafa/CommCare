@@ -14,7 +14,7 @@ export class HospitalHomeComponent implements OnInit {
 
   hospital:Ihospital;
   constructor(private deptservice:DepartmentService,private hosService:HospitalService) {
-    this.departments=deptservice.getAll();
+    //this.departments=deptservice.getAll();
    }
 
 
