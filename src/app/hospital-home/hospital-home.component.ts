@@ -16,17 +16,17 @@ export class HospitalHomeComponent implements OnInit {
   hospitals:Ihospital[];
   id:number;
   hospital:Ihospital={};
-  constructor(private deptservice:DepartmentService,private hosService:HospitalService,  activatedRoute:ActivatedRoute) {
-    activatedRoute.params.subscribe((params) => {
-      this.id = params['id'];
-      console.log(this.id);
-    });
+  constructor(private deptservice:DepartmentService,private hosService:HospitalService, private activatedRoute:ActivatedRoute) {
+    
     // console.log(this.hospital.description);
    }
 
 
   ngOnInit() {
-    this.hospital=this.hosService.getById(this.id);
+    this.activatedRoute.params.subscribe((params) => {
+      this.id = params['id'];
+      this.hospital=this.hosService.getById(+this.id);
+    });
   }
 
 }
