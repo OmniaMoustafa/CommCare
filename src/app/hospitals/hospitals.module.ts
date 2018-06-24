@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {DoctorsModule}  from '../doctors/doctors.module';
 import { DepartmentsModule }  from '../departments/departments.module';
+import { HospitalHomeComponent } from 'src/app/hospital-home/hospital-home.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { DepartmentsModule }  from '../departments/departments.module';
       {path:'hospitals/viewAll',component:HospitalListingComponent},
       {path:'details/:id',component:HospitalDetailsComponent},
       {path:'hospital/add',component:HospitalAddComponent},
+      {path:'hospitalHome/:id',component:HospitalHomeComponent}
       
     ])
   ],
