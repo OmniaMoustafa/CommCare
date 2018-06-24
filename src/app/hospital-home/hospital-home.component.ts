@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Idepartment } from 'src/app/shared/interfaces/idepartment';
 import { DepartmentService } from 'src/app/shared/services/department.service';
+import { HospitalService } from 'src/app/shared/services/hospital.service';
+import { Ihospital } from 'src/app/shared/interfaces/ihospital';
 
 @Component({
   selector: 'app-hospital-home',
@@ -9,11 +11,12 @@ import { DepartmentService } from 'src/app/shared/services/department.service';
 })
 export class HospitalHomeComponent implements OnInit {
   departments:Idepartment[];
-  constructor(private deptservice:DepartmentService) { 
-    this.deptservice.getAll().subscribe(
-      (data : Idepartment[]) => {this.departments = data}
-    );
-  }
+
+  hospital:Ihospital;
+  constructor(private deptservice:DepartmentService,private hosService:HospitalService) {
+    this.departments=deptservice.getAll();
+   }
+
 
   ngOnInit() {
   }

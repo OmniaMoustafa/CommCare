@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HospitalService } from 'src/app/shared/services/hospital.service';
+import { Ihospital } from 'src/app/shared/interfaces/ihospital';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  hospital:Ihospital={};
+  constructor(private hosService:HospitalService) { }
 
   ngOnInit() {
   }
