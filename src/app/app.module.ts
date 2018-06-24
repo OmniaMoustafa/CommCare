@@ -31,15 +31,11 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentsModule } from './appointments/appointments.module';
 import { SystemHomeModule } from './system-home/system-home.module';
 import { HospitalsModule } from './hospitals/hospitals.module';
+import { HttpClientModule } from '@angular/common/http';
 import { RoomsModule } from './rooms/rooms.module';
 import { RoomServiceService } from './shared/services/room.service';
 import { BedService } from './shared/services/bed.service';
 import { BedsModule } from './Beds/Beds.module';
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -48,6 +44,7 @@ import { BedsModule } from './Beds/Beds.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     EventsModule,
     DepartmentsModule,
     DoctorsModule,

@@ -17,6 +17,8 @@ export class PatientAddComponent implements OnInit {
   todayDate: Date = new Date();
   todayYear: number = this.todayDate.getFullYear();
   image: string;
+  bloodPressure: number;
+  bloodSugarLevel: number;
 
   constructor(private _PatientService: PatientService) { }
 
@@ -35,7 +37,7 @@ export class PatientAddComponent implements OnInit {
 
   }
 
-  onAdd(form: NgForm) : boolean {
+  onAdd(form: NgForm) {
     const patient: IPatient = {
       firstName: form.value['fName'],
       lastName: form.value['lName'],
@@ -44,10 +46,11 @@ export class PatientAddComponent implements OnInit {
       age: this.getAge(),
       image: form.value['image'],
       DOB: form.value['DOB'],
-      gender: this.gender
+      gender: this.gender,
+      bloodPressure: this.bloodPressure,
+      bloodSugarLevel: this.bloodSugarLevel 
     };
     this._PatientService.updatePatient(patient, this.patientIndex);
-    return true;
 
   }
 }

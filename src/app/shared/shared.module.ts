@@ -14,6 +14,9 @@ import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hos
 import { HeaderComponent } from './header-content/header.component';
 import { SystemFooterComponent } from './system-footer/system-footer.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SystemMenuComponent } from './system-menu/system-menu.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 
 
 @NgModule({
@@ -27,6 +30,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
       {path: 'sign-up', component: SignUpComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
       {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
+      {path: 'aboutus',component:AboutUsComponent}
       
     ])
   ],
@@ -38,17 +42,19 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HospitalLoginComponent,
     HospitalAboutUsComponent,
     HospitalMedicalservicesComponent,
-    HeaderComponent
-,
-    SystemFooterComponent
-,
-    SignUpComponent
+    HeaderComponent,
+    SystemFooterComponent,
+    SignUpComponent,
+    SystemMenuComponent,
+    AboutUsComponent
 ],
 exports:
 [
   HospitalHeaderComponent,
   HospitalFooterComponent,
-  SystemFooterComponent
+  AboutUsComponent,
+  SystemFooterComponent,
+  HeaderComponent,
 ]
 })
 export class SharedModule { }

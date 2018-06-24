@@ -1,20 +1,21 @@
-button{
-    padding: 10px 20px;
-    margin-top: 50px;
-    background: rgb(173, 172, 172);
-    color:#fff;
-    font-weight: bold;
-    border-radius: 3px;
-    border: 1px solid transparent;
-    margin-bottom: 50px;
-    margin-left: 15px;
+.doc-category{
+    border: 1px solid #DDD;
 }
-
 .drag-scroll {
     height: 150px;
-    width: 88%;
+    width: 100%;
 }
 
 .drag-scroll > div{
     height: calc(100% + 20px) !important;
+}
+.all-doc-btn{
+    padding: 10px 20px;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    margin: 30px 15px 0px 0px !important;
+    background-color: #D7172E;
+    float: right;
 }

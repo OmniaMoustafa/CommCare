@@ -57,6 +57,16 @@ import { CalendarModalComponent } from './doctor-calendar/calendar-modal/calenda
 
         ]
       },
+        {path: "doctorProfile/:id" ,component:DoctorsComponent,children :[
+        {path:'', component: DoctorDetailsComponent },
+        {path:'Listing', component:DoctorListingsComponent},
+        {path:'add',component:DoctorAddComponent},
+        {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
+        {path:'calendar', component:DoctorCalendarComponent},
+        {path:'calendar/edit',component:EditCalendarComponent},
+        {path:'docevents',component:EventListingComponent},
+        //{path:'docpatients',component:PatientsComponent}
+      ]},
     ])
   ],
 

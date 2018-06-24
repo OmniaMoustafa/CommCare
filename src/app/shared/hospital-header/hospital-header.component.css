@@ -265,3 +265,15 @@
     transform: scale(1);
     opacity: 1;
 }
+.logo{
+    padding-right: 100px;
+}
+.menu-user{
+    padding-top: 27px;
+}
+.mm-menu{
+    padding-right: 58px;
+}
+.all-header{
+    padding: 0px !important;
+}

@@ -7,4 +7,6 @@ export interface IPatient {
     phone: string;
     address: string;
     image: string;
+    bloodPressure: number;
+    bloodSugarLevel: number;
 }

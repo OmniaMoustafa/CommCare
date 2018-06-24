@@ -1,5 +1,5 @@
 .container{
-    margin-top: 15px;
+    margin-top: -61px;
 }
 
 img#PP{
@@ -16,6 +16,7 @@ ul {
     list-style-type: none;
     margin-top: -10px;
     margin-bottom: 10px;
+    margin-left: 35px;
 }
 
 ul li{
@@ -52,6 +53,19 @@ button.btn-primary{
     border: 1px solid lightgray;
 }
 
-.modal-content{
-    height: 625px;
+/* .modal-content{
+    height: 545px;
+} */
+
+.modal-footer{
+    margin-top: 40px;
+}
+
+.modal-title {
+    margin-bottom: -28px;
+    line-height: 2.428571;
+}
+
+.modal-body{
+    margin-top: -30px;
 }
