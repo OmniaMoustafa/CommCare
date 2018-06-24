@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Idepartment } from "src/app/shared/interfaces/idepartment";
 import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class DepartmentService {
@@ -30,8 +31,8 @@ export class DepartmentService {
             }];
     }
 
-    public getAll() {
-        return this.httpClient.get('http://localhost:63451/api/Departments?type=json');
+    public getAll():Observable<Idepartment[]> {
+        return this.httpClient.get<Idepartment[]>('http://localhost:63451/api/Departments?type=json');
         // return this.departments;
     }
 
