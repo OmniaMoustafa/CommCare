@@ -37,6 +37,7 @@ import { RoomServiceService } from './shared/services/room.service';
 import { BedService } from './shared/services/bed.service';
 import { BedsModule } from './Beds/Beds.module';
 
+
 @NgModule({
   declarations: [
     AppComponent

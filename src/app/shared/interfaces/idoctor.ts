@@ -1,7 +1,7 @@
 export class Idoctor {
     name?:string;
     speciality?:string;
-    id:number;
+    id?:number;
     detailedDesc?:string;
     photo?:string;
 }
