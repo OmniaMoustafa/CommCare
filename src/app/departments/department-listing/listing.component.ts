@@ -12,6 +12,10 @@ export class ListingComponent implements OnInit {
   filteredDepts:Idepartment[];
   _listFilter: string;
 
+  constructor(private deptservice:DepartmentService) { 
+    this.deptservice.getAll().subscribe(
+      (data : Idepartment[]) => {this.departments = data}
+    );
   get listFilter(): string {
     return this._listFilter;
   }

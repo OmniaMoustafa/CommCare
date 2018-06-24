@@ -9,9 +9,11 @@ import { DepartmentService } from 'src/app/shared/services/department.service';
 })
 export class HospitalHomeComponent implements OnInit {
   departments:Idepartment[];
-  constructor(private deptservice:DepartmentService) {
-    this.departments=deptservice.getAll();
-   }
+  constructor(private deptservice:DepartmentService) { 
+    this.deptservice.getAll().subscribe(
+      (data : Idepartment[]) => {this.departments = data}
+    );
+  }
 
   ngOnInit() {
   }
