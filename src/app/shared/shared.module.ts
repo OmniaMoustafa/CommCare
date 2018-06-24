@@ -13,6 +13,7 @@ import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.
 import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
 import { HeaderComponent } from './header-content/header.component';
 import { SystemFooterComponent } from './system-footer/system-footer.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { SystemMenuComponent } from './system-menu/system-menu.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
@@ -26,6 +27,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     RouterModule.forChild([
       {path: 'contactUs', component: ContactUsComponent},
       {path: 'login', component: HospitalLoginComponent},
+      {path: 'sign-up', component: SignUpComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
       {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
       {path: 'aboutus',component:AboutUsComponent}
@@ -42,6 +44,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     HospitalMedicalservicesComponent,
     HeaderComponent,
     SystemFooterComponent,
+    SignUpComponent,
     SystemMenuComponent,
     AboutUsComponent
 ],

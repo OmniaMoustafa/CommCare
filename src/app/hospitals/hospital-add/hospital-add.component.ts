@@ -19,6 +19,7 @@ export class HospitalAddComponent implements OnInit {
   public OnAdd(form: NgForm) {
     this.hos.id = this.cont;
     this.hosService.add(this.hos);
+
     this.cont++;
     // this.router.navigate(['/hospitals/viewAll']);
     this.router.navigate(['/hospitalHome/', this.hos.id]);
@@ -26,4 +27,5 @@ export class HospitalAddComponent implements OnInit {
   onClick() {
     this.hosService.setBool(false);
   }
+
 }

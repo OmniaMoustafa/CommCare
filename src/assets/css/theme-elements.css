@@ -4459,7 +4459,7 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 
 /* Featured Box */
 .featured-box {
-	background: #F5F5F5;
+	background: #08c;
 	background: -webkit-linear-gradient( top , #FFF 1%, #fcfcfc 98%) repeat scroll 0 0 transparent;
 	background: linear-gradient(to bottom, #FFF 1%, #fcfcfc 98%) repeat scroll 0 0 transparent;
 	-webkit-box-sizing: border-box;

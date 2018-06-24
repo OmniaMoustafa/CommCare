@@ -1,10 +1,11 @@
+  
 .featured-box .box-content{
 	border-top: 3px solid #3498db;
 }
 h2{
 	color: #0088cc;
 }
-.login{
+.signup{
 	margin-left: 260px;
 }
 label
