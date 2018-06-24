@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HospitalService } from 'src/app/shared/services/hospital.service';
+import { Ihospital } from 'src/app/shared/interfaces/ihospital';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  id:number;
+  hospital:Ihospital={};
+  constructor(private hosService:HospitalService) { }
 
   ngOnInit() {
+    this.hospital=this.hosService.getById(this.id);
   }
 
 }

@@ -19,6 +19,7 @@ export class ListingComponent implements OnInit {
     }
     );
   }
+
   get listFilter(): string {
     return this._listFilter;
   }
@@ -26,7 +27,6 @@ export class ListingComponent implements OnInit {
     this._listFilter = value;
     this.filteredDepts = this.listFilter ? this.performFilter(this.listFilter) : this.departments;
   }
-
   
   performFilter(filterBy: string): Idepartment[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -39,6 +39,7 @@ export class ListingComponent implements OnInit {
     })
     // this.departments = this.deptservice.getAll();
     // this.filteredDepts = this.departments;
+
   }
   
 }
