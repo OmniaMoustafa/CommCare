@@ -56,13 +56,19 @@
     
              <div class="col-md-2">
                      <input type="submit" value="Search Now"  
-                     #filtersearch (click)="onFilter(doctorname,specialistname,cityname)" class="btn btn-primary  text-uppercase font-size-sm">
+                     #filtersearch 
+                     class="btn btn-primary  text-uppercase font-size-sm">
              </div>
          </div>
      </div>
      
 
     </div>
+
+  
+    <!-- (click)="onFilter(doctorname,specialistname,cityname)" 
+                     [queryParams]="{name:doctorname}" -->
+
 <!-- <div class="filter">
     <div id="container" class="">
         <header class="flex-item">

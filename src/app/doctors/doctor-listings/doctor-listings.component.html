@@ -1,6 +1,9 @@
-<app-filterDoctors></app-filterDoctors>
+<app-filterDoctors ></app-filterDoctors>
 <div class="container">
     <app-doctor-item-small *ngFor="let doc of doctors" [doctor]="doc"></app-doctor-item-small>
     
 </div>
 
+
+
+<!-- (sendData)="filterDoctors($event) -->

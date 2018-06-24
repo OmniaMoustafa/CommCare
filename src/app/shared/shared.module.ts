@@ -13,6 +13,7 @@ import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.
 import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
 import { HeaderComponent } from './header-content/header.component';
 import { SystemFooterComponent } from './system-footer/system-footer.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SystemFooterComponent } from './system-footer/system-footer.component';
     RouterModule.forChild([
       {path: 'contactUs', component: ContactUsComponent},
       {path: 'login', component: HospitalLoginComponent},
+      {path: 'sign-up', component: SignUpComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
       {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
       
@@ -39,6 +41,8 @@ import { SystemFooterComponent } from './system-footer/system-footer.component';
     HeaderComponent
 ,
     SystemFooterComponent
+,
+    SignUpComponent
 ],
 exports:
 [

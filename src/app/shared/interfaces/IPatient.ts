@@ -1,5 +1,5 @@
 export interface IPatient {
-    firstName: string;
+    firstName?: string;
     lastName: string;
     age: number;
     DOB: string;
