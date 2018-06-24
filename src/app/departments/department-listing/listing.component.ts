@@ -12,7 +12,14 @@ export class ListingComponent implements OnInit {
   filteredDepts:Idepartment[];
   _listFilter: string;
 
-  
+  constructor(private deptservice:DepartmentService) { 
+    this.deptservice.getAll().subscribe( dep =>{
+      this.departments = dep;
+      
+    }
+    );
+  }
+
   get listFilter(): string {
     return this._listFilter;
   }
@@ -20,16 +27,19 @@ export class ListingComponent implements OnInit {
     this._listFilter = value;
     this.filteredDepts = this.listFilter ? this.performFilter(this.listFilter) : this.departments;
   }
-
-  constructor(private deptservice:DepartmentService) {}
   
   performFilter(filterBy: string): Idepartment[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));
   }
   ngOnInit() {
+    this.deptservice.getAll()
+    .subscribe(deps =>{
+      this.departments = deps;
+    })
     // this.departments = this.deptservice.getAll();
-    this.filteredDepts = this.departments;
+    // this.filteredDepts = this.departments;
+
   }
   
 }
