@@ -1,0 +1,9 @@
+.drag-scroll {
+    height:300px;
+    width: 88%;
+    margin-bottom: 150px;
+}
+
+.drag-scroll > div{
+    height: calc(100% + 20px) !important;
+}

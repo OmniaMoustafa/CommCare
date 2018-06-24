@@ -9,7 +9,7 @@
 							<p>{{patient.firstName+' '+ patient.lastName}}</p>
 						</div>
 						<div class="col-md-4">
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#patientDetails">
 								<img id="icon" src="./assets/img/new-24-512.png" alt="edit icon">Edit
 							</button>
 						</div>
@@ -22,6 +22,8 @@
 							<li>Birth Day: {{patient.DOB}}</li>
 							<li>Phone: {{patient.phone}}</li>
 							<li>Address: {{patient.address}}</li>
+							<li>Blood Pressure: {{patient.bloodPressure}}</li>
+							<li>Blood Sugar Level: {{patient.bloodSugarLevel}}</li>
 						</ul>
 					</div>
 				</div>
@@ -33,7 +35,7 @@
 		</div>
 
 		<!-- Modal -->
-		<div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div #model class="modal fade bd-example-modal-sm" id="patientDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">

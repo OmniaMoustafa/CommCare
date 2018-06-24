@@ -1,0 +1,33 @@
+
+.feature-box-icon{
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.text p{
+    font-size: 18px;
+    margin-top: 30px;
+}
+.image{
+    margin-right: 30px;
+}
+hr.tall{
+    margin: 0px;
+}
+.space{
+    margin-bottom:50px; 
+}
+.nospace{
+    margin-top:-60px; 
+}
+.alltext p{
+    font-size: 17px;
+    line-height:1.6; 
+}
+.alltext article{
+    font-size: 18px;
+    line-height:1.8; 
+}
+.secundary p{
+    font-size: 14px;
+}
+

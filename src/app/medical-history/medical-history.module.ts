@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MedicalHistoryComponent } from './medical-history.component';
-import { AccordionModule } from 'ngx-bootstrap';
+import { AccordionModule, TimepickerModule, BsDatepickerModule } from 'ngx-bootstrap';
 import { InitialPhysicianAssesmentComponent } from './initial-physician-assesment/initial-physician-assesment.component';
 // tslint:disable-next-line:max-line-length
 import { InitialPhysicianAssesmentListingComponent } from './Initial-physician-assesment/initial-physician-assesment-listing/initial-physician-assesment-listing.component';
@@ -39,11 +39,15 @@ import { HPService } from '../shared/services/MedicalHistoryService/hp.service';
 import { ConsultationService } from '../shared/services/MedicalHistoryService/consultation.service';
 import { AdmissionService } from '../shared/services/MedicalHistoryService/admission.service';
 import { PhysicianService } from '../shared/services/MedicalHistoryService/physician.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    TimepickerModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    FormsModule
   ],
   declarations: [
     MedicalHistoryComponent,
