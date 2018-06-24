@@ -76,6 +76,14 @@
       <div class="row">
         <div class="form-group">
           <div class="col-md-12">
+            <textarea #quote=ngModel [(ngModel)]="hos.quote" name="quote" maxlength="5000" placeholder="quote"
+              data-msg-required="Please enter your quote." rows="5" class="form-control inputt" id="quote" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
             <input #hoPhoto=ngModel [(ngModel)]="hos.photo" name="hoPhoto" type="file" placeholder="The Department Photo" value="" data-msg-required="Please choose the hospital image."
               maxlength="100" class="form-control inputimg" id="subject" required>
           </div>

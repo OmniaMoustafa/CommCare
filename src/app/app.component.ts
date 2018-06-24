@@ -8,6 +8,7 @@ import { HospitalService } from 'src/app/shared/services/hospital.service';
 })
 export class AppComponent implements OnInit {
   ishospital = this.hosService.getBool();
+  
   title = 'app';
     constructor(private hosService:HospitalService) { }
   
