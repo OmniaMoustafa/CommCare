@@ -21,9 +21,8 @@ export class ListingComponent implements OnInit {
     this.filteredDepts = this.listFilter ? this.performFilter(this.listFilter) : this.departments;
   }
 
-  constructor(private deptservice:DepartmentService) { 
-
-  }
+  constructor(private deptservice:DepartmentService) {}
+  
   performFilter(filterBy: string): Idepartment[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));

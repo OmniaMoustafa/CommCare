@@ -8,11 +8,12 @@ import { Ihospital } from 'src/app/shared/interfaces/ihospital';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  id:number;
   hospital:Ihospital={};
   constructor(private hosService:HospitalService) { }
 
   ngOnInit() {
+    this.hospital=this.hosService.getById(this.id);
   }
 
 }
