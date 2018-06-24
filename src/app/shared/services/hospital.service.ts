@@ -14,7 +14,10 @@ export class HospitalService{
                 phone:234985545689,
                 photo:'../../../assets/img/hos1.jpg',
                 hours:'08 am :08 pm',
-                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
+                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                quote:'Its Quote number one',
+                facebookLink:'https://wuzzuf.net/profile'
+                
             },
             {
                 id:2,
@@ -23,7 +26,9 @@ export class HospitalService{
                 phone:31180938976,
                 photo:'../../../assets/img/hos4.jpg',
                 hours:'12 am : 12 pm',
-                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
+                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                quote:'Its Quote number two',
+                facebookLink:'https://wuzzuf.net/profile'
             },
             {
                 id:3,
@@ -32,7 +37,9 @@ export class HospitalService{
                 phone:45682739898,
                 photo:'../../../assets/img/hos3.jpg',
                 hours:'10 am :12 pm',
-                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
+                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                quote:'Its Quote number three',
+                facebookLink:'https://wuzzuf.net/profile'
             },
             {
                 id:4,
@@ -41,7 +48,9 @@ export class HospitalService{
                 phone:45682739898,
                 photo:'../../../assets/img/hos11.jpg',
                 hours:'10 am :12 pm',
-                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.'
+                description:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                quote:'Its Quote number four',
+                facebookLink:'https://wuzzuf.net/profile'
             }
         ];
     };

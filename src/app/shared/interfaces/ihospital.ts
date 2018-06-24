@@ -10,5 +10,8 @@ export interface Ihospital {
     deptdescription?:string;
     medservicesdescription?:string;
     latestnewsdescription?:string;
+    facebookLink?:String;
+    twitterLink?:String;
+    quote?:string;
     
 }
