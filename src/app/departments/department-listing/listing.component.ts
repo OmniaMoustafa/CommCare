@@ -15,11 +15,9 @@ export class ListingComponent implements OnInit {
 
   constructor(private deptservice:DepartmentService) { 
 
-    this.deptservice.getAll().subscribe( dep =>{
-      this.departments = dep;
+    
       
-    }
-    );
+    
   }
 
   get listFilter(): string {
@@ -45,5 +43,4 @@ export class ListingComponent implements OnInit {
 
   }
 
-}
 }
