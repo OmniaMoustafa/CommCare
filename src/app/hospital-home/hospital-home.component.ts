@@ -11,10 +11,12 @@ import { Ihospital } from 'src/app/shared/interfaces/ihospital';
 })
 export class HospitalHomeComponent implements OnInit {
   departments:Idepartment[];
+
   hospital:Ihospital;
   constructor(private deptservice:DepartmentService,private hosService:HospitalService) {
     this.departments=deptservice.getAll();
    }
+
 
   ngOnInit() {
   }
