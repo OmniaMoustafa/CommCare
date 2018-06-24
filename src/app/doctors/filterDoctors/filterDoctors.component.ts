@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Idoctor } from '../../shared/interfaces/idoctor';
 import { Doctorservice } from '../../shared/services/doctor.service';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-filterDoctors',
@@ -9,7 +10,7 @@ import { Doctorservice } from '../../shared/services/doctor.service';
 })
 export class FilterDoctorsComponent implements OnInit {
 
-
+  // @Output() sendData = new EventEmitter();
   constructor(private docservice:Doctorservice) {
     
    }
@@ -19,7 +20,7 @@ export class FilterDoctorsComponent implements OnInit {
   }
 public onFilter(doctorname, specialistname,cityname)
 {
-   
+  //  this.sendData.emit(doctorname,specialistname,cityname);
   
   console.log(doctorname.value);
   console.log(specialistname.value);

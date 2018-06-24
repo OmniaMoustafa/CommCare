@@ -15,5 +15,5 @@ export interface IPatient {
     medicineQuantity?:string;
     medicineRestriction?:string;
     place?:string;
-    
+
 }

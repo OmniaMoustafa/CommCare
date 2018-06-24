@@ -11,14 +11,24 @@ import { Router } from '@angular/router';
 })
 export class HospitalAddComponent implements OnInit {
   public hos: Ihospital= {};
+  cont:number = 5;
   constructor(private hosService:HospitalService , private router: Router) { }
 
   ngOnInit() {
   }
   public OnAdd(form: NgForm) {
+    this.hos.id = this.cont;
     this.hosService.add(this.hos);
-    this.router.navigate(['/hospitals/viewAll']);
-    this.router.navigate(['/details/:id']);
+   this.cont++;
+<<<<<<< HEAD
+    this.router.navigate(['/HospitalHome']);
+    this.router.navigate(['/details/',this.hos.id]);
+=======
+    // this.router.navigate(['/hospitals/viewAll']);
+    this.router.navigate(['/hospitalHome/',this.hos.id]);
 }
-
+onClick(){
+  this.hosService.setBool(false);
+>>>>>>> e2ece5d0c417fe39d33d362c89b2d99f8badc513
+}
 }

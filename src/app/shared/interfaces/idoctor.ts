@@ -1,4 +1,4 @@
-export interface Idoctor {
+export class Idoctor {
     name?:string;
     speciality?:string;
     id?:number;
