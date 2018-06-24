@@ -20,7 +20,7 @@ export class HospitalAddComponent implements OnInit {
     this.hos.id = this.cont;
     this.hosService.add(this.hos);
    this.cont++;
-    // this.router.navigate(['/hospitals/viewAll']);
+    this.router.navigate(['/HospitalHome']);
     this.router.navigate(['/details/',this.hos.id]);
 }
 
