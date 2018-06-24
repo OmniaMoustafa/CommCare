@@ -11,12 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
-import { ModalModule } from "ngx-bootstrap";
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
-import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
 import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component';
 import { PatientListingsComponent } from '../patients/patient-listings/patient-listings.component';
 import { PatientsModule } from '../patients/patients.module';
@@ -24,6 +22,8 @@ import { EventsModule } from '../events/events.module';
 import { EventDetailsComponent } from 'src/app/events/event-details/event-details.component';
 import { PatientDetailsComponent } from 'src/app/patients/patient-details/patient-details.component';
 import { CalendarModalComponent } from './doctor-calendar/calendar-modal/calendar-modal.component';
+import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
+import { ModalModule } from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -57,16 +57,6 @@ import { CalendarModalComponent } from './doctor-calendar/calendar-modal/calenda
 
         ]
       },
-        {path: "doctorProfile/:id" ,component:DoctorsComponent,children :[
-        {path:'', component: DoctorDetailsComponent },
-        {path:'Listing', component:DoctorListingsComponent},
-        {path:'add',component:DoctorAddComponent},
-        {path:'WritePrescription', component:DoctorPrescriptionComponent} ,
-        {path:'calendar', component:DoctorCalendarComponent},
-        {path:'calendar/edit',component:EditCalendarComponent},
-        {path:'docevents',component:EventListingComponent},
-        //{path:'docpatients',component:PatientsComponent}
-      ]},
     ])
   ],
 
