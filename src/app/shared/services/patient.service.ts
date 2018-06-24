@@ -53,7 +53,62 @@ export class PatientService {
         bloodSugarLevel: 85
     },
 ];
-
+private patients:IPatient[];
+constructor(){
+    this.patients=[
+    {
+        firstName: 'Noor Elhoda',
+        lastName: 'Ezzat',
+        age: 23,
+        DOB: '15/9/1994',
+        gender: 'female',
+        phone: '01142664848',
+        address: 'cairo',
+        image: './assets/img/patient1.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85,
+    },
+    {
+        firstName: 'Sara',
+        lastName: 'Hossam',
+        age: 23,
+        DOB: '19/6/1994',
+        gender: 'female',
+        phone: '01185758948',
+        address: 'cairo',
+        image: './assets/img/patient3.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
+    },
+    {
+        firstName: 'Omnia',
+        lastName: 'Moustafa',
+        age: 23,
+        DOB: '10/11/1994',
+        gender: 'female',
+        phone: '011985779003',
+        address: 'cairo',
+        image: './assets/img/patient4.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
+    },
+    {
+        firstName: 'Omnia',
+        lastName: 'Ameer',
+        age: 23,
+        DOB: '13/4/1994',
+        gender: 'female',
+        phone: '01198654337',
+        address: 'cairo',
+        image: './assets/img/patient2.jpg',
+        bloodPressure: 95,
+        bloodSugarLevel: 85
+    },
+];}
+addPat(pat:IPatient){
+    this.patients.push(pat);
+    
+}
 addPatient(firstName: string, lastName: string, age: number, DOB: string, gender: string, phone: string, address: string, image: string, bloodPressure: number, bloodSugarLevel: number) {
     this.patient.push({
         firstName: firstName,
@@ -66,6 +121,7 @@ addPatient(firstName: string, lastName: string, age: number, DOB: string, gender
         bloodPressure: bloodPressure,
         bloodSugarLevel: bloodSugarLevel});
 }
+
 
 // tslint:disable-next-line:max-line-length
 updatePatient(patient: IPatient, id: number) {

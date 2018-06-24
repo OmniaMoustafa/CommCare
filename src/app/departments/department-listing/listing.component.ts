@@ -8,16 +8,16 @@ import { Idepartment } from 'src/app/shared/interfaces/idepartment';
   styleUrls: ['./listing.component.css']
 })
 export class ListingComponent implements OnInit {
+ 
   departments:Idepartment[];
   filteredDepts:Idepartment[];
   _listFilter: string;
 
   constructor(private deptservice:DepartmentService) { 
-    this.deptservice.getAll().subscribe( dep =>{
-      this.departments = dep;
+
+    
       
-    }
-    );
+    
   }
 
   get listFilter(): string {
@@ -27,11 +27,12 @@ export class ListingComponent implements OnInit {
     this._listFilter = value;
     this.filteredDepts = this.listFilter ? this.performFilter(this.listFilter) : this.departments;
   }
-  
+
   performFilter(filterBy: string): Idepartment[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));
   }
+
   ngOnInit() {
     this.deptservice.getAll()
     .subscribe(deps =>{
@@ -41,5 +42,5 @@ export class ListingComponent implements OnInit {
     // this.filteredDepts = this.departments;
 
   }
-  
+
 }

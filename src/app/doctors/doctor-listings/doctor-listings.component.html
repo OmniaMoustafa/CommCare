@@ -3,7 +3,8 @@
         <app-filterDoctors></app-filterDoctors>
     </div>
 </div>
-
-
-
-<!-- (sendData)="filterDoctors($event) -->
+<div class="container">
+    <div class="row">
+        <app-doctor-item-small *ngFor="let doc of doctors" [doctor]="doc"></app-doctor-item-small>
+    </div>
+</div>
