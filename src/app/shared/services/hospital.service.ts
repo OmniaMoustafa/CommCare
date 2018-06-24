@@ -53,9 +53,8 @@ export class HospitalService{
         const i=this.hospitals.findIndex(b=>b.id == id);
         return this.hospitals[i];
     }
-    public add(dept: Ihospital) {
-        
-        this.hospitals.push(dept);
+    public add(hosp: Ihospital) {
+        this.hospitals.push(hosp);
         console.log(this.hospitals);
     }
 }
