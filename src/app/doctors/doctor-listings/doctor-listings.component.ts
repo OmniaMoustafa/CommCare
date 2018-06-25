@@ -20,11 +20,8 @@ export class DoctorListingsComponent implements OnInit {
   constructor(private docservice: Doctorservice, private activeRoute: ActivatedRoute) {
 
   }
- aaaa:string;
-   public search(filter) {
-     console.log(filter.value);  
-   } 
-  
+
+    
   ngOnInit() {
   
    
@@ -35,6 +32,8 @@ export class DoctorListingsComponent implements OnInit {
     if (this.category.categoryname) {
       this.doctors = this.docservice.getBySpeciality(this.category.categoryname);
     }
+    
+  
     //   else if(this.doctors.do)
     //   {
     // this.doctors=this.docservice.filterDoctors(this.doctors.doctorname)
