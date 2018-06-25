@@ -1,10 +1,14 @@
+<div class="col-md-1">
+
+  </div>
+<div class="col-md-10 h">
 <div id="say-hello">
   <div class="row">
     <div class="col-md-6 p-none">
       <section class="section section-no-border match-height background-color-primary m-none left-form wd">
         <div class="row m-none">
           <div class="col-half-section col-half-section-right mr-md">
-            <h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Say Hello</h2>
+            <h2 class=" text-uppercase font-weight-extra-bold">Say Hello</h2>
             <form id="callSendMessage" class="custom-form-style" action="#" method="POST">
               <div class="form-content">
                 <div class="form-control-custom">
@@ -14,7 +18,10 @@
                   <input type="text" class="form-control" name="callSubject" placeholder="Your Phone *" data-msg-required="This field is required." id="callSubject" required="" />
                 </div>
                 <div class="form-control-custom">
-                  <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" placeholder="Email(Optional)" id="message" required="" aria-required="true"></textarea>
+                    <input type="text" class="form-control" name="callSubject" placeholder="Your Email *" data-msg-required="This field is required." id="callSubject" required="" />
+                </div>
+                <div>
+                  
                 </div>
                 <!-- <input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" value="Submit" routerLink="/acceptance"/> -->
                 <button class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" routerLink="/acceptance">Submit</button>
@@ -38,7 +45,8 @@
                         <td style="color:white;">Sunday</td>
                       </tr>
                       <tr>
-                        <td>14 @5hr</td>
+                        <td><input type="checkbox" value="14 @5hr" name="14 @5hr">14 @5hr
+                          </td>
                       </tr>
                       <tr>
                         <td>14 @5hr</td>
@@ -165,3 +173,7 @@
     </div>
   </div>
 </div>
+</div>
+<div class="col-md-1">
+
+  </div>
