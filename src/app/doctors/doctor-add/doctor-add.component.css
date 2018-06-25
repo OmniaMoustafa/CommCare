@@ -1,0 +1,8 @@
+.form-control {
+    width: 95%;
+}
+
+.col-form-label{
+    text-align: left;
+    padding-left: 50px;
+}
