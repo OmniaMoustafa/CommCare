@@ -3,7 +3,7 @@ import { Idoctor } from "src/app/shared/interfaces/idoctor";
 import { Observable, Subject } from "rxjs";
 @Injectable()
 export class Doctorservice {
-    private doctors: Idoctor[];
+    public doctors: Idoctor[];
     constructor() {
         this.doctors = [
             {
@@ -53,9 +53,8 @@ export class Doctorservice {
         return i;
     }
 
-    public filterDoctors(doctorname: string, specialityname: string): Idoctor[] {
-        const ii = this.doctors.filter(a => a.name.replace(/\s/g, '') == doctorname
-            || a.speciality.replace(/\s/g, '') == specialityname)
+    public filterDoctors(doctorname: string): Idoctor[] {
+        const ii = this.doctors.filter(a => a.name.replace(/\s/g, '') == doctorname)
         console.log(ii);
         return ii;
     }
