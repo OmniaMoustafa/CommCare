@@ -35,6 +35,7 @@ import { SystemHomeModule } from './system-home/system-home.module';
 
 
 import { HospitalsModule } from './hospitals/hospitals.module';
+import { AppointmentService } from './shared/services/appointment.service';
 
 
 
@@ -80,7 +81,8 @@ import { HospitalsModule } from './hospitals/hospitals.module';
     AdmissionService,
     ConsultationService,
     PhysicianService,
-    HospitalService
+    HospitalService,
+    AppointmentService
   ],
 
   bootstrap: [AppComponent]

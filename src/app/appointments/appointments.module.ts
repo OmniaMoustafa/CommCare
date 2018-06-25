@@ -32,7 +32,7 @@ import { CarouselModule } from 'ngx-bootstrap';
     component:AppointmentsComponent,
     children:[
       { path:'',component:AppointmentDetailsSmallComponent},
-      {path:'details',component:AppointmentDetailsComponent},
+      // {path:'details',component:AppointmentDetailsComponent},
       {path:'appointmaentdetails', component:AppointmentDetailsSmallComponent},
       {path:'acceptance',component:AppointmentDetailsComponent}
     ]}])
