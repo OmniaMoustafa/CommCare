@@ -10,6 +10,8 @@ import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { PaymentComponent } from './Packedges/payment/payment.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
+import { HospitalAddComponent } from '../hospitals/hospital-add/hospital-add.component';
+
 
 @NgModule({
   imports: [
@@ -29,7 +31,8 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
     
     PackedgesComponent,
     PaymentComponent,
-    HomeSliderComponent
+    HomeSliderComponent,
+    
 
 ],
 exports:[

@@ -16,6 +16,28 @@ import { Router } from '@angular/router';
 })
 export class AppointmentDetailsSmallComponent implements OnInit {
   appointment = new IAppointment();
+  apparr = [
+    {
+      name: "sunday",
+    itemslots:[{
+      name:  "14 @5hr",
+      checked: false
+
+    },{
+      name:"14 @5hr",
+      checked: true
+        }
+  ]},
+  {name: "monday",
+  itemslots:[{
+    name:  "14 @5hr",
+    checked: true
+  },{
+    name:"14 @5hr",
+    checked: false
+      }
+]}
+  ]
   constructor(private appointmentData: AppointmentService, private router:Router) { console.log("rawaaa");}
 
   ngOnInit() {

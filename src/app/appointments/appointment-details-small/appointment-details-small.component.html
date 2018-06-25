@@ -14,14 +14,24 @@
                   <div class="form-content">
                     <div class="form-control-custom">
                       <input type="text" class="form-control" name="FName" placeholder="Your FirstName *" data-msg-required="This field is required." #name [(ngModel)]="appointment.FirstName"
-                        id="callName" required />
+                        id="callName" required ngModel  #FName="ngModel"/>
+                    </div>
+                    <div class="alert alert-danger req" *ngIf="FName.touched && !FName.valid">
+                        Name is required
                     </div>
                     <div class="form-control-custom">
                       <input type="text" class="form-control" name="LName"  placeholder="Your LastName *" data-msg-required="This field is required." #last [(ngModel)]="appointment.LastName"
-                        id="callSubject" required />
+                        id="callSubject" required ngModel #LName="ngModel"/>
+                        <div class="alert alert-danger req" *ngIf="LName.touched && !LName.valid">
+                            Name is required
+                        </div>
                         <input type="text" class="form-control" name="phone"  placeholder="Your phone *" data-msg-required="This field is required." #phone [(ngModel)]="appointment.YourPhone"
-                        id="callSubject" required  />
+                        id="callSubject" required ngModel #phone="ngModel" />
+                        <div class="alert alert-danger req" *ngIf="phone.touched && !phone.valid">
+                            phone is required
+                        </div>
                     </div>
+                 
                     <div class="form-control-custom">
                       <input type="text" class="form-control" name="email"   placeholder="Your Email *" data-msg-required="This field is required." #Email [(ngModel)]="appointment.YourEmail"
                         id="callSubject" required  />
@@ -53,17 +63,17 @@
                           </tr>
                           <tr>
                             <td>
-                              <input type="checkbox" value="14 @5hr" name="14 @5hr">14 @5hr
+                              <input type="radio" value="14 @5hr" name="14 @5hr"> 2 PM
                             </td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>4 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">6 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>8 PM</td>
                           </tr>
                         </table>
                       </div>
@@ -73,16 +83,16 @@
                             <td style="color:white;">Monday</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">2 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>4 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>6 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">8 PM</td>
                           </tr>
                         </table>
                       </div>
@@ -92,16 +102,16 @@
                             <td style="color:white;"> Tuesday</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>2 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">4 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">6 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>8 PM</td>
                           </tr>
                         </table>
                       </div>
@@ -113,58 +123,49 @@
                       <div class="col-md-3">
                         <table style="width:100px; margin-left:85px;">
                           <tr style="background-color:#007fc9;">
-                            <td style="color:white;"> Tuesday</td>
+                            <td style="color:white;"> Wednesday</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>2 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>4 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>6 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">8 PM</td>
                           </tr>
                         </table>
                       </div>
                       <div class="col-md-3">
-                        <table style="width:100px; margin-left:85px;">
-                          <tr style="background-color:#007fc9;">
-                            <td style="color:white;"> Tuesday</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                        </table>
-                      </div>
+                          <table style="width:100px; margin-left:85px;">
+                            <tr style="background-color:#007fc9;">
+                              <td style="color:white;"> Wednesday</td>
+                            </tr>
+                            <tr>
+                              <td>2 PM</td>
+                            </tr>
+                            <tr>
+                              <td><input type="radio" value="14 @5hr" name="14 @5hr" >4 PM</td>
+                            </tr>
+                            <tr>
+                              <td><input type="radio" value="14 @5hr" name="14 @5hr">6 PM</td>
+                            </tr>
+                            <tr>
+                              <td><input type="radio" value="14 @5hr" name="14 @5hr">8 PM</td>
+                            </tr>
+                          </table>
+                        </div>
                       <div class="col-md-3">
                         <table style="width:100px; margin-left:85px;">
                           <tr style="background-color:#007fc9;">
-                            <td style="color:white;"> Tuesday</td>
+                            <td style="color:white;"> Friday</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
+                            <td class="off">OFF</td>
+                        
                         </table>
                       </div>
                     </span>
@@ -183,5 +184,14 @@
     </div>
   </div>
 <div class="col-md-1">
-
+ 
 </div>
+<!-- <div *ngFor="let item of apparr">
+    <label> 
+        <span innerHTML="{{item.name}}"></span>
+        <label *ngFor="let slot of item.itemslots">{{slot.name}}
+    <input  [checked]="slot.checked" 
+    type="checkbox" value="{{slot.name}}" [(ngModel)]="slot.name" [name]="slot.Name"  />
+    </label>
+</label>
+</div> -->
