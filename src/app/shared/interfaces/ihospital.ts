@@ -6,4 +6,12 @@ export interface Ihospital {
     phone?:number;
     hours?:string;
     description?:string;
+    docdescription?:string;
+    deptdescription?:string;
+    medservicesdescription?:string;
+    latestnewsdescription?:string;
+    facebookLink?:String;
+    twitterLink?:String;
+    quote?:string;
+    
 }

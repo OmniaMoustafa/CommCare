@@ -6,7 +6,6 @@ import { DetailsComponent } from './department-details/details.component';
 import { AddComponent } from './department-add/add.component';
 import { DepartmentItemSmallComponent } from './department-item-small/department-item-small.component';
 import { RouterModule } from '@angular/router';
-import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -28,8 +27,7 @@ import { FormsModule } from '@angular/forms';
     DetailsComponent, 
     AddComponent, 
     DepartmentItemSmallComponent,
-    DepartmentsComponent,
-    SearchComponent
+    DepartmentsComponent
   ],
   exports:[
     DepartmentsComponent,

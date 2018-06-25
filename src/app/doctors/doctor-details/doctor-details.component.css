@@ -1,0 +1,90 @@
+.first-row{
+    margin-top: -142px;    
+}
+
+.first-row .profpic img{
+ margin-left: -15px;
+ width: 300;
+ height: 300;
+}
+
+.block-personaldetails {
+    margin-top: 0px;
+    box-shadow: 5px 5px 9px #ababab;
+    width: 96%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.readmorebutton{
+    float: right;
+}
+
+.rowabout {
+    height: 220px;
+    margin-top: 0px;
+    top: -25px;
+}
+
+.aboutdr h2 {
+    padding-left: 24px;
+    padding-top: 33px;
+}
+
+.experiencedoctor{
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.experiencedoctor1{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: orange;
+    font-weight: bold;
+}
+
+.detailsofexp{
+    width: 107%;
+}
+
+.details{
+    margin: -30px
+}
+
+section.section{
+    margin: 50px 0px;
+    width: 118%;
+    height: 350px;
+}
+
+.text-color-quaternary {
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.thumb-info-title{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* ---------Another sample of Profile Details----------- */
+.text-left {
+    text-align: left;
+}
+
+.tabs-details{
+    margin-top: 30px;
+    width: 96%;
+}
+
+.nav-tabs li{
+    width: 100%;
+    text-align: center;
+}
+
+th{
+    font-weight: bold;
+}

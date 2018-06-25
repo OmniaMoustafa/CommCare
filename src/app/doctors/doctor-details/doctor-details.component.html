@@ -1,26 +1,24 @@
-
-<div class="row">
-  <div class="col-md-6 profpic">
-    <img src="../../../assets/img/detail.jpg" width="400" height="300">
-
-
+<!-- <div class="row first-row">
+  <div class="col-md-4 profpic">
+    <img src="../../../assets/img/detail.jpg">
   </div>
-  <div class="col-md-6">
+
+  <div class="col-md-8">
     <div class="row detailsaboutdr ">
       <div class="col-md-10 text-center topics">
-
-        <h2>{{doctor_details.name}}</h2>
-        <h3>{{doctor_details.speciality}}</h3>
-
         <div class="row">
-          <div class="total-rates">
-
-            <i class="fa fa-star orange"></i>
-            <i class="fa fa-star orange"></i>
-            <i class="fa fa-star orange"></i>
-            <i class="fa fa-star orange"></i>
-            <i class="fa fa-star-half orange"></i>
-
+          <div class="col-md-6">
+            <h2>{{doctor_details.name}}</h2>
+            <h3>{{doctor_details.speciality}}</h3>
+          </div>
+          <div class="col-md-6">
+              <div class="total-rates">
+                  <i class="fa fa-star orange"></i>
+                  <i class="fa fa-star orange"></i>
+                  <i class="fa fa-star orange"></i>
+                  <i class="fa fa-star orange"></i>
+                  <i class="fa fa-star-half orange"></i>
+                </div>
           </div>
         </div>
 
@@ -34,67 +32,147 @@
 
     </div>
 
+    <div class="row">
+
+        <div class="block-personaldetails">
+          <h4 class="text-center"> Personal Details</h4>
+          <div class="row">
+            <div class="col-md-6 firstrowdetails">
+              <p> Birthday:
+                <span> 1990 October 2</span>
+              </p>
+    
+              <p> Marital:
+                <span> Single</span>
+              </p>
+              <p> Nationality:
+                <span> American</span>
+              </p>
+              <p></p>
+            </div>
+    
+            <div class="col-md-6 secondrowdetails">
+              <p> Skype:
+                <span> yourskype</span>
+              </p>
+              <p> PHONE:
+                <span> 23-456-789</span>
+              </p>
+              <p> EMAIL:
+                <span> info@domain.com</span>
+              </p>
+              <p></p>
+            </div>
+    
+          </div>
+        </div>    
+      </div>
+
   </div>
-
-
-
-
-
 </div>
+
 <div class="row rowabout">
-  <div class="col-md-6 ">
+  <div class="col-md-12 ">
     <div class="aboutdr">
       <h2> About Me</h2>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ullam enim reprehenderit iste explicabo laudantium?
         Quae ipsum libero labore enim culpa nostrum, nesciunt, autem quod quia commodi odio incidunt qui.
-        <!-- <p class="hiddenabout"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum doloribus praesentium impedit optio adipisci,
-              alias perferendis quod vero numquam doloremque vitae aliquid eos esse, nemo ex fuga distinctio ab? </p> -->
-      </p>
+       </p>
       <button class="btn btn-primary readmorebutton"> Read More </button>
 
 
     </div>
   </div>
-  <div class="col-md-6">
 
-    <div class="block-personaldetails">
-      <h4 class="text-center"> Personal Details</h4>
-      <div class="row">
-        <div class="col-md-6 firstrowdetails">
-          <p> Birthday:
-            <span> 1990 October 2</span>
-          </p>
+</div> -->
 
-          <p> Marital:
-            <span> Single</span>
-          </p>
-          <p> Nationality:
-            <span> American</span>
-          </p>
-          <p></p>
-        </div>
-
-        <div class="col-md-6 secondrowdetails">
-          <p> Skype:
-            <span> yourskype</span>
-          </p>
-          <p> PHONE:
-            <span> 23-456-789</span>
-          </p>
-          <p> EMAIL:
-            <span> info@domain.com</span>
-          </p>
-          <p></p>
-        </div>
-
-      </div>
+<div class="row first-row">
+    <div class="col-md-4 profpic">
+      <img src="../../../assets/img/detail.jpg">
     </div>
+  
+    <div class="col-md-8">
+      <div class="row detailsaboutdr ">
+        <div class="col-md-10 text-left topics">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>{{doctor_details.name}}</h2>
+              <h3>{{doctor_details.speciality}}</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="total-rates">
+                    <i class="fa fa-star orange"></i>
+                    <i class="fa fa-star orange"></i>
+                    <i class="fa fa-star orange"></i>
+                    <i class="fa fa-star orange"></i>
+                    <i class="fa fa-star-half orange"></i>
+                  </div>
+            </div>
+          </div>
+  
+        </div>
+        <!-- <div class="col-md-1">
+          <div class=" icon-edit">
+            <i class="fa fa-edit fa-lg orange"></i>
+          </div>
+        </div> -->
+  
+  
+      </div>
+  
+      <div class="row">
 
-
-
+          <div class="tabs tabs-details">
+              <ul class="nav nav-tabs">
+                  <li class="active"><a href="#personalDetails" data-toggle="tab">Personal Details</a></li>
+              </ul>
+              <div class="tab-content">
+                  <div class="tab-pane active" id="personalDetails">
+                      <table class="table table-striped mt-xl">
+                          <tbody>
+                              <tr>
+                                  <th>Nationality</th>
+                                  <td>American</td>
+                                  <th>Phone</th>
+                                  <td>23-456-789</td>
+                              </tr>
+                              <tr>
+                                  <th>Email</th>
+                                  <td>info@domain.com</td>
+                                  <th>Skype</th>
+                                  <td>yourskype</td>
+                              </tr>
+                              <tr>
+                                <th>Country</th>
+                                <td>Egypt</td>
+                                <th>City</th>
+                                <td>Giza</td>
+                            </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+     
+        </div>
+  
+    </div>
   </div>
 
-</div>
+  <div class="row rowabout">
+      <div class="col-md-12 ">
+        <div class="aboutdr">
+          <h2> About Me</h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, ullam enim reprehenderit iste explicabo laudantium?
+            Quae ipsum libero labore enim culpa nostrum, nesciunt, autem quod quia commodi odio incidunt qui.
+           </p>
+          <!-- <button class="btn btn-primary readmorebutton"> Read More </button> -->
+    
+    
+        </div>
+      </div>
+    
+    </div>
 
 <div class="row">
   <div class="col-md-2">
@@ -103,7 +181,7 @@
       <div class="circleinline"></div>
     </div>
   </div>
-  <div class="col-md-10">
+  <div class="col-md-10 details">
 
     <div class="row">
       <div class="col-md-4">
@@ -145,7 +223,6 @@
 
 </div>
 
-
 <div class="row">
   <div class="col-md-10">
     <section id="education" class="section  ">
@@ -155,7 +232,7 @@
         <div class="col-md-10">
           <div class="owl-carousel nav-bottom custom-carousel-style-1 custom-item-padding custom-dots-style-1" data-plugin-options="{'items': 1, 'loop': false, 'dots': true, 'nav': false}">
             <div>
-              <div class="col-md-6 col-sm-6">
+              <div class="col-md-6 col-sm-6 custom-box">
                 <div class="custom-box-details-2 background-color-light custom-box-shadow-3">
                   <i class="icon-graduation icons text-color-primary"></i>
                   <h4 class="font-weight-semibold text-color-dark m-none">helwan University</h4>
@@ -218,9 +295,9 @@
 </div>
 
 <div class="row">
-  <h3 class="experiencedoctor"> AWARDS</h3>
+  <h3 class="experiencedoctor1"> AWARDS</h3>
   <ul class="portfolio-list">
-    <li class="col-md-4 col-sm-6 col-xs-12">
+    <li class="col-md-2 col-sm-6 col-xs-12">
       <div class="portfolio-item">
         <a href="">
           <span class="thumb-info thumb-info-lighten">
@@ -230,18 +307,18 @@
                 <span class="thumb-info-inner">prize1</span>
                 <span class="thumb-info-type">1-1-2222</span>
               </span>
-              <span class="thumb-info-action">
+              <!-- <span class="thumb-info-action">
                 <span class="thumb-info-action-icon">
                   <i class="fa fa-link"></i>
                   <p> sara hossam</p>
                 </span>
-              </span>
+              </span> -->
             </span>
           </span>
         </a>
       </div>
     </li>
-    <li class="col-md-4 col-sm-6 col-xs-12">
+    <li class="col-md-2 col-sm-6 col-xs-12">
       <div class="portfolio-item">
         <a href="">
           <span class="thumb-info thumb-info-lighten">
@@ -251,41 +328,19 @@
                 <span class="thumb-info-inner">prize1</span>
                 <span class="thumb-info-type">1-1-2222</span>
               </span>
-              <span class="thumb-info-action">
+              <!-- <span class="thumb-info-action">
                 <span class="thumb-info-action-icon">
                   <i class="fa fa-link"></i>
                   <p> sara hossam</p>
                 </span>
-              </span>
-            </span>
-          </span>
-        </a>
-      </div>
-    </li>
-
-    <li class="col-md-4 col-sm-6 col-xs-12">
-      <div class="portfolio-item">
-        <a href="">
-          <span class="thumb-info thumb-info-lighten">
-            <span class="thumb-info-wrapper">
-              <img src="../../../assets/img/detail.jpg" class="img-responsive" alt="">
-              <span class="thumb-info-title">
-                <span class="thumb-info-inner">prize1</span>
-                <span class="thumb-info-type">1-1-2222</span>
-              </span>
-              <span class="thumb-info-action">
-                <span class="thumb-info-action-icon">
-                  <i class="fa fa-link"></i>
-                  <p> sara hossam</p>
-                </span>
-              </span>
+              </span> -->
             </span>
           </span>
         </a>
       </div>
     </li>
 
-    <li class="col-md-4 col-sm-6 col-xs-12">
+    <li class="col-md-2 col-sm-6 col-xs-12">
       <div class="portfolio-item">
         <a href="">
           <span class="thumb-info thumb-info-lighten">
@@ -295,18 +350,19 @@
                 <span class="thumb-info-inner">prize1</span>
                 <span class="thumb-info-type">1-1-2222</span>
               </span>
-              <span class="thumb-info-action">
+              <!-- <span class="thumb-info-action">
                 <span class="thumb-info-action-icon">
                   <i class="fa fa-link"></i>
                   <p> sara hossam</p>
                 </span>
-              </span>
+              </span> -->
             </span>
           </span>
         </a>
       </div>
     </li>
-    <li class="col-md-4 col-sm-6 col-xs-12">
+
+    <li class="col-md-2 col-sm-6 col-xs-12">
       <div class="portfolio-item">
         <a href="">
           <span class="thumb-info thumb-info-lighten">
@@ -316,12 +372,33 @@
                 <span class="thumb-info-inner">prize1</span>
                 <span class="thumb-info-type">1-1-2222</span>
               </span>
-              <span class="thumb-info-action">
+              <!-- <span class="thumb-info-action">
                 <span class="thumb-info-action-icon">
                   <i class="fa fa-link"></i>
                   <p> sara hossam</p>
                 </span>
+              </span> -->
+            </span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li class="col-md-2 col-sm-6 col-xs-12">
+      <div class="portfolio-item">
+        <a href="">
+          <span class="thumb-info thumb-info-lighten">
+            <span class="thumb-info-wrapper">
+              <img src="../../../assets/img/detail.jpg" class="img-responsive" alt="">
+              <span class="thumb-info-title">
+                <span class="thumb-info-inner">prize1</span>
+                <span class="thumb-info-type">1-1-2222</span>
               </span>
+              <!-- <span class="thumb-info-action">
+                <span class="thumb-info-action-icon">
+                  <i class="fa fa-link"></i>
+                  <p> sara hossam</p>
+                </span>
+              </span> -->
             </span>
           </span>
         </a>
@@ -332,4 +409,3 @@
 
 
 </div>
-

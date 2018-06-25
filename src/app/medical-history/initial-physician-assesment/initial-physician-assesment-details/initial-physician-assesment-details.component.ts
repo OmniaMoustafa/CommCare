@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { InitialPhysicianAssesment } from '../../../shared/interfaces/InitialPhysicianAssesment';
 import { InitialPhysicianAssesmentService } from '../../../shared/services/MedicalHistoryService/InitialPhysicianAssesment.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-initial-physician-assesment-details',
@@ -9,13 +10,20 @@ import { InitialPhysicianAssesmentService } from '../../../shared/services/Medic
 })
 export class InitialPhysicianAssesmentDetailsComponent implements OnInit {
 
-  @Input() index: number;
-  InitialPhysicianAssesment: InitialPhysicianAssesment;
+  // @Input() index: number;
+  @Input() InitialPhysicianAssesment: InitialPhysicianAssesment;
+  private sub: Subscription;
 
   constructor(private _initialPhysicianAssesmentService: InitialPhysicianAssesmentService) { }
 
   ngOnInit() {
-    this.InitialPhysicianAssesment = this._initialPhysicianAssesmentService.getInitialPhysicianAssesmentById(this.index);
+    // this.InitialPhysicianAssesment = this._initialPhysicianAssesmentService.getInitialPhysicianAssesmentById(this.index);
+    // this.sub = this._initialPhysicianAssesmentService.InitialChanged
+    // .subscribe(
+    //   (initial: InitialPhysicianAssesment[])=>{
+    //     this.InitialPhysicianAssesment = initial[this.index];
+    //   }
+    // )
   }
 
 }

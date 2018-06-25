@@ -1,11 +1,25 @@
 <div class="container-fluid">
   <div class="row">
-    <app-slider></app-slider>
+    <img [src]="'../../../assets/img/'+hospital.photo" alt="first slide" style="display: block; width: 100%; ">
+    <div class="carousel-caption d-none d-md-block">
+      <h3>20 Years Caring About You</h3>
+      <p>We are located in New York</p>
+    </div>
   </div>
 </div>
 <section class="p-xlg">
   <div class="container">
-    <app-about></app-about>
+    <div class="row">
+      <div class="col-md-12 center">
+        <h2 class="mt-lg mb-sm">
+          <strong>About Us</strong>
+        </h2>
+        <p class="lead font-weight-normal">
+          {{hospital.description}}
+        </p>
+        <hr class="custom-divider">
+      </div>
+    </div>
     <div class="row mt-lg">
       <app-department-item-small *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
     </div>
@@ -15,7 +29,45 @@
 <div class="container-fluid">
 
   <div class="row">
-    <app-quote></app-quote>
+    <section class="section-secondary">
+      <div class="container">
+        <div class="row mt-xlg pt-md mb-xlg pb-md">
+          <div class="owl-carousel owl-theme nav-bottom rounded-nav" data-plugin-options="{'items': 1, 'loop': false, 'dots': false}">
+            <div>
+              <div class="col-md-8 col-md-offset-2 pt-xlg">
+                <div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+                  <div class="testimonial-quote">“</div>
+                  <blockquote>
+                    <p class="font-weight-light">{{hospital.quote}}</p>
+                  </blockquote>
+                  <div class="testimonial-author mt-xlg">
+                    <p class="text-uppercase">
+                      <strong>Mahatma Gandhi</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="col-md-8 col-md-offset-2 pt-xlg">
+                <div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+                  <div class="testimonial-quote">“</div>
+                  <blockquote>
+                    <p class="font-weight-light">It is health that is real wealth and not pieces of gold and silver.</p>
+                  </blockquote>
+                  <div class="testimonial-author mt-xlg">
+                    <p class="text-uppercase">
+                      <strong>Mahatma Gandhi</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
   </div>
 

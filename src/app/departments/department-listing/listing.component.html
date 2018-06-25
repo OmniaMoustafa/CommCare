@@ -1,4 +1,18 @@
-<app-search></app-search>
+<form id="propertiesForm" action="demo-real-estate-properties.html" method="POST" class="search-form">
+    <div class="form-row filter-patient">
+      <div class="col-md-12">
+          <div class="input-container">
+            <div  class="icon"><img src="../../../assets/img/search.png"/></div>
+              <input class="input-field" type="text" [(ngModel)]='listFilter' placeholder="Search Departments.." name="patientName">
+              
+            </div>
+            <span class="add-span">
+              <i routerLink="/departments/add" class="fa fa-plus add-icon" title="Add Department" ></i>
+            </span>
+      </div>
+     
+    </div>
+  </form>
 <div class="row mt-lg">
-    <app-department-item-small class="col-sm-4" *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
+    <app-department-item-small  *ngFor="let dept of filteredDepts" [department]="dept"></app-department-item-small>
 </div>

@@ -11,6 +11,13 @@ import { DoctorsModule } from '../doctors/doctors.module';
 import { HospitalLoginComponent } from './hospital-login/hospital-login.component';
 import { HospitalAboutUsComponent } from './hospital-About-Us/hospital-About-Us.component';
 import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hospital-medicalservices.component';
+import { HeaderComponent } from './header-content/header.component';
+import { SystemFooterComponent } from './system-footer/system-footer.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SystemMenuComponent } from './system-menu/system-menu.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
+
 
 @NgModule({
   imports: [
@@ -20,8 +27,10 @@ import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hos
     RouterModule.forChild([
       {path: 'contactUs', component: ContactUsComponent},
       {path: 'login', component: HospitalLoginComponent},
+      {path: 'sign-up', component: SignUpComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
       {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
+      {path: 'aboutus',component:AboutUsComponent}
       
     ])
   ],
@@ -32,12 +41,20 @@ import { HospitalMedicalservicesComponent } from './hospital-medicalservices/hos
     ContactUsComponent   ,
     HospitalLoginComponent,
     HospitalAboutUsComponent,
-    HospitalMedicalservicesComponent
+    HospitalMedicalservicesComponent,
+    HeaderComponent,
+    SystemFooterComponent,
+    SignUpComponent,
+    SystemMenuComponent,
+    AboutUsComponent
 ],
 exports:
 [
   HospitalHeaderComponent,
   HospitalFooterComponent,
+  AboutUsComponent,
+  SystemFooterComponent,
+  HeaderComponent,
 ]
 })
 export class SharedModule { }

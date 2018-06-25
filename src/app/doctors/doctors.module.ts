@@ -5,41 +5,38 @@ import { DoctorListingsComponent } from './doctor-listings/doctor-listings.compo
 import { DoctorAddComponent } from './doctor-add/doctor-add.component';
 import { DoctorItemSmallComponent } from './doctor-item-small/doctor-item-small.component';
 import { DoctorCalendarComponent } from './doctor-calendar/doctor-calendar.component';
-import { FullCalendarModule } from 'ng-fullcalendar';
 import { CalendarService } from "../shared/services/CalendarService/calendar.service";
 import { RouterModule, Routes } from '@angular/router';
-import { Component } from '@angular/core/src/metadata/directives';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'angular-calendar';
-import { NgbModalModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarUtilsModule } from '../calendar-utils/calendar-utils.module';
 import { EditCalendarComponent } from './doctor-calendar/edit-calendar/edit-calendar.component';
 import { DoctorsComponent } from './doctors.component';
 import { EventListingComponent } from '../events/event-listing/event-listing.component';
-import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
 import { FilterDoctorsComponent } from './filterDoctors/filterDoctors.component';
 import { PatientListingsComponent } from '../patients/patient-listings/patient-listings.component';
 import { PatientsModule } from '../patients/patients.module';
 import { EventsModule } from '../events/events.module';
-import { AppointmentDetailsSmallComponent } from '../appointments/appointment-details-small/appointment-details-small.component';
 import { EventDetailsComponent } from 'src/app/events/event-details/event-details.component';
-import { MedicalHistoryComponent } from 'src/app/medical-history/medical-history.component';
 import { PatientDetailsComponent } from 'src/app/patients/patient-details/patient-details.component';
-import { PatientsComponent } from '../patients/patients.component';
+import { CalendarModalComponent } from './doctor-calendar/calendar-modal/calendar-modal.component';
+import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
+import { ModalModule } from 'ngx-bootstrap';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    FullCalendarModule,
     DoctorCategoryModule,
     CalendarUtilsModule,
+    BrowserAnimationsModule,
     FormsModule,
     PatientsModule,
     EventsModule,
+    ModalModule.forRoot(),
     CalendarModule.forRoot(),
-    NgbModalModule.forRoot(),
     RouterModule.forChild([
       { path: 'doctors/:categoryname', component: DoctorListingsComponent },
       { path: 'doctorListing', component: DoctorListingsComponent },
@@ -73,7 +70,8 @@ import { PatientsComponent } from '../patients/patients.component';
       DoctorCalendarComponent,
       EditCalendarComponent,
       DoctorPrescriptionComponent,
-      FilterDoctorsComponent
+      FilterDoctorsComponent,
+      CalendarModalComponent
     ],
 
   exports: [
@@ -84,7 +82,8 @@ import { PatientsComponent } from '../patients/patients.component';
     DoctorItemSmallComponent,
     DoctorCalendarComponent,
     EditCalendarComponent,
-    RouterModule
+    RouterModule,
+    CalendarModalComponent
   ],
   providers:
     [

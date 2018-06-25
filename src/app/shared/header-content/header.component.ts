@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
+    var topnav = document.getElementById("topnav");
+    window.addEventListener('scroll',function(){topnav.style.display="none" ;topnav.style.transition="ease-out 1s";});
+    if(window.scrollTo(0,0)){
+      topnav.style.display="block";
+    }
   }
 
 }

@@ -1,10 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Idepartment } from "src/app/shared/interfaces/idepartment";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class DepartmentService {
     private departments: Idepartment[];
-    constructor() {
+    constructor(private httpClient:HttpClient) {
         this.departments = [
             {
                 id: 1,
@@ -29,9 +31,9 @@ export class DepartmentService {
             }];
     }
 
-    public getAll(): Idepartment[] {
-
-        return this.departments;
+    public getAll():Observable<Idepartment[]> {
+        return this.httpClient.get<Idepartment[]>('http://localhost:63451/api/Departments?type=json');
+        // return this.departments;
     }
 
     public getById(id: number): Idepartment {

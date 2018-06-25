@@ -6,7 +6,7 @@
     width: 100%;
     margin-top: -26px;
     position: fixed;
-    z-index: 1001;
+   
 }
 .header-bar-dr .pages-path div{
     
@@ -76,7 +76,7 @@
 
     menu {
         position: fixed;
-        top: 134px;
+        top: 232px;
         left: 0;
         height: 100vh;
         list-style-type: none;
@@ -113,6 +113,8 @@
       .menu li a:hover{
         background: #a7a8ad;
         color: #fff;
+        z-index: 9999897 !important;
+
       }
       .menu li.current a {
         background: #ff5e5e;
@@ -121,6 +123,7 @@
       .menu li a.active {
         background: #8e8f94;
         color: #fff3f5;
+        /* z-index: 99999 !important; */
       }
       .menu li a.active:after{
           position:absolute;
@@ -129,7 +132,8 @@
           content:"";
           border:2.5em solid transparent;
           border-left-color:#8e8f94;
-          border-width: 2.5em 1em
+          border-width: 2.5em 1em;
+          /* z-index: 98976889 !important; */
       }
       .menu li{
           position:relative;
@@ -156,6 +160,7 @@
       .menu li:hover:after{
           visibility:visible;
           opacity:1;
+          /* z-index: 9789876 !important; */
       }
       @media screen and (max-height: 34em){
         .menu li{
@@ -190,4 +195,6 @@
         content: "\f0f6";
       }
  
-      
+      .changing-sections{
+        margin-top: 80px;
+      }

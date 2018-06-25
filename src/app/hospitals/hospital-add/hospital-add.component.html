@@ -1,62 +1,101 @@
 <div class="row pt-lg mb-lg pb-xl ">
-    <div class="col-md-3"> </div> 
+  <div class="col-md-2"> </div>
   <div class="col-md-8">
-      <div class="row">
-        <h4 class="font-weight-semibold mb-xlg">Add the hospital information : </h4>
-      </div>
-      <form method="post" (ngSubmit)="OnAdd(MyForm)" #MyForm=ngForm>
-        <div class="row">
-          <div class="form-group">
-            <div class="col-md-12">
-              <input #honame=ngModel [(ngModel)]="hos.name" name="honame" type="text" placeholder="Hospital name" value="" data-msg-required="Please enter hospital name." maxlength="100"
-                class="form-control inputs"  id="name" required>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-              <div class="col-md-12">
-                <input #hoaddress=ngModel [(ngModel)]="hos.address" name="hoaddress" type="text" placeholder="Hospital address" value="" data-msg-required="Please enter hospital address." maxlength="100"
-                  class="form-control inputs"  id="name" required>
-              </div>
-            </div>
-          </div>
-        <div class="row">
-          <div class="form-group ">
-            <div class="col-md-6">
-              <input #hophone=ngModel [(ngModel)]="hos.phone" name="hophone" type="text" placeholder="hospital phone" value="" data-msg-required="Please enter hospital phone." maxlength="100"
-                class="form-control"  id="subject" required>
-            </div>
-            <div class="col-md-6">
-                <input #hophone=ngModel [(ngModel)]="hos.hours" name="hophone" type="text" placeholder="hospital phone" value="" data-msg-required="Please enter hospital phone." maxlength="100"
-                  class="form-control"  id="subject" required>
-              </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group">
-            <div class="col-md-12">
-              <textarea #hoDesc=ngModel [(ngModel)]="hos.description" name="hoDesc" maxlength="5000" placeholder="hospital Description" data-msg-required="Please enter the description." rows="5" class="form-control inputs"
-                 id="message" required></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group">
-            <div class="col-md-12">
-              <input #hoPhoto=ngModel [(ngModel)]="hos.photo" name="hoPhoto" type="file" placeholder="The Department Photo" value="" data-msg-required="Please choose the hospital image." maxlength="100"
-                class="form-control inputimg"  id="subject" required>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <input type="submit" value="Add" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading..."> &nbsp;
-            <input type="button" value="Cancel" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
-          </div>
-        </div>
-      </form>
-  
+    <div class="row">
+      <h4 class="font-weight-semibold mb-xlg">Add the hospital information : </h4>
     </div>
-    <div class="col-md-1"></div>
+    <form method="post" (ngSubmit)="OnAdd(MyForm)" #MyForm=ngForm>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #honame=ngModel [(ngModel)]="hos.name" name="honame" type="text" placeholder="Hospital name" value="" data-msg-required="Please enter hospital name."
+              maxlength="100" class="form-control inputs" id="name" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #hoaddress=ngModel [(ngModel)]="hos.address" name="hoaddress" type="text" placeholder="Hospital address" value=""
+              data-msg-required="Please enter hospital address." maxlength="100" class="form-control inputs" id="name" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group ">
+          <div class="col-md-6">
+            <input #hophone=ngModel [(ngModel)]="hos.phone" name="hophone" type="text" placeholder="hospital phone" value="" data-msg-required="Please enter hospital phone."
+              maxlength="100" class="form-control space" id="subject" required>
+          </div>
+          <div class="col-md-6">
+            <input #hohours=ngModel [(ngModel)]="hos.hours" name="hohours" type="text" placeholder="hospital hours" value="" data-msg-required="Please enter hospital phone."
+              maxlength="100" class="form-control small" id="subject" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #hoDesc=ngModel [(ngModel)]="hos.description" name="hoDesc" maxlength="5000" placeholder="hospital Description"
+              data-msg-required="Please enter the description." rows="5" class="form-control inputt" id="message" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #ourdoctorsDesc=ngModel [(ngModel)]="hos.docdescription" name="ourdoctorsDesc" maxlength="5000" placeholder="Doctors Description"
+              data-msg-required="Please enter the description." rows="5" class="form-control inputt" id="message" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #depDesc=ngModel [(ngModel)]="hos.deptdescription" name="depDesc" maxlength="5000" placeholder="Departments Description"
+              data-msg-required="Please enter the description." rows="5" class="form-control inputt" id="message" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #medicalserviceDesc=ngModel [(ngModel)]="hos.medservicesdescription" name="medicalserviceDesc" maxlength="5000" placeholder="Medical Services Description"
+              data-msg-required="Please enter the description." rows="5" class="form-control inputt" id="message" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #latestnewsDesc=ngModel [(ngModel)]="hos.latestnewsdescription" name="hoDesc" maxlength="5000" placeholder="Latest News Description"
+              data-msg-required="Please enter the description." rows="5" class="form-control inputt" id="message" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <textarea #quote=ngModel [(ngModel)]="hos.quote" name="quote" maxlength="5000" placeholder="quote"
+              data-msg-required="Please enter your quote." rows="5" class="form-control inputt" id="quote" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input #hoPhoto=ngModel [(ngModel)]="hos.photo" name="hoPhoto" type="file" placeholder="The Department Photo" value="" data-msg-required="Please choose the hospital image."
+              maxlength="100" class="form-control inputimg" id="subject" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" value="Add" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading..." (click)='onClick()'> &nbsp;
+        </div>
+      </div>
+    </form>
+
   </div>
+  <div class="col-md-2"></div>
+</div>

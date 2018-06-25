@@ -3,7 +3,6 @@ import { NgModule , OnInit } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EventsModule } from './events/events.module';
 import { FooterComponent } from './shared/footer-content/footer.component';
-import { HeaderComponent } from './shared/header-content/header.component';
 import { DepartmentService } from 'src/app/shared/services/department.service';
 import { DepartmentsModule} from 'src/app/departments/departments.module';
 import { DoctorsModule } from './doctors/doctors.module';
@@ -30,27 +29,25 @@ import { ConsultationService } from './shared/services/MedicalHistoryService/con
 import { PhysicianService } from './shared/services/MedicalHistoryService/physician.service';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentsModule } from './appointments/appointments.module';
-
 import { SystemHomeModule } from './system-home/system-home.module';
-
-
 import { HospitalsModule } from './hospitals/hospitals.module';
 import { AppointmentService } from './shared/services/appointment.service';
-
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { RoomsModule } from './rooms/rooms.module';
+import { RoomServiceService } from './shared/services/room.service';
+import { BedService } from './shared/services/bed.service';
+import { BedsModule } from './Beds/Beds.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FooterComponent,
-    HeaderComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     EventsModule,
     DepartmentsModule,
     DoctorsModule,
@@ -58,15 +55,12 @@ import { AppointmentService } from './shared/services/appointment.service';
     HospitalHomeModule,
     DoctorCategoryModule,
     PatientsModule,
-
     MedicalHistoryModule,
     AppointmentsModule,
     SystemHomeModule,
-    MedicalHistoryModule,
-    MedicalHistoryModule,
-
-    MedicalHistoryModule,
-    HospitalsModule
+    HospitalsModule,
+    RoomsModule,
+    BedsModule
 
 
    ],
@@ -82,7 +76,10 @@ import { AppointmentService } from './shared/services/appointment.service';
     ConsultationService,
     PhysicianService,
     HospitalService,
-    AppointmentService
+    AppointmentService,
+    RoomServiceService,
+    BedService
+
   ],
 
   bootstrap: [AppComponent]

@@ -10,16 +10,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HospitalDetailsComponent implements OnInit {
   hospitals:Ihospital[];
-  hospitalDetails:Ihospital; 
+  hos:Ihospital; 
   id:number;
-  constructor(private hosservice:HospitalService, activatedRoute:ActivatedRoute) { 
-    this.id=activatedRoute.snapshot.params['id'];
+  constructor(private hosservice:HospitalService,private activatedRoute:ActivatedRoute) { 
+    
   }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe((params) => {
+      this.id = params['id'];
      this.hospitals=this.hosservice.getAll();
 
-    this.hospitalDetails=this.hosservice.getById(this.id);
-  }
-
+    this.hos=this.hosservice.getById(+this.id);
+  });
+}
 }

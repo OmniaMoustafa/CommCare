@@ -1,7 +1,9 @@
 /* .image {
     height:100px;
 } */
-
+.image{
+    margin-top:0px;
+}
   p.lheight{
     line-height:0.2;
  }
@@ -16,19 +18,18 @@ ul.history li .featured-box .news {
 
     overflow: scroll;
 }
-#hero_1_herosubpanelcolumn1_0_imgStaticMap{
-border-radius: 50%;
-}
 
 .yellow{
     color:yellow;
 }
 .home-intro{
-padding-top:4%; 
+padding-top:1%; 
 height: 176px;
-padding-top:2%; 
+padding-bottom:10%; 
 }
-.map{
-    padding-left:55px; 
-    padding-top:0 !important; 
-}
+/* .map{
+   
+    border-radius: 50%;
+border:2px solid white;
+   
+} */

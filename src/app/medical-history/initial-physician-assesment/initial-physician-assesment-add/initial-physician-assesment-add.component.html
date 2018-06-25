@@ -1,3 +1,133 @@
-<p>
-  initial-physician-assesment-add works!
-</p>
+<form method="get" (ngSubmit)="onAdd(myForm)" #myForm=ngForm>
+    <div class="form-group row">
+        <label for="staticEmail" class="col-md-3 col-form-label">Date</label>
+        <div class="col-md-8">
+           <input type="date" class="form-control" name="date" value="" ngModel>
+        </div>
+      </div>
+
+    <div class="form-group row">
+      <label for="staticEmail" class="col-md-3 col-form-label">Hospital Name</label>
+      <div class="col-md-8">
+        <input type="text" class="form-control" name="hospitalName" value="" required ngModel>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="staticEmail" class="col-md-3 col-form-label">Time of Arrival</label>
+      <div class="col-md-8">
+        <!-- <input type="time" class="form-control" name="timeofarrival" value="" required ngModel> -->
+        <timepicker name="timeofarrival" [(ngModel)]="timeofarrival" required></timepicker>
+    </div>
+    </div>
+    <hr>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-md-2 col-form-label">Gender</label>
+      <div class="col-md-3">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" [(ngModel)]="gender">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+        </div>
+      </div>
+      <div class="col-md-3">
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female" [(ngModel)]="gender">
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class="form-group row">
+        <label for="staticEmail" class="col-md-2 col-form-label">Arrival</label>
+        <div class="col-md-3">
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Arrival" id="inlineRadio1" value="Alone" [(ngModel)]="Arrival">
+              <label class="form-check-label" for="inlineRadio1">Alone</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="Arrival" id="inlineRadio2" value="Accompanied" [(ngModel)]="Arrival">
+                <label class="form-check-label" for="inlineRadio2">Accompanied</label>
+            </div>
+          </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+          <label for="staticEmail" class="col-md-2 col-form-label">Mode Of Arrival</label>
+          <div class="col-md-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="ModeOfArrival" id="inlineRadio1" value="Ambulance" [(ngModel)]="ModeOfArrival">
+                <label class="form-check-label" for="inlineRadio1">Ambulance</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="ModeOfArrival" id="inlineRadio2" value="Auto" [(ngModel)]="ModeOfArrival">
+                  <label class="form-check-label" for="inlineRadio2">Auto</label>
+              </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="ModeOfArrival" id="inlineRadio3" value="Walk-in" [(ngModel)]="ModeOfArrival">
+                    <label class="form-check-label" for="inlineRadio3">Walk-in</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="ModeOfArrival" id="inlineRadio4" value="Other" [(ngModel)]="ModeOfArrival">
+                      <label class="form-check-label" for="inlineRadio4">Other</label>
+                  </div>
+                </div>
+        </div>
+        <hr>
+        <div class="form-group row">
+            <label for="staticEmail" class="col-md-2 col-form-label">Information Obtained</label>
+            <div class="col-md-3">
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="InformationObtained" id="inlineRadio1" value="Patient" [(ngModel)]="InformationObtained">
+                  <label class="form-check-label" for="inlineRadio1">Patient</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="InformationObtained" id="inlineRadio2" value="Family" [(ngModel)]="InformationObtained">
+                    <label class="form-check-label" for="inlineRadio2">Family</label>
+                </div>
+              </div>
+          </div>
+          <hr>
+          <div class="form-group row">
+              <label for="staticEmail" class="col-md-2 col-form-label">Place Of Incident</label>
+              <div class="col-md-2">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="PlaceOfIncident" id="inlineRadio1" value="Home" [(ngModel)]="PlaceOfIncident">
+                    <label class="form-check-label" for="inlineRadio1">Home</label>
+                </div>
+              </div>
+              <div class="col-md-2">
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="PlaceOfIncident" id="inlineRadio2" value="Work" [(ngModel)]="PlaceOfIncident">
+                      <label class="form-check-label" for="inlineRadio2">Work</label>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="PlaceOfIncident" id="inlineRadio3" value="School" [(ngModel)]="PlaceOfIncident">
+                        <label class="form-check-label" for="inlineRadio3">School</label>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="PlaceOfIncident" id="inlineRadio4" value="Other" [(ngModel)]="PlaceOfIncident">
+                          <label class="form-check-label" for="inlineRadio4">Other</label>
+                      </div>
+                    </div>
+            </div>
+    
+    
+    
+
+
+    <button type="submit" class="btn btn-primary">Save changes</button>
+  </form>

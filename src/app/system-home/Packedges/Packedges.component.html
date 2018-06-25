@@ -1,66 +1,73 @@
-<div class="container">
+<div class="container ml-packages">
 	<div class="row">
 		<div class="pricing-table">
-			<div class="col-md-4 mrg">
+			<div class="col-md-2"></div>
+			<div class="col-md-4 package ">
 				<div class="plan">
-					<h3>Enterprise
+					<h3>Doctor
 						<span>$59</span>
 					</h3>
-					
-					<ul>
-						<li>
-							<strong>10GB</strong> Disk Space</li>
-						<li>
-							<strong>100GB</strong> Monthly Bandwidth</li>
-						<li>
-							<strong>20</strong> Email Accounts</li>
-						<li>
-							<strong>Unlimited</strong> subdomains</li>
-					</ul>
-					<a class="btn btn-lg btn-primary" href="#"> Buy Now</a>
+
+					<p>We serve you a complete profile as a Doctor... </p>
+					<button class="btn btn-primary" (click)="lg.show()">As a Doctor</button>
+
+					<div bsModal #lg="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">LogIn as A Doctor</h5>
+									<button type="button" class="close pull-right" (click)="lg.hide()" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<app-doctor-add></app-doctor-add>
+								</div>
+								<div class="modal-footer">
+										<button type="button" class="btn btn-primary" (click)="lg.hide()" aria-label="Close">
+												Cancel
+											</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
-			<div class="col-md-4 mrg">
+			<div class="col-md-4 package ">
 				<div class="plan">
-					
-					<h3>Professional
+
+					<h3>Hospital
 						<span>$29</span>
 					</h3>
-					<ul>
-						<li>
-							<strong>5GB</strong> Disk Space</li>
-						<li>
-							<strong>50GB</strong> Monthly Bandwidth</li>
-						<li>
-							<strong>10</strong> Email Accounts</li>
-						<li>
-							<strong>Unlimited</strong> subdomains</li>
-					</ul>
-					<a class="btn btn-lg btn-primary" href="#" >Buy Now</a>
+					<p>We serve you a complete hospital system ........</p>
+					<button class="btn btn-primary" (click)="lgModal.show()">As a Hospital</button>
+
+					<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">LogIn as A Hospital</h5>
+									<button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<app-hospital-add></app-hospital-add>
+								</div>
+								<div class="modal-footer">
+										<button type="button" class="btn btn-primary" (click)="lgModal.hide()" aria-label="Close">
+												Cancel
+											</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</div>
-			<div class="col-md-4 mrg">
-				<div class="plan">
-					<h3>Standard
-						<span>$17</span>
-					</h3>
-					<ul>
-						<li>
-							<strong>3GB</strong> Disk Space</li>
-						<li>
-							<strong>25GB</strong> Monthly Bandwidth</li>
-						<li>
-							<strong>5</strong> Email Accounts</li>
-						<li>
-							<strong>Unlimited</strong> subdomains</li>
-					</ul>
-					<a class="btn btn-lg btn-primary" href="#"> Buy Now </a>
-
-				</div>
-			</div>
+			<div class="col-md-2"></div>
 		</div>
 
 	</div>
 </div>
-

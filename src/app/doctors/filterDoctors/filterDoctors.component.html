@@ -1,66 +1,107 @@
- <div class="filter"> 
-        <h3> Find Your Doctor</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="part">
-                        <!-- <label > Doctor Name</label> -->
-                        Doctor Name  
-                 <input class="inpts "  list="drsname"  #doctorname  >
-                        <datalist id="drsname">
-                          <option value="Ahmed">
-                          <option value="mohamed">
-                          <option value="ali">
-                          <option value="hassan">
-                          <option value="hossam">
-                        </datalist>
-
-                </div>
-                
-
-            </div>
-            <div class="col-md-3">
-
-                <div class="part">
-                        <!-- <label> Specialist</label> -->
-                        Specialist 
-                     <input class="inpts "  #specialistname list="specialist">
-                        <datalist id="specialist">
-                                <option value="Dermatologist">
-                                <option value="Radiologist">
-                                <option value=" Psychologist">
-                                <option value="Anesthesiologist">
-                                <option value="Dentist">
-                                 <option value="Bones">
-                              </datalist>
-
+<div class="col-md-12 space">
+        <form id="propertiesForm" action="demo-real-estate-properties.html" method="POST">
+            <div class="form-row filter-patient">
+                <div class="col-md-12">
+                    <div class="input-container">
+                        <div class="icon">
+                            <img src="../../../assets/img/search.png" />
+                        </div>
+                        <input class="input-field" type="text" [(ngModel)]='listFilter' placeholder="Search Events.." name="EventName">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="part">
-                        <!-- <label> City Name</label> -->
-                        City Name 
-                 <input class="inpts " #cityname list="city">
-                        <datalist id="city">
-                                <option value="giza">
-                                <option value="haram">
-                                <option value="nasrcity">
-                                <option value="6-october">
-                                <option value="manial">
-                              </datalist>
-
-                </div>
-
-                
-            </div>
-
-            <div class="col-md-2">
-                    <input type="submit" value="Search Now"  
-                    #filtersearch (click)="onFilter(doctorname,specialistname,cityname)" class="btn btn-primary  text-uppercase font-size-sm">
-            </div>
-        </div>
-
+        </form>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="filter container-fluid">     
+     <div class="container">
+         <h3> Find Your Doctor</h3>
+         <div class="row">
+             <div class="col-md-3">
+                 <div class="part">
+                        
+                         Doctor Name  
+                  <input class="inpts "  list="drsname"  #doctorname  >
+                         <datalist id="drsname">
+                           <option value="Ahmed">
+                           <option value="mohamed">
+                           <option value="ali">
+                           <option value="hassan">
+                           <option value="hossam">
+                         </datalist>
+    
+                 </div>
+                 
+    
+             </div>
+             <div class="col-md-3">
+    
+                 <div class="part">
+                        
+                         Specialist 
+                      <input class="inpts "  #specialistname list="specialist">
+                         <datalist id="specialist">
+                                 <option value="Dermatologist">
+                                 <option value="Radiologist">
+                                 <option value=" Psychologist">
+                                 <option value="Anesthesiologist">
+                                 <option value="Dentist">
+                                  <option value="Bones">
+                               </datalist>
+    
+                 </div>
+             </div>
+             <div class="col-md-3">
+                 <div class="part">
+                        
+                         City Name 
+                  <input class="inpts " #cityname list="city">
+                         <datalist id="city">
+                                 <option value="giza">
+                                 <option value="haram">
+                                 <option value="nasrcity">
+                                 <option value="6-october">
+                                 <option value="manial">
+                               </datalist>
+    
+                 </div>
+    
+                 
+             </div>
+    
+             <div class="col-md-2">
+                     <input type="submit" value="Search Now"  
+                     #filtersearch 
+                     class="btn btn-primary  text-uppercase font-size-sm">
+             </div>
+         </div>
+     </div>
+     
+
+    </div> -->
+
+  
+    <!-- (click)="onFilter(doctorname,specialistname,cityname)" 
+                     [queryParams]="{name:doctorname}" -->
+
 <!-- <div class="filter">
+
     <div id="container" class="">
         <header class="flex-item">
             <h2>Find your doctor</h2>

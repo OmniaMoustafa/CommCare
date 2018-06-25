@@ -7,12 +7,14 @@ import { QuoteComponent } from './quote/quote.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DepartmentsModule } from 'src/app/departments/departments.module';
 import { CarouselModule } from 'ngx-bootstrap';
+import { HospitalsModule } from 'src/app/hospitals/hospitals.module';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     DepartmentsModule,
+    HospitalsModule,
     CarouselModule.forRoot()
   ],
   declarations: [HospitalHomeComponent, SliderComponent, AboutComponent, QuoteComponent]
