@@ -6,6 +6,7 @@ import { Router, Route, Routes, RouterModule } from '@angular/router';
 import { AppointmentDetailsComponent } from './appointment-details/appointment-details.component';
 import { FormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap';
+
 // const eventsRoutes:Routes=[
 //   {
 //     path:'appointments',
@@ -25,12 +26,13 @@ import { CarouselModule } from 'ngx-bootstrap';
     CommonModule,
     RouterModule.forRoot([
       {path:'acceptance',component:AppointmentDetailsComponent},
+      
       {
       path:'appointments',
     component:AppointmentsComponent,
     children:[
       { path:'',component:AppointmentDetailsSmallComponent},
-      {path:'details',component:AppointmentDetailsComponent},
+      // {path:'details',component:AppointmentDetailsComponent},
       {path:'appointmaentdetails', component:AppointmentDetailsSmallComponent},
       {path:'acceptance',component:AppointmentDetailsComponent}
     ]}])
@@ -38,6 +40,8 @@ import { CarouselModule } from 'ngx-bootstrap';
   declarations: [AppointmentsComponent,
     AppointmentDetailsSmallComponent,
     AppointmentDetailsComponent
+
+   
 ],
 exports:[
   AppointmentsComponent
