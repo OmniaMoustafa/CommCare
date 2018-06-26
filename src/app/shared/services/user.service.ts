@@ -8,7 +8,7 @@ import { User } from '../calsses/user';
   providedIn: 'root'
 })
 export class UserService {
-readonly rooturl = 'http://localhost:58802';
+readonly rooturl = 'http://localhost:54657';
 constructor(private httpClient:HttpClient) { }
 registerUser(user:User)
 {
