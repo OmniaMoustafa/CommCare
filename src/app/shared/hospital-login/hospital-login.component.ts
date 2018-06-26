@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgForm, NgModel } from '@angular/forms' 
 
 @Component({
   selector: 'app-hospital-login',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HospitalLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  OnClick()
+  {
+    this.router.navigate(['/home']);
   }
 
 }
