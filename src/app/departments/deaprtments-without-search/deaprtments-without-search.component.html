@@ -1,0 +1,9 @@
+<div class="row mt-lg">
+  <app-department-item-small  *ngFor="let dept of departments" [department]="dept" [deptIndex]="departments.indexOf(dept)"></app-department-item-small>
+</div>
+
+  <a class="btn btn-primary mt-md butn" href="#" routerLink="/departments" >To All Departments
+    <i class="fa fa-long-arrow-right"></i>
+  </a>
+
+

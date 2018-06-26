@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+     <div class="doctorblock">
+         <app-doctor-item-small style="width: 31%" *ngFor="let doc of doctors" [doctor]="doc"></app-doctor-item-small>
+     </div>
+  </div>
+</div>
+<a class="btn btn-primary mt-md butn" href="#" routerLink="/doctorListing" >To All Doctors
+  <i class="fa fa-long-arrow-right"></i>
+</a>
+

@@ -12,3 +12,11 @@
 {
     padding: 0;
 }
+.small-image
+{
+    height: 150px;
+}
+.pb-xlg
+{
+    padding-bottom: 13px !important;
+}

@@ -14,5 +14,5 @@
     </div>
   </form>
 <div class="row mt-lg">
-    <app-department-item-small  *ngFor="let dept of filteredDepts" [department]="dept"></app-department-item-small>
+    <app-department-item-small  *ngFor="let dept of filteredDepts" [department]="dept" [deptIndex]="departments.indexOf(dept)"></app-department-item-small>
 </div>

@@ -1,26 +1,20 @@
-<!-- <app-hospital-header class="hospital-header"></app-hospital-header> --
+<!-- <app-header *ngIf="!ishospital"></app-header>
+<div class="mt-router-outlet">
+    <router-outlet></router-outlet>
+</div>
+<app-system-footer *ngIf="!ishospital"></app-system-footer>
 
-<!-- <ng-template *ngIf="ishospital==true">
 
-    <app-header></app-header>
-    <div class="mt-router-outlet">
-        <router-outlet></router-outlet>
-    </div>
-    <app-system-footer></app-system-footer>
-<!-- </ng-template> -->
 
-<!-- <ng-template *ngIf='ishospital==true'>
-    <app-hospital-header></app-hospital-header>
-    <div class="mt-router-outlet">
-        <router-outlet></router-outlet>
-    </div>
-    <app-hospital-footer></app-hospital-footer>
-</ng-template> -->
+<app-hospital-header *ngIf='ishospital'></app-hospital-header>
+<div class="mt-router-outlet">
+    <router-outlet></router-outlet>
+</div>
+<app-hospital-footer *ngIf='ishospital'></app-hospital-footer> -->
+
 
 <app-header></app-header>
     <div class="mt-router-outlet">
         <router-outlet></router-outlet>
     </div>
  <app-system-footer></app-system-footer>
-
-

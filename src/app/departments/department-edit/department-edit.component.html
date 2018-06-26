@@ -8,7 +8,7 @@
       <div class="row">
         <div class="form-group">
           <div class="col-md-12">
-            <input #dname=ngModel [(ngModel)]="dept.Name" name="dname" type="text" placeholder="The Department Name" value="" data-msg-required="Please enter your name." maxlength="100"
+            <input #dname=ngModel [(ngModel)]="department.Name" name="dname" type="text"  value="department.Name" data-msg-required="Please enter your name." maxlength="100"
               class="form-control"  id="name" required>
           </div>
         </div>
@@ -16,7 +16,7 @@
       <div class="row">
         <div class="form-group">
           <div class="col-md-12">
-            <input #dBDesc=ngModel [(ngModel)]="dept.Description" name="dBDesc" type="text" placeholder="Brief Description" value="" data-msg-required="Please enter the subject." maxlength="100"
+            <input #dBDesc=ngModel [(ngModel)]="department.Description" name="dBDesc" type="text"  value="department.Description" data-msg-required="Please enter the subject." maxlength="100"
               class="form-control"  id="subject" required>
           </div>
         </div>
@@ -24,7 +24,7 @@
       <div class="row">
         <div class="form-group">
           <div class="col-md-12">
-            <input #roomNo=ngModel [(ngModel)]="dept.Rooms" name="roomNo" type="text" placeholder="Room Numbers" value="" data-msg-required="Please enter the subject." maxlength="100"
+            <input #roomNo=ngModel [(ngModel)]="department.Rooms" name="roomNo" type="text"  value="department.Rooms" data-msg-required="Please enter the subject." maxlength="100"
               class="form-control"  id="subject" required>
           </div>
         </div>
@@ -32,7 +32,7 @@
       <div class="row">
         <div class="form-group">
           <div class="col-md-12">
-            <input #bedNo=ngModel [(ngModel)]="dept.Beds" name="bedNo" type="text" placeholder="Beds Number" value="" data-msg-required="Please enter the subject." maxlength="100"
+            <input #bedNo=ngModel [(ngModel)]="department.Beds" name="bedNo" type="text"  value="department.Beds" data-msg-required="Please enter the subject." maxlength="100"
               class="form-control"  id="subject" required>
           </div>
         </div>
@@ -40,24 +40,24 @@
       <div class="row">
         <div class="form-group">
           <div class="col-md-12">
-            <textarea #dDDesc=ngModel [(ngModel)]="dept.DetailedDescription" name="dDDesc" maxlength="5000" placeholder="Detailed Description" data-msg-required="Please enter your message." rows="5" class="form-control"
+            <textarea #dDDesc=ngModel [(ngModel)]="department.DetailedDescription" name="dDDesc" value="department.DetailedDescription" maxlength="5000"  data-msg-required="Please enter your message." rows="5" class="form-control"
                id="message" required></textarea>
           </div>
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="form-group">
           <div class="col-md-12">
               <label id="file-wrapper"> Add Photo
-            <input class="add-input" #dPhoto=ngModel [(ngModel)]="dept.Photo" name="dPhoto" type="file" placeholder="The Department Photo" value="" data-msg-required="Please enter the subject." maxlength="100"
-              class="form-control"  id="subject" required>
+            <input class="add-input" #dPhoto=ngModel [(ngModel)]="department.Photo" name="dPhoto"  type="file" placeholder="The Department Photo"  data-msg-required="Please enter the subject." maxlength="100"
+              class="form-control"  id="subject" >
               </label>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-md-12">
-          <input type="submit" value="Add" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading..."> &nbsp;
+          <input type="submit"  value="Save" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading..."> &nbsp;
           <input type="button" value="Cancel" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
         </div>
       </div>

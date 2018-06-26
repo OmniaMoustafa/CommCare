@@ -8,6 +8,7 @@ import { Idepartment } from 'src/app/shared/interfaces/idepartment';
 })
 export class DepartmentItemSmallComponent implements OnInit {
   @Input() department: Idepartment;
+  @Input() deptIndex: number;
   
   constructor() { 
    }
