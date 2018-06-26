@@ -1,36 +1,84 @@
 <div class="container">
-    <div class="col-sm-9">
-        <div class="featured-box featured-box-secundary default info-content signup">
-          <div class="box-content">
-            <h2>Register An Account</h2>
-            <form action="" id="" method="post">
-              <div class="row">
-                <div class="form-group">
-                  <div class="col-md-12">
-                    <label>E-mail Address</label>
-                    <input type="text" value="" class="form-control input-lg">
-                  </div>
-                </div>
+  <div class="col-sm-9">
+    <div class="featured-box featured-box-secundary default info-content signup">
+      <div class="box-content">
+        <h2>Register An Account</h2>
+        <form (ngSubmit)="onSubmit(userRegisterationForm)" method="post" [formGroup]="userRegisterationForm">
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>FirstName</label>
+                <input type="text" class="form-control input-lg" name="FirstName" formControlName="FirstName">
+                <p class="help-block" *ngIf="userRegisterationForm.get('FirstName').touched && userRegisterationForm.controls['FirstName'].errors?.required ">Firstname is required </p>                
+                <p class="help-block" *ngIf="userRegisterationForm.controls['FirstName'].errors?.minlength ">Firstname should be at least 3 charachters </p>                
               </div>
-              <div class="row">
-                <div class="form-group">
-                  <div class="col-md-6">
-                    <label>Password</label>
-                    <input type="password" value="" class="form-control input-lg">
-                  </div>
-                  <div class="col-md-6">
-                    <label>Re-enter Password</label>
-                    <input type="password" value="" class="form-control input-lg">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <input type="submit" value="Register" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading...">
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>LastName</label>
+                <input type="text" value="" class="form-control input-lg" name="LastName" formControlName="LastName">
+                <p class="help-block" *ngIf="userRegisterationForm.get('LastName').touched && userRegisterationForm.controls['LastName'].errors?.required ">Lastname is required </p>                
+                <p class="help-block" *ngIf="userRegisterationForm.controls['LastName'].errors?.minlength ">Lastname should be at least 3 charachters </p>                
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label data-error="Required Field">UserName</label>
+                <input type="text" value="" class="form-control input-lg" name="Username" formControlName="Username">
+                <p class="help-block" *ngIf="userRegisterationForm.get('Username').touched && userRegisterationForm.controls['Username'].errors?.required ">Username is required </p>                
+                <p class="help-block" *ngIf="userRegisterationForm.controls['Username'].errors?.minlength ">Username should be at least 6 charachters </p>                
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>E-mail Address</label>
+                <input type="text" value="" class="validate form-control input-lg" name="Email" formControlName="Email">
+                <p class="help-block" *ngIf="userRegisterationForm.get('Email').touched && userRegisterationForm.controls['Email'].errors?.required">Email is required</p>
+                <p class="help-block" *ngIf="userRegisterationForm.controls['Email'].errors?.email ">Email is invalid</p>                
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>Password</label>
+                <input type="password" value="" class="form-control input-lg" name="Password" formControlName="Password">
+                <p class="help-block" *ngIf="userRegisterationForm.get('Password').touched && userRegisterationForm.controls['Password'].errors?.required">Password is required</p>
+                <p class="help-block" *ngIf="userRegisterationForm.controls['Password'].errors?.minlength">Password should be at least 8 charachters</p>
+  
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12">
+                <label>Re-enter Password</label>
+                <input type="password" value="" class="form-control input-lg" name="ConfirmPassword" formControlName="ConfirmPassword">
+                <p class="help-block" *ngIf="userRegisterationForm.controls['ConfirmPassword'].touched && userRegisterationForm.controls['ConfirmPassword'].errors?.required">confirm Password is required</p>
+                <p class="help-block" *ngIf="userRegisterationForm.get('ConfirmPassword').touched && userRegisterationForm.controls['ConfirmPassword'].value != userRegisterationForm.controls['Password'].value"> doesn't match your password</p>
+              </div>
+            </div>
+            
+          </div>
+          
+          
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" [disabled]="!userRegisterationForm.valid" value="Register" class="btn btn-primary pull-right push-bottom"
+                data-loading-text="Loading...">Register</button>
+            </div>
+          </div>
+        </form>
       </div>
+    </div>
+  </div>
 </div>

@@ -46,4 +46,3 @@ export class ListingComponent implements OnInit {
   }
 
 }
-}
