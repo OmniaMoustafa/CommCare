@@ -68,7 +68,6 @@ import {  ToastrModule} from 'ngx-toastr';
     ToastrModule.forRoot(),
     BrowserAnimationsModule
 
-
    ],
 
   providers: [
