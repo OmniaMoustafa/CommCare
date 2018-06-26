@@ -14,7 +14,7 @@ export class HospitalService {
                     phone: 234985545689,
                     photo: '../../../assets/img/hos1.jpg',
                     hours: '08 am :08 pm',
-                    description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                    description: ' our mission is to improve the health of the patients and the diverse communities we serve with nationally recognized health care,education and research,as well as a commitment to community partenerships.',
                     quote: 'Its Quote number one',
                     facebookLink: 'https://wuzzuf.net/profile'
 
@@ -26,7 +26,7 @@ export class HospitalService {
                     phone: 31180938976,
                     photo: '../../../assets/img/hos4.jpg',
                     hours: '12 am : 12 pm',
-                    description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                    description: 'our mission is to improve the health of the patients and the diverse communities we serve with nationally recognized health care,education and research,as well as a commitment to community partenerships.',
                     quote: 'Its Quote number two',
                     facebookLink: 'https://wuzzuf.net/profile'
                 },
@@ -37,7 +37,7 @@ export class HospitalService {
                     phone: 45682739898,
                     photo: '../../../assets/img/hos3.jpg',
                     hours: '10 am :12 pm',
-                    description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                    description: ' our mission is to improve the health of the patients and the diverse communities we serve with nationally recognized health care,education and research,as well as a commitment to community partenerships.',
                     quote: 'Its Quote number three',
                     facebookLink: 'https://wuzzuf.net/profile'
                 },
@@ -48,7 +48,7 @@ export class HospitalService {
                     phone: 45682739898,
                     photo: '../../../assets/img/hos11.jpg',
                     hours: '10 am :12 pm',
-                    description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
+                    description: ' our mission is to improve the health of the patients and the diverse communities we serve with nationally recognized health care,education and research,as well as a commitment to community partenerships.',
                     quote: 'Its Quote number four',
                     facebookLink: 'https://wuzzuf.net/profile'
                 }
