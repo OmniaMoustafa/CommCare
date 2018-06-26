@@ -3,6 +3,7 @@ import { Idepartment } from 'src/app/shared/interfaces/idepartment';
 import { DepartmentService } from 'src/app/shared/services/department.service';
 import { ActivatedRoute } from '@angular/router'
 import { Router} from '@angular/router/src/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-details',
@@ -11,16 +12,24 @@ import { Router} from '@angular/router/src/router';
 })
 export class DetailsComponent implements OnInit {
   department: Idepartment;
-  id:number;
+  ID:number;
+  private sub : Subscription;
   constructor(private deptservice:DepartmentService , private activeLink:ActivatedRoute) {
-    
+    this.ID=this.activeLink.snapshot.params["ID"];
    }
 
   ngOnInit() {
-    /* this.department= this.deptservice.getById(this.department.id); */
-     this.id=this.activeLink.snapshot.params["id"];
-     this.department=this.deptservice.getById(this.id);
-     console.log(this.department);
+     this.department=this.deptservice.getById(this.ID);
+     this.sub = this.deptservice.deptChanged
+     .subscribe(
+       (deps: Idepartment[])=> {
+         this.department = deps.find(i=>i.ID === this.ID);
+       }
+     )
+     console.log(this.department); 
+
+  }
+    
   }
 
-}
+

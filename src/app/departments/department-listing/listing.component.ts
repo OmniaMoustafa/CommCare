@@ -1,6 +1,7 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { DepartmentService } from 'src/app/shared/services/department.service';
 import { Idepartment } from 'src/app/shared/interfaces/idepartment';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-listing',
@@ -12,14 +13,10 @@ export class ListingComponent implements OnInit {
   departments:Idepartment[];
   filteredDepts:Idepartment[];
   _listFilter: string;
+  private subscription: Subscription;
 
   constructor(private deptservice:DepartmentService) { 
 
-    this.deptservice.getAll().subscribe( dep =>{
-      this.departments = dep;
-      
-    }
-    );
   }
 
   get listFilter(): string {
@@ -32,17 +29,22 @@ export class ListingComponent implements OnInit {
 
   performFilter(filterBy: string): Idepartment[] {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.departments.filter((dept: Idepartment) => dept.name.toLocaleLowerCase().startsWith(filterBy));
+    return this.departments.filter((dept: Idepartment) => dept.Name.toLocaleLowerCase().startsWith(filterBy));
   }
 
   ngOnInit() {
-    this.deptservice.getAll()
-    .subscribe(deps =>{
-      this.departments = deps;
-    })
-    // this.departments = this.deptservice.getAll();
-    // this.filteredDepts = this.departments;
+
+    this.departments = this.deptservice.getAll();
+    this.filteredDepts = this.departments;
+    this.subscription = this.deptservice.deptChanged
+    .subscribe(
+      (depts: Idepartment[])=>{
+        this.filteredDepts = depts;
+      }
+    )
+
+    }
+    
 
   }
 
-}

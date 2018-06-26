@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { InitialPhysicianAssesmentService } from '../../../shared/services/MedicalHistoryService/InitialPhysicianAssesment.service';
-import { InitialPhysicianAssesment } from '../../../shared/interfaces/InitialPhysicianAssesment';
+import {InitialPhysicianAssesment} from '../../../shared/interfaces/InitialPhysicianAssesment';
 import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-initial-physician-assesment-add',
