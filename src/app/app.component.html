@@ -1,11 +1,11 @@
-<!-- <app-hospital-header class="hospital-header"></app-hospital-header> -->
-<!-- <ng-template *ngIf="ishospital==true"> -->
-    <app-header></app-header>
+
+    <app-new-header></app-new-header>
     <div class="mt-router-outlet">
         <router-outlet></router-outlet>
     </div>
-    <app-system-footer></app-system-footer>
-<!-- </ng-template> -->
+    <app-hospital-footer></app-hospital-footer>
+    <!-- <app-system-footer></app-system-footer> -->
+
 
 <!-- <ng-template *ngIf='ishospital==true'>
     <app-hospital-header></app-hospital-header>
@@ -14,3 +14,6 @@
     </div>
     <app-hospital-footer></app-hospital-footer>
 </ng-template> -->
+<!-- <app-system-master *ngIf="!ishospital"></app-system-master>
+
+<app-hospital-master *ngIf="ishospital"></app-hospital-master> -->

@@ -16,7 +16,9 @@ import { SystemFooterComponent } from './system-footer/system-footer.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SystemMenuComponent } from './system-menu/system-menu.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { SystemMasterComponent } from './system-master/system-master.component';
+import { HospitalMasterComponent } from './hospital-master/hospital-master.component';
+import { NewHeaderComponent  } from './new-header/new-header.component'
 
 
 @NgModule({
@@ -46,7 +48,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SystemFooterComponent,
     SignUpComponent,
     SystemMenuComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SystemMasterComponent,
+    HospitalMasterComponent,
+    NewHeaderComponent
 ],
 exports:
 [
@@ -55,6 +60,9 @@ exports:
   AboutUsComponent,
   SystemFooterComponent,
   HeaderComponent,
+  SystemMasterComponent,
+  HospitalMasterComponent,
+  NewHeaderComponent
 ]
 })
 export class SharedModule { }
