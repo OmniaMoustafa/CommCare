@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SystemHomeComponent } from './system-home.component';
 import { PackedgesComponent } from './Packedges/Packedges.component';
-import { CarouselModule } from 'ngx-bootstrap';
+import { CarouselModule, ModalModule } from 'ngx-bootstrap';
 import { DoctorsModule } from '../doctors/doctors.module';
 import { HospitalsModule } from '../hospitals/hospitals.module';
 import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
@@ -10,6 +10,8 @@ import { DoctorCategoryModule } from '../doctorCategory/doctorCategory.module';
 import { PaymentComponent } from './Packedges/payment/payment.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
+import { HospitalAddComponent } from '../hospitals/hospital-add/hospital-add.component';
+
 
 @NgModule({
   imports: [
@@ -20,7 +22,8 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
     RouterModule.forRoot([
       { path:'payment', component:PaymentComponent},
     ]),
-    HospitalsModule
+    HospitalsModule,
+    ModalModule.forRoot()
     
   ],
   declarations: [SystemHomeComponent,
@@ -28,7 +31,8 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
     
     PackedgesComponent,
     PaymentComponent,
-    HomeSliderComponent
+    HomeSliderComponent,
+    
 
 ],
 exports:[

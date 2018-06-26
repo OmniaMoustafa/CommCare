@@ -50,3 +50,21 @@ td:hover{
 	top: 200px;
     
 }
+
+.h{
+	height: 550px;
+}
+
+table{
+	border-radius: 25px;
+}
+
+.off{
+	height: 125px;
+	text-align: center;
+    margin-top: 20px;
+}
+
+.req{
+	
+}

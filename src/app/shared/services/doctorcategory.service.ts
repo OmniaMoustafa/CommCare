@@ -15,7 +15,7 @@ export class DoctorcategoryService {
       },
       {
         id: 2,
-        categoryname: 'dentistdoctor'
+        categoryname: 'Dentist'
       },
       {
         id: 3,
@@ -23,31 +23,31 @@ export class DoctorcategoryService {
       },
       {
         id: 4,
-        categoryname: 'Batna'
+        categoryname: 'physiatrist'
       },
       {
         id: 5,
-        categoryname: '3elag tabe3y'
+        categoryname: 'neurologist'
       },
       {
         id: 6,
-        categoryname: 'Bones'
+        categoryname: 'Orthopedist'
       },
       {
         id: 7,
-        categoryname: 'asha3a'
+        categoryname: 'Nutritionist'
       },
       {
         id: 8,
-        categoryname: 'anf w azon'
+        categoryname: 'Urologist'
       },
       {
         id: 9,
-        categoryname: '3yooun'
+        categoryname: 'Radiology center'
       },
       {
         id: 10,
-        categoryname: 'atfaal'
+        categoryname: 'Plastic Surgeon'
       }
 
 

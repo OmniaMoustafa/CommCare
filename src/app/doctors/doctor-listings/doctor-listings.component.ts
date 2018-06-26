@@ -15,11 +15,16 @@ export class DoctorListingsComponent implements OnInit {
   @Input() doctors: Idoctor[];
   ddoctor:Idoctor;
   category: Category;
+  
+
   constructor(private docservice: Doctorservice, private activeRoute: ActivatedRoute) {
 
   }
 
+    
   ngOnInit() {
+  
+   
     this.ddoctor = new Idoctor();
     this.category = new Category();
     this.category.categoryname = this.activeRoute.snapshot.params.categoryname;
@@ -27,16 +32,17 @@ export class DoctorListingsComponent implements OnInit {
     if (this.category.categoryname) {
       this.doctors = this.docservice.getBySpeciality(this.category.categoryname);
     }
+    
+  
     //   else if(this.doctors.do)
     //   {
     // this.doctors=this.docservice.filterDoctors(this.doctors.doctorname)
     //   }
+    
     else {
+     
       this.doctors = this.docservice.getAll();
     }
   }
-  // filterDoctors(doctorname,specialistname,cityname){
-  //   console.log(doctorname,specialistname, cityname )
-  // }
-
+ 
 }

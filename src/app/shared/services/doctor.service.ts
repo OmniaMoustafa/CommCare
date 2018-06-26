@@ -3,30 +3,53 @@ import { Idoctor } from "src/app/shared/interfaces/idoctor";
 import { Observable, Subject } from "rxjs";
 @Injectable()
 export class Doctorservice {
-    private doctors: Idoctor[];
+    public doctors: Idoctor[];
     constructor() {
         this.doctors = [
             {
-                name: 'sara',
+                name: 'Sara',
                 id: 1,
-                speciality: 'dentist doctor',
+                speciality: 'Dentist ',
                 detailedDesc: 'it is a detailed description about caradiology',
                 photo: '../../../assets/img/doct2.jpg'
             },
             {
                 id: 2,
-                name: 'sara hossam',
-                speciality: 'dentist doctor',
+                name: 'Sara hossam',
+                speciality: 'Dentist ',
                 detailedDesc: 'it is a detailed description about dental',
                 photo: '../../../assets/img/detail.jpg'
             },
             {
                 id: 3,
-                name: 'dina',
-                speciality: 'batna doctor',
+                name: 'Dina',
+                speciality: 'Nutritionist ',
                 detailedDesc: 'it is a detailed description about nutrition',
                 photo: '../../../assets/img/doctor1.jpg'
+            },
+            {
+                id: 4,
+                name: 'omnia',
+                speciality: 'Neurologist ',
+                detailedDesc: 'it is a detailed description about nutrition',
+                photo: '../../../assets/img/doct2.jpg'
+            },
+            
+            {
+                id: 5,
+                name: 'radwa',
+                speciality: 'Urologist ',
+                detailedDesc: 'it is a detailed description about nutrition',
+                photo: '../../../assets/img/doctor1.jpg'
+            },
+            {
+                id: 6,
+                name: 'Nour',
+                speciality: 'Internist ',
+                detailedDesc: 'it is a detailed description about nutrition',
+                photo: '../../../assets/img/detail.jpg'
             }
+
 
         ];
     }
@@ -53,9 +76,8 @@ export class Doctorservice {
         return i;
     }
 
-    public filterDoctors(doctorname: string, specialityname: string): Idoctor[] {
-        const ii = this.doctors.filter(a => a.name.replace(/\s/g, '') == doctorname
-            || a.speciality.replace(/\s/g, '') == specialityname)
+    public filterDoctors(doctorname: string): Idoctor[] {
+        const ii = this.doctors.filter(a => a.name.replace(/\s/g, '') == doctorname)
         console.log(ii);
         return ii;
     }
