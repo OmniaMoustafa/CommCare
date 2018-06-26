@@ -16,9 +16,10 @@ export class HospitalHomeComponent implements OnInit {
   hospitals:Ihospital[];
   id:number;
   hospital:Ihospital={};
-  constructor(private deptservice:DepartmentService,
-    private hosService:HospitalService, private activatedRoute:ActivatedRoute) {
-    }
+  constructor(private deptservice:DepartmentService,private hosService:HospitalService, private activatedRoute:ActivatedRoute) {
+    
+    console.log(this.hospital.photo);
+   }
 
     ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {

@@ -1,7 +1,7 @@
 <!-- <app-hospital-header></app-hospital-header> -->
 <div class="container-fluid">
   <div class="row">
-    <img src="../../../assets/img/demos/medical/slides/hos1.jpg" alt="first slide" style="display: block; width: 100%; ">
+    <img [src]="'../../../assets/img/'+hospital.photo" alt="first slide" style="display: block; width: 100%; ">
     <div class="carousel-caption d-none d-md-block">
       <h3>20 Years Caring About You</h3>
       <p>We are located in New York</p>
@@ -32,6 +32,47 @@
 
   <div class="row">
     <app-quote></app-quote>
+
+    <section class="section-secondary">
+      <div class="container">
+        <div class="row mt-xlg pt-md mb-xlg pb-md">
+          <div class="owl-carousel owl-theme nav-bottom rounded-nav" data-plugin-options="{'items': 1, 'loop': false, 'dots': false}">
+            <div>
+              <div class="col-md-8 col-md-offset-2 pt-xlg">
+                <div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+                  <div class="testimonial-quote">“</div>
+                  <blockquote>
+                    <p class="font-weight-light">{{hospital.quote}}</p>
+                  </blockquote>
+                  <div class="testimonial-author mt-xlg">
+                    <p class="text-uppercase">
+                      <strong>Mahatma Gandhi</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="col-md-8 col-md-offset-2 pt-xlg">
+                <div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+                  <div class="testimonial-quote">“</div>
+                  <blockquote>
+                    <p class="font-weight-light">It is health that is real wealth and not pieces of gold and silver.</p>
+                  </blockquote>
+                  <div class="testimonial-author mt-xlg">
+                    <p class="text-uppercase">
+                      <strong>Mahatma Gandhi</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
   </div>
 
 </div>

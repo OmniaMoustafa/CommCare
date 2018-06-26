@@ -1,11 +1,8 @@
-.mrg{
-    padding : 5px;
-    width: 350px;
-    
-}
-.mrg:hover{
+.package:hover{
     border:2px solid #008fe2;
 }
-.ml-packages{
-    margin-left: 140px;
+
+.package 
+{
+    margin-right: 50px;
 }

@@ -40,7 +40,6 @@ import { BedsModule } from './Beds/Beds.module';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent

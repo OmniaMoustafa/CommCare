@@ -10,22 +10,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./hospital-add.component.css']
 })
 export class HospitalAddComponent implements OnInit {
-  public hos: Ihospital= {};
-  cont:number = 5;
-  constructor(private hosService:HospitalService , private router: Router) { }
+  public hos: Ihospital = {};
+  cont: number = 5;
+  constructor(private hosService: HospitalService, private router: Router) { }
 
   ngOnInit() {
   }
   public OnAdd(form: NgForm) {
     this.hos.id = this.cont;
     this.hosService.add(this.hos);
-   this.cont++;
 
+ 
+
+    this.cont++;
     // this.router.navigate(['/hospitals/viewAll']);
-    this.router.navigate(['/hospitalHome/',this.hos.id]);
-}
-onClick(){
-  this.hosService.setBool(false);
+    this.router.navigate(['/hospitalHome/', this.hos.id]);
+  }
+  onClick() {
+    this.hosService.setBool(false);
+  }
 
-}
 }

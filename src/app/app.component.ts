@@ -8,7 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  ishospital = false;
+
+  //ishospital = false;
+
+  ishospital = this.hosService.getBool();
+  
+
   title = 'app';
     constructor(private hosService:HospitalService, private activatedRoute: ActivatedRoute) { 
     }   
