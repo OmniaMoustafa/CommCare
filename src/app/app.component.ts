@@ -8,22 +8,36 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  ishospital;
-  id:number;
-  title = 'app';
-    constructor(private hosService:HospitalService,private activatedRoute:ActivatedRoute) { }
+
+
+  //ishospital = false;
+
+  ishospital = this.hosService.getBool();
   
+
+  title = 'app';
+    constructor(private hosService:HospitalService, private activatedRoute: ActivatedRoute) { 
+    }   
+    
     ngOnInit() {
-      this.id=this.activatedRoute.snapshot.params["id"];
-        console.log(this.id);
-        if(this.id)
-        {
-          this.ishospital=true;
+      let id;
+      this.activatedRoute.queryParams.subscribe(
+        (params) => { 
+          id = params["id"];
+          console.log(`id : ${id}`);
+          if(id){
+            this.ishospital=true;
+          }
+          else{
+            this.ishospital=false;
+          }
         }
-        else
-        {
-          this.ishospital=false;
-        }
-      }
+      );
+      
+     
+    }
+
+  
+
 }
 

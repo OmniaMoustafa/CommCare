@@ -21,12 +21,11 @@ export class HospitalHomeComponent implements OnInit {
     console.log(this.hospital.photo);
    }
 
-
-  ngOnInit() {
+    ngOnInit() {
     this.activatedRoute.params.subscribe((params) => {
       this.id = params['id'];
       this.hospital=this.hosService.getById(+this.id);
-
+      console.log(this.id);
     });
   }
 

@@ -40,10 +40,11 @@ import { BedsModule } from './Beds/Beds.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent
-  ],
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -60,8 +61,7 @@ import { BedsModule } from './Beds/Beds.module';
     SystemHomeModule,
     HospitalsModule,
     RoomsModule,
-    BedsModule
-
+    BedsModule,
 
    ],
 
