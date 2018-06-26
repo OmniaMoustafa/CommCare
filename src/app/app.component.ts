@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
+
   //ishospital = false;
 
   ishospital = this.hosService.getBool();
@@ -37,4 +38,6 @@ export class AppComponent implements OnInit {
     }
 
   
+
 }
+

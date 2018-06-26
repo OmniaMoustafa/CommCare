@@ -1,11 +1,7 @@
 <!-- <app-hospital-header></app-hospital-header> -->
 <div class="container-fluid">
   <div class="row">
-    <img [src]="'../../../assets/img/'+hospital.photo" alt="first slide" style="display: block; width: 100%; ">
-    <div class="carousel-caption d-none d-md-block">
-      <h3>20 Years Caring About You</h3>
-      <p>We are located in New York</p>
-    </div>
+    <img [src]="hospital.photo" alt="first slide" style="display: block; width: 100%; ">
   </div>
 </div>
 <section class="p-xlg">
@@ -22,12 +18,22 @@
         <hr class="custom-divider">
       </div>
     </div>
+    <h2 class="mt-lg mb-sm center">
+      <strong>Our Departments</strong>
+    </h2>
     <div class="row mt-lg">
-      <app-department-item-small *ngFor="let dept of departments" [department]="dept"></app-department-item-small>
+     <app-deaprtments-without-search></app-deaprtments-without-search>
     </div>
     <hr class="custom-divider">
+    <h2 class="mt-lg mb-sm center">
+      <strong>Our Doctors</strong>
+    </h2>
+    <div class="row mt-lg">
+    <app-doctors-witout-searching></app-doctors-witout-searching>
+    </div>
   </div>
 </section>
+
 <div class="container-fluid">
 
   <div class="row">

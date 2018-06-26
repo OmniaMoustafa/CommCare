@@ -1,8 +1,10 @@
 export interface Idepartment
 {
-    id?:number;
-    name?:string;
-    briefDesc?:string;
-    detailedDesc?:string;
-    photo?:string;
+    ID?:number;
+    Name?:string;
+    Description?:string;
+    DetailedDescription?:string;
+    Photo?:string;
+    Rooms?:number;
+    Beds?:number;
 }
