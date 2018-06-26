@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from "@angular/forms";
 import { HospitalHeaderComponent } from './hospital-header/hospital-header.component';
 /* import { HospitalComponent } from './hospital/hospital.component'; */
 import { HospitalFooterComponent } from 'src/app/shared/hospital-footer/hospital-footer.component';
@@ -24,12 +25,13 @@ import { NewHeaderComponent  } from './new-header/new-header.component'
 @NgModule({
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     DepartmentsModule,
     DoctorsModule,
     RouterModule.forChild([
       {path: 'contactUs', component: ContactUsComponent},
       {path: 'login', component: HospitalLoginComponent},
-      {path: 'sign-up', component: SignUpComponent},
+      {path: 'Signup', component: SignUpComponent},
       {path: 'AboutUs', component: HospitalAboutUsComponent},
       {path: 'Medicalservice', component: HospitalMedicalservicesComponent},
       {path: 'aboutus',component:AboutUsComponent}
