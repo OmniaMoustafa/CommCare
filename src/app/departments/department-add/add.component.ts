@@ -11,12 +11,14 @@ import { NgForm, NgModel } from '@angular/forms'
 })
 export class AddComponent implements OnInit {
   public dept: Idepartment= {};
+  cont: number = 4;
   constructor( private deptService:DepartmentService , private router: Router) { }
 
   ngOnInit() {
   }
   public OnAdd(form: NgForm) {
       this.deptService.add(this.dept);
+      this.cont++;
       this.router.navigate(['/departments']);
   }
 }

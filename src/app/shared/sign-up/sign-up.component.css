@@ -19,7 +19,7 @@ label
     line-height: 1.33;
 	border-radius: 6px;
 }
-input[type="submit"]{
+button[type="submit"]{
 	border-radius: 6px;
 }
 

@@ -37,6 +37,9 @@ import { RoomsModule } from './rooms/rooms.module';
 import { RoomServiceService } from './shared/services/room.service';
 import { BedService } from './shared/services/bed.service';
 import { BedsModule } from './Beds/Beds.module';
+import { UserService } from './shared/services/user.service';
+import {  ToastrModule} from 'ngx-toastr';
+
 
 
 
@@ -62,6 +65,8 @@ import { BedsModule } from './Beds/Beds.module';
     HospitalsModule,
     RoomsModule,
     BedsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
 
    ],
 
@@ -78,8 +83,8 @@ import { BedsModule } from './Beds/Beds.module';
     HospitalService,
     AppointmentService,
     RoomServiceService,
-    BedService
-
+    BedService,
+    UserService
   ],
 
   bootstrap: [AppComponent]

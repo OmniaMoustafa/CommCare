@@ -4,11 +4,19 @@
 }
 .dept-box
 {
-    min-height: 300px;
+    height: 392px;
     margin-right: 30px;
     cursor: pointer;
 }
 .thumb-info-caption .thumb-info-caption-text, .thumb-info-caption p
 {
     padding: 0;
+}
+.small-image
+{
+    height: 150px;
+}
+.pb-xlg
+{
+    padding-bottom: 13px !important;
 }
