@@ -59,17 +59,17 @@
 </div> -->
 <div class="row">
   <div class="col-md-6 profpic">
-    <img src="../../../assets/img/hos1.jpg" width="400" height="300">
+    <img [src]="department.Photo" width="400" height="300">
   </div>
   <div class="col-md-6">
     <div class="row detailsaboutdr ">
       <div class="col-md-10 text-center topics">
-        <h2>{{department.name}}</h2>
-        <h4>{{department.briefDesc}}</h4>
+        <h2>{{department.Name}}</h2>
+        <h4 class="boldfont">{{department.Description}}</h4>
       </div>
       <div class="col-md-1">
         <div class=" icon-edit">
-          <i class="fa fa-edit fa-lg "></i>
+          <i class="fa fa-edit fa-lg " routerLink="edit"></i>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
   <div class="col-md-5 ">
     <div class="aboutdr">
       <h2> About This Department</h2>
-      <p> {{department.detailedDesc}}</p>
+      <p> {{department.DetailedDescription}}</p>
     </div>
   </div>
   <div class="col-md-7">
@@ -90,7 +90,7 @@
       <div class="row">
         <div class="col-md-4 firstrowdetails">
           <p> No.of Rooms:
-            <span> 20</span>
+            <span> {{department.Rooms}}</span>
           </p>
           <p> No.of Doctors:
             <span> 10</span>
@@ -100,13 +100,13 @@
         <div class="col-md-8 firstrowdetails">
 
           <p> No.of Beds:
-            <span> 35</span>
+            <span> {{department.Beds}}</span>
           </p>
 
-          
+
         </div>
       </div>
-      <div class="row doc-slide ">
+      <!--     <div class="row doc-slide ">
         <div class="col-md-12 ">
             <div class="owl-carousel owl-theme nav-bottom" data-plugin-options="{'loop': false, 'nav': true, 'dots': false, 'margin':10}">
                 <div>
@@ -131,7 +131,7 @@
               </div>
     
           </div>
-          </div>
+          </div> -->
     </div>
   </div>
 </div>

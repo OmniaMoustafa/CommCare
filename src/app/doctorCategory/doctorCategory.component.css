@@ -10,12 +10,13 @@
     height: calc(100% + 20px) !important;
 }
 .all-doc-btn{
-    padding: 10px 20px;
-    color:#fff;
-    font-weight: bold;
+    padding: 13px 26px;
+    color: #fff;
+    font-weight: normal;
     border-radius: 3px;
     border: 1px solid transparent;
     margin: 30px 15px 0px 0px !important;
-    background-color: #D7172E;
+    background-color: #194d89;
     float: right;
+    font-size: 20px;
 }

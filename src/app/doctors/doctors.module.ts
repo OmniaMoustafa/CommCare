@@ -24,6 +24,7 @@ import { PatientDetailsComponent } from 'src/app/patients/patient-details/patien
 import { CalendarModalComponent } from './doctor-calendar/calendar-modal/calendar-modal.component';
 import { DoctorPrescriptionComponent } from './doctor-prescription/doctor-prescription.component';
 import { ModalModule } from 'ngx-bootstrap';
+import { DoctorsWitoutSearchingComponent } from './doctors-witout-searching/doctors-witout-searching.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { ModalModule } from 'ngx-bootstrap';
       EditCalendarComponent,
       DoctorPrescriptionComponent,
       FilterDoctorsComponent,
-      CalendarModalComponent
+      CalendarModalComponent,
+      DoctorsWitoutSearchingComponent
     ],
 
   exports: [
@@ -83,7 +85,8 @@ import { ModalModule } from 'ngx-bootstrap';
     DoctorCalendarComponent,
     EditCalendarComponent,
     RouterModule,
-    CalendarModalComponent
+    CalendarModalComponent,
+    DoctorsWitoutSearchingComponent
   ],
   providers:
     [

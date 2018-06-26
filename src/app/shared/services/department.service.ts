@@ -2,48 +2,81 @@ import { Injectable } from "@angular/core";
 import { Idepartment } from "src/app/shared/interfaces/idepartment";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable()
 export class DepartmentService {
     private departments: Idepartment[];
+    deptChanged = new Subject<Idepartment[]>();
     constructor(private httpClient:HttpClient) {
         this.departments = [
-            {
-                id: 1,
-                name: 'Cardiology',
-                briefDesc: 'it is a brief description about caradiology',
-                detailedDesc: 'it is a detailed description about caradiology',
-                photo: '../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png'
+             {
+                ID: 1,
+                Name: 'Cardiology',
+                Description: 'We care about your Heart',
+                DetailedDescription: 'Cardiology department has a great staff of doctors and nurses who is really care about you , we have 10 rooms having 20 beds in that departmnet and it has great equipments to help you to recover soon  ',
+                Photo: '../../../assets/img/cardiology.png',
+                Rooms:10,
+                Beds :20
+                
             },
             {
-                id: 2,
-                name: 'Dental',
-                briefDesc: 'it is a brief description about dental',
-                detailedDesc: 'it is a detailed description about dental',
-                photo: '../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png'
+                ID: 2,
+                Name: 'Dental',
+                Description: 'We care about your teeth',
+                DetailedDescription: 'Dental department has a great staff of doctors and nurses who is really care about you , we have 7 rooms having 14 beds in that departmnet and it has great equipments to help you to recover soon',
+                Photo: '../../../assets//img/dental.jpg',
+                Rooms:7,
+                Beds :14
             },
             {
-                id: 3,
-                name: 'Nutrition',
-                briefDesc: 'it is a brief description about nutrition',
-                detailedDesc: 'it is a detailed description about nutrition',
-                photo: '../../../assets//img/demos/restaurant/blog/blog-restaurant-1.png'
+                ID: 3,
+                Name: 'Nutrition',
+                Description: 'We care about your Diet',
+                DetailedDescription: 'Nutrition department has a great staff of doctors and nurses who is really care about you , we have 8 rooms having 11 beds in that departmnet and it has great equipments to help you to recover soon',
+                Photo: '../../../assets//img/nutrition.jpeg',
+                Rooms:8,
+                Beds :11
             }];
     }
 
-    public getAll():Observable<Idepartment[]> {
-        return this.httpClient.get<Idepartment[]>('http://localhost:63451/api/Departments?type=json');
-        // return this.departments;
+    public getAll():Idepartment[] {
+        //return this.httpClient.get<Idepartment[]>('http://localhost:63451/api/Departments?type=json');
+         return this.departments;
     }
 
-    public getById(id: number): Idepartment {
+     public getById(id: number): Idepartment {
 
-        const index = this.departments.findIndex(a => a.id == id);
+        const index = this.departments.findIndex(a => a.ID == id);
         return this.departments[index];
-    }
+    } 
     public add(dept: Idepartment) {
         
         this.departments.push(dept);
+        this.deptChanged.next(this.departments.slice());
         console.log(this.departments);
+    }
+    public Update(id:number,dept:Idepartment)
+    {
+        var d = this.departments.find(i=>i.ID === id);
+        if (dept.Name != null) {
+            d.Name = dept.Name;
+        }
+        if (dept.Description != null) {
+            d.Description = dept.Description;
+        }
+        if (dept.DetailedDescription != null) {
+            d.DetailedDescription = dept.DetailedDescription;
+        }
+        if (dept.Photo != null) {
+            d.Photo = dept.Photo;
+        }
+        if (dept.Rooms != null) {
+            d.Rooms = dept.Rooms;
+        }
+        if (dept.Beds != null) {
+            d.Beds = dept.Beds;
+        }
+        
     }
 }

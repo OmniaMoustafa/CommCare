@@ -11,11 +11,20 @@
 }
 .block-personaldetails
 {
-    margin-top: 32px;
+    margin-top: 96px;
     margin-right: 70px;
     margin-left: 66px;
+}
+.rowabout
+{
+    height: 300px;
 }
 .doc-slide
 {
     margin: 5px 41px;
+}
+.boldfont
+{
+    font-size: 25px;
+    font-weight: normal;
 }

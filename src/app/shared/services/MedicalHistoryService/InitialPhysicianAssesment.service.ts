@@ -1,8 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { InitialPhysicianAssesment } from '../../interfaces/InitialPhysicianAssesment';
+import { Subject } from 'rxjs/internal/Subject';
+
 
 @Injectable()
 export class InitialPhysicianAssesmentService {
+    InitialChanged = new Subject<InitialPhysicianAssesment[]>();
     InitialPhysicianAssesment: InitialPhysicianAssesment[] = [
         {
             date: '12/12/2016',
@@ -75,6 +78,8 @@ export class InitialPhysicianAssesmentService {
             fName: initial.fName,
             lName: initial.lName
         });
+        this.InitialChanged.next(this.InitialPhysicianAssesment.slice());
         console.log(this.InitialPhysicianAssesment, this.InitialPhysicianAssesment.length);
     }
+
 }

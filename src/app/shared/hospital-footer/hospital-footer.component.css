@@ -75,3 +75,13 @@ footer .footer-menu li a {
     margin-right: 5px;
     font-size: .85em;
 }
+#footer .container .row > div {
+    margin-bottom: 22px;
+    margin-top: 20px;
+}
+.contactus{
+    margin-right:3px;
+}
+.contact-details{
+    margin-right:5px;
+}

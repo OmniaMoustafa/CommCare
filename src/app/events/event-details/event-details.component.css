@@ -1,3 +1,19 @@
 h3{
     line-height: 60px;
 }
+.event-blog{
+    margin-bottom: 350px;
+}
+.background-event{
+    margin-left: 110px;
+    width: 85%;
+    margin-top: -30px;
+
+}
+.event-img img{
+    margin-left: 110px;
+}
+.event-date{
+    width: 84%;
+    border-radius: 7px;
+}

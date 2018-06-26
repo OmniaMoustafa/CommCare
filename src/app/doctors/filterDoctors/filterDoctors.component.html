@@ -1,10 +1,41 @@
- <div class="filter container-fluid">     
+<div class="col-md-12 space">
+        <form id="propertiesForm" action="demo-real-estate-properties.html" method="POST">
+            <div class="form-row filter-patient">
+                <div class="col-md-12">
+                    <div class="input-container">
+                        <div class="icon">
+                            <img src="../../../assets/img/search.png" />
+                        </div>
+                        <input class="input-field" type="text" [(ngModel)]='listFilter' placeholder="Search Events.." name="EventName">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="filter container-fluid">     
      <div class="container">
          <h3> Find Your Doctor</h3>
          <div class="row">
              <div class="col-md-3">
                  <div class="part">
-                         <!-- <label > Doctor Name</label> -->
+                        
                          Doctor Name  
                   <input class="inpts "  list="drsname"  #doctorname  >
                          <datalist id="drsname">
@@ -22,7 +53,7 @@
              <div class="col-md-3">
     
                  <div class="part">
-                         <!-- <label> Specialist</label> -->
+                        
                          Specialist 
                       <input class="inpts "  #specialistname list="specialist">
                          <datalist id="specialist">
@@ -38,7 +69,7 @@
              </div>
              <div class="col-md-3">
                  <div class="part">
-                         <!-- <label> City Name</label> -->
+                        
                          City Name 
                   <input class="inpts " #cityname list="city">
                          <datalist id="city">
@@ -63,13 +94,14 @@
      </div>
      
 
-    </div>
+    </div> -->
 
   
     <!-- (click)="onFilter(doctorname,specialistname,cityname)" 
                      [queryParams]="{name:doctorname}" -->
 
 <!-- <div class="filter">
+
     <div id="container" class="">
         <header class="flex-item">
             <h2>Find your doctor</h2>

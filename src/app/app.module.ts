@@ -31,6 +31,7 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { AppointmentsModule } from './appointments/appointments.module';
 import { SystemHomeModule } from './system-home/system-home.module';
 import { HospitalsModule } from './hospitals/hospitals.module';
+import { AppointmentService } from './shared/services/appointment.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RoomsModule } from './rooms/rooms.module';
 import { RoomServiceService } from './shared/services/room.service';
@@ -41,10 +42,12 @@ import {  ToastrModule} from 'ngx-toastr';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent
-  ],
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -65,7 +68,6 @@ import {  ToastrModule} from 'ngx-toastr';
     ToastrModule.forRoot(),
     BrowserAnimationsModule
 
-
    ],
 
   providers: [
@@ -79,9 +81,11 @@ import {  ToastrModule} from 'ngx-toastr';
     ConsultationService,
     PhysicianService,
     HospitalService,
+    AppointmentService,
     RoomServiceService,
     BedService,
     UserService
+
   ],
 
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@ export class HospitalService {
                     photo: '../../../assets/img/hos1.jpg',
                     hours: '08 am :08 pm',
                     description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
-                    quote: 'Its Quote number one',
+                    quote: "Good health and good sense are two of life's greatest blessings",
                     facebookLink: 'https://wuzzuf.net/profile'
 
                 },
@@ -27,7 +27,7 @@ export class HospitalService {
                     photo: '../../../assets/img/hos4.jpg',
                     hours: '12 am : 12 pm',
                     description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
-                    quote: 'Its Quote number two',
+                    quote: 'A good reputation is more valuable than money',
                     facebookLink: 'https://wuzzuf.net/profile'
                 },
                 {
@@ -38,7 +38,7 @@ export class HospitalService {
                     photo: '../../../assets/img/hos3.jpg',
                     hours: '10 am :12 pm',
                     description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
-                    quote: 'Its Quote number three',
+                    quote: 'Each day is the scholar of yesterday',
                     facebookLink: 'https://wuzzuf.net/profile'
                 },
                 {
@@ -49,7 +49,7 @@ export class HospitalService {
                     photo: '../../../assets/img/hos11.jpg',
                     hours: '10 am :12 pm',
                     description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendreritarcu, ac tincidunt mauris lacus sed leo. vamus suscipit molestie vestibulum.',
-                    quote: 'Its Quote number four',
+                    quote: 'The person who receives the most favors is the one who knows how to return them',
                     facebookLink: 'https://wuzzuf.net/profile'
                 }
             ];

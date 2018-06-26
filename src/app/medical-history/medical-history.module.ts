@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MedicalHistoryComponent } from './medical-history.component';
-import { AccordionModule, TimepickerModule, BsDatepickerModule } from 'ngx-bootstrap';
+import { AccordionModule, TimepickerModule} from 'ngx-bootstrap';
 import { InitialPhysicianAssesmentComponent } from './initial-physician-assesment/initial-physician-assesment.component';
 // tslint:disable-next-line:max-line-length
 import { InitialPhysicianAssesmentListingComponent } from './Initial-physician-assesment/initial-physician-assesment-listing/initial-physician-assesment-listing.component';
@@ -46,7 +46,6 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AccordionModule.forRoot(),
     TimepickerModule.forRoot(),
-    BsDatepickerModule.forRoot(),
     FormsModule
   ],
   declarations: [

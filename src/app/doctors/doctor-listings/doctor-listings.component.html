@@ -1,9 +1,30 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <app-filterDoctors></app-filterDoctors>
     </div>
+</div> -->
+
+<div class="col-md-12 space">
+        <form id="propertiesForm" action="" method="POST">
+            <div class="form-row filter-patient">
+                <div class="col-md-12">
+                    <div class="input-container">
+                        <div class="icon">
+                            <img src="../../../assets/img/search.png" />
+                        </div>
+                        <input class="input-field" type="text"  placeholder="Search Doctor.."  #filter>
+                         <input type="submit" (click)="search(filter)">    
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+<div class="container">
+    <div class="row">
+       <div class="doctorblock">
+           <app-doctor-item-small style="width: 31%" *ngFor="let doc of doctors" [doctor]="doc"></app-doctor-item-small>
+       </div>
+    </div>
 </div>
-
-
-
-<!-- (sendData)="filterDoctors($event) -->

@@ -1,167 +1,197 @@
-<div id="say-hello">
-  <div class="row">
-    <div class="col-md-6 p-none">
-      <section class="section section-no-border match-height background-color-primary m-none left-form wd">
-        <div class="row m-none">
-          <div class="col-half-section col-half-section-right mr-md">
-            <h2 class="text-color-quaternary text-uppercase font-weight-extra-bold">Say Hello</h2>
-            <form id="callSendMessage" class="custom-form-style" action="#" method="POST">
-              <div class="form-content">
-                <div class="form-control-custom">
-                  <input type="text" class="form-control" name="callName" placeholder="Your Name *" data-msg-required="This field is required." id="callName" required="" />
-                </div>
-                <div class="form-control-custom">
-                  <input type="text" class="form-control" name="callSubject" placeholder="Your Phone *" data-msg-required="This field is required." id="callSubject" required="" />
-                </div>
-                <div class="form-control-custom">
-                  <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" placeholder="Email(Optional)" id="message" required="" aria-required="true"></textarea>
-                </div>
-                <!-- <input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" value="Submit" routerLink="/acceptance"/> -->
-                <button class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" routerLink="/acceptance">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="col-md-6 p-none wd">
-      <section class="section section-no-border match-height m-none right-form wd" >
-        <div class="row">
-          <div class="col-md-12" style="margin-top:75px;">
-        
-            <div class="owl-carousel owl-theme show-nav-hover mt-none" data-plugin-options="{'items': 1, 'margin': 10, 'loop': true, 'nav': true, 'animateOut': 'fadeOut'}">
-              <div>
-                <span>
-                  <div class="col-md-3">
-                    <table style="width:100px; margin-left:85px;">
-                      <tr style="background-color: #007fc9;">
-                        <td style="color:white;">Sunday</td>
-                      </tr>
-                      <tr>
-                        <td>14 @5hr</td>
-                      </tr>
-                      <tr>
-                        <td>14 @5hr</td>
-                      </tr>
-                      <tr>
-                        <td>14 @5hr</td>
-                      </tr>
-                      <tr>
-                        <td>14 @5hr</td>
-                      </tr>
-                    </table>
+<div class="col-md-1">
+
+</div>
+
+  <div class="col-md-10 h">
+    <div id="say-hello">
+      <div class="row">
+        <div class="col-md-6 p-none">
+          <section class="section section-no-border match-height background-color-primary m-none left-form wd">
+            <div class="row m-none">
+              <div class="col-half-section col-half-section-right mr-md">
+                <h2 class=" text-uppercase font-weight-extra-bold" >Say Hello</h2>
+                <form id="callSendMessage" class="custom-form-style" action="#" method="POST"  (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+                  <div class="form-content">
+                    <div class="form-control-custom">
+                      <input type="text" class="form-control" name="FName" placeholder="Your FirstName *" data-msg-required="This field is required." #name [(ngModel)]="appointment.FirstName"
+                        id="callName" required ngModel  #FName="ngModel"/>
                     </div>
-                    <div class="col-md-3">
-                      <table style="width:100px; margin-left:85px;">
-                        <tr style="background-color: #007fc9;">
-                          <td style="color:white;">Monday</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                      </table>
-                      </div>
-                      <div class="col-md-3">
-                        <table style="width:100px; margin-left:85px;">
-                          <tr style="background-color:#007fc9;">
-                            <td style="color:white;">	Tuesday</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                          <tr>
-                            <td>14 @5hr</td>
-                          </tr>
-                        </table>
+                    <div class="alert alert-danger req" *ngIf="FName.touched && !FName.valid">
+                        Name is required
+                    </div>
+                    <div class="form-control-custom">
+                      <input type="text" class="form-control" name="LName"  placeholder="Your LastName *" data-msg-required="This field is required." #last [(ngModel)]="appointment.LastName"
+                        id="callSubject" required ngModel #LName="ngModel"/>
+                        <div class="alert alert-danger req" *ngIf="LName.touched && !LName.valid">
+                            Name is required
                         </div>
-                </span>
-              </div>
-              <div>
-                <span>
+                        <input type="text" class="form-control" name="phone"  placeholder="Your phone *" data-msg-required="This field is required." #phone [(ngModel)]="appointment.YourPhone"
+                        id="callSubject" required ngModel #phone="ngModel" />
+                        <div class="alert alert-danger req" *ngIf="phone.touched && !phone.valid">
+                            phone is required
+                        </div>
+                    </div>
                  
-                    <div class="col-md-3">
-                      <table style="width:100px; margin-left:85px;">
-                        <tr style="background-color:#007fc9;">
-                          <td style="color:white;">	Tuesday</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                        <tr>
-                          <td>14 @5hr</td>
-                        </tr>
-                      </table>
+                    <div class="form-control-custom">
+                      <input type="text" class="form-control" name="email"   placeholder="Your Email *" data-msg-required="This field is required." #Email [(ngModel)]="appointment.YourEmail"
+                        id="callSubject" required  />
+                    </div>
+                    <div>
+
+                    </div>
+                    <!-- <input type="submit" class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1" value="Submit" routerLink="/acceptance"/> -->
+                    <button class="btn btn-quaternary text-color-light text-uppercase font-weight-semibold outline-none custom-btn-style-2 custom-border-radius-1"
+                     type="submit" >Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-md-6 p-none wd">
+          <section class="section section-no-border match-height m-none right-form wd">
+            <div class="row">
+              <div class="col-md-12" style="margin-top:75px;">
+
+                <div class="owl-carousel owl-theme show-nav-hover mt-none" data-plugin-options="{'items': 1, 'margin': 10, 'loop': true, 'nav': true, 'animateOut': 'fadeOut'}">
+                  <div>
+                    <span>
+                      <div class="col-md-3">
+                        <table style="width:100px; margin-left:85px;">
+                          <tr style="background-color: #007fc9;">
+                            <td style="color:white;">Sunday</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="radio" value="14 @5hr" name="14 @5hr"> 2 PM
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4 PM</td>
+                          </tr>
+                          <tr>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">6 PM</td>
+                          </tr>
+                          <tr>
+                            <td>8 PM</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="col-md-3">
+                        <table style="width:100px; margin-left:85px;">
+                          <tr style="background-color: #007fc9;">
+                            <td style="color:white;">Monday</td>
+                          </tr>
+                          <tr>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">2 PM</td>
+                          </tr>
+                          <tr>
+                            <td>4 PM</td>
+                          </tr>
+                          <tr>
+                            <td>6 PM</td>
+                          </tr>
+                          <tr>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">8 PM</td>
+                          </tr>
+                        </table>
                       </div>
                       <div class="col-md-3">
                         <table style="width:100px; margin-left:85px;">
                           <tr style="background-color:#007fc9;">
-                            <td style="color:white;">	Tuesday</td>
+                            <td style="color:white;"> Tuesday</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>2 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">4 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">6 PM</td>
                           </tr>
                           <tr>
-                            <td>14 @5hr</td>
+                            <td>8 PM</td>
                           </tr>
                         </table>
-                        </div>
-                        <div class="col-md-3">
+                      </div>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+
+                      <div class="col-md-3">
+                        <table style="width:100px; margin-left:85px;">
+                          <tr style="background-color:#007fc9;">
+                            <td style="color:white;"> Wednesday</td>
+                          </tr>
+                          <tr>
+                            <td>2 PM</td>
+                          </tr>
+                          <tr>
+                            <td>4 PM</td>
+                          </tr>
+                          <tr>
+                            <td>6 PM</td>
+                          </tr>
+                          <tr>
+                            <td><input type="radio" value="14 @5hr" name="14 @5hr">8 PM</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="col-md-3">
                           <table style="width:100px; margin-left:85px;">
                             <tr style="background-color:#007fc9;">
-                              <td style="color:white;">	Tuesday</td>
+                              <td style="color:white;"> Wednesday</td>
                             </tr>
                             <tr>
-                              <td>14 @5hr</td>
+                              <td>2 PM</td>
                             </tr>
                             <tr>
-                              <td>14 @5hr</td>
+                              <td><input type="radio" value="14 @5hr" name="14 @5hr" >4 PM</td>
                             </tr>
                             <tr>
-                              <td>14 @5hr</td>
+                              <td><input type="radio" value="14 @5hr" name="14 @5hr">6 PM</td>
                             </tr>
                             <tr>
-                              <td>14 @5hr</td>
+                              <td><input type="radio" value="14 @5hr" name="14 @5hr">8 PM</td>
                             </tr>
                           </table>
-                          </div>
-                </span>
+                        </div>
+                      <div class="col-md-3">
+                        <table style="width:100px; margin-left:85px;">
+                          <tr style="background-color:#007fc9;">
+                            <td style="color:white;"> Friday</td>
+                          </tr>
+                          <tr>
+                            <td class="off">OFF</td>
+                        
+                        </table>
+                      </div>
+                    </span>
+                  </div>
+
+                </div>
+
               </div>
-            
+
             </div>
-        
-          </div>
-        
+
+          </section>
+
         </div>
-      
-      </section>
-     
+      </div>
     </div>
   </div>
+<div class="col-md-1">
+ 
 </div>
+<!-- <div *ngFor="let item of apparr">
+    <label> 
+        <span innerHTML="{{item.name}}"></span>
+        <label *ngFor="let slot of item.itemslots">{{slot.name}}
+    <input  [checked]="slot.checked" 
+    type="checkbox" value="{{slot.name}}" [(ngModel)]="slot.name" [name]="slot.Name"  />
+    </label>
+</label>
+</div> -->

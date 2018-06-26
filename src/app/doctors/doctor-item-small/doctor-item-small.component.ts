@@ -9,7 +9,7 @@ import { Idoctor } from '../../shared/interfaces/idoctor';
 export class DoctorItemSmallComponent implements OnInit {
   @Input() doctor: Idoctor;
   constructor() { }
-
+@Input() eventIndex:number;
   ngOnInit() {
   }
 
